@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.circularreveal.CircularRevealRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/app_background"
     tools:context=".view.activity.MainActivity">
 
 
-    <com.google.android.material.circularreveal.CircularRevealFrameLayout
+    <FrameLayout
         android:id="@+id/framelayout_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -20,24 +21,13 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
-        app:itemIconTint="@color/bottom_nav_background"
+        app:itemIconTint="@color/white"
         app:itemRippleColor="@color/teal_700"
-        app:itemTextColor="@color/bottom_nav_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:itemTextColor="@color/white"
+        app:itemBackground="@color/app_background"
         app:menu="@menu/bottom_navigation_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        style="@style/Widget.MaterialComponents.BottomNavigationView.PrimarySurface"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:menu="@menu/bottom_navigation_menu" />
-
-
-</com.google.android.material.circularreveal.CircularRevealRelativeLayout>
+</RelativeLayout>

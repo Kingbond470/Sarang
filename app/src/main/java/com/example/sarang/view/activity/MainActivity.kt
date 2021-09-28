@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setCurrentFragment(HomeFragment())
 
-        bottom_navigation.setOnNavigationItemSelectedListener {
+        bottomNavBar.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.page_1 -> setCurrentFragment(HomeFragment())
                 R.id.page_2 -> setCurrentFragment(SearchFragment())
