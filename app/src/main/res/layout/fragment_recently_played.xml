@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:padding="10dp"
     tools:context=".view.fragment.RecentlyPlayedFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Recently Player"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/gotham_bold"
-        android:layout_marginVertical="100dp"
-        />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivBackRecentlyPlayed"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_back" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvRecentlyPlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_toRightOf="@+id/ivBackRecentlyPlayed"
+        android:fontFamily="@font/gotham_medium"
+        android:text="Recently Played"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/tvTodayRecentlyPlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivBackRecentlyPlayed"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gotham_book"
+        android:text="Today"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+
+    <TextView
+        android:id="@+id/tvYesterDayRecentlyPlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTodayRecentlyPlayed"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gotham_book"
+        android:text="Yesterday"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tvDateRecentlyPlayed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvYesterDayRecentlyPlayed"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gotham_book"
+        android:text="Wed, 29 Sep 2021"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+</RelativeLayout>
