@@ -2,4 +2,8 @@
     <string name="app_name">Sarang</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="todo">TODO</string>
+    <string name="artists_songs_or_podcasts">Artists, songs, or podcasts</string>
+    <string name="browse_all">Browse all</string>
 </resources>

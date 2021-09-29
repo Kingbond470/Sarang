@@ -14,7 +14,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="68dp"
         android:fontFamily="@font/gotham_bold"
-        android:text="Search"
+        android:text="@string/search"
         android:textColor="@color/white"
         android:textSize="28sp" />
 
@@ -36,6 +36,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="12.7dp"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_search" />
 
         <TextView
@@ -44,7 +45,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="50dp"
             android:fontFamily="@font/gotham_medium"
-            android:text="Artists, songs, or podcasts"
+            android:text="@string/artists_songs_or_podcasts"
             android:textColor="@color/black"
             android:textSize="16sp" />
     </androidx.cardview.widget.CardView>
@@ -57,7 +58,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/gotham_bold"
-        android:text="Browse all"
+        android:text="@string/browse_all"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
