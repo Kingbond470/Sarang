@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:padding="10dp"
     tools:context=".view.fragment.SettingsFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Settings"
-        android:textSize="30sp"
-        android:fontFamily="@font/gotham_bold"
-        android:layout_marginVertical="100dp"
-        />
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivBackSettings"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_back" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/ivBackSettings"
+        android:fontFamily="@font/gotham_medium"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/tvFreeAccountSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivBackSettings"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gotham_book"
+        android:text="Free Account"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipGoPremiumSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvFreeAccountSettings"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/white"
+        android:text="Go Premium"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:chipStrokeColor="@color/white"
+        app:chipStrokeWidth="0.8dp" />
+
+</RelativeLayout>
