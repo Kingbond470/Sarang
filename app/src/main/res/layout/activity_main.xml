@@ -21,10 +21,10 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/app_background"
         app:itemIconTint="@color/white"
         app:itemRippleColor="@color/teal_700"
         app:itemTextColor="@color/white"
-        app:itemBackground="@color/app_background"
         app:menu="@menu/bottom_navigation_menu">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
