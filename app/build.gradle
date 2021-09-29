@@ -78,7 +78,7 @@ dependencies {
     //Okhttp3
     implementation "com.squareup.okhttp3:okhttp:$okhttp3_version"
 
-
+    
     //hilt
     implementation("com.google.dagger:hilt-android:2.38.1")
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
