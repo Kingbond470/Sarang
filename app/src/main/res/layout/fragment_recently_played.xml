@@ -37,12 +37,19 @@
         android:textColor="@color/white"
         android:textSize="28sp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTodayRecentlyPlayed"
+        android:id="@+id/recyclerViewRecentlyPlayedToday"
+        />
+
 
     <TextView
         android:id="@+id/tvYesterDayRecentlyPlayed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvTodayRecentlyPlayed"
+        android:layout_below="@id/recyclerViewRecentlyPlayedToday"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/gotham_book"
@@ -50,15 +57,31 @@
         android:textColor="@color/white"
         android:textSize="28sp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvYesterDayRecentlyPlayed"
+        android:id="@+id/recyclerViewYesterdayRecentlyPlayedToday"
+        />
+
     <TextView
         android:id="@+id/tvDateRecentlyPlayed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvYesterDayRecentlyPlayed"
+        android:layout_below="@id/recyclerViewYesterdayRecentlyPlayedToday"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/gotham_book"
         android:text="Wed, 29 Sep 2021"
         android:textColor="@color/white"
         android:textSize="28sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDateRecentlyPlayed"
+        android:id="@+id/recyclerViewDateRecentlyPlayedToday"
+        />
+
+
 </RelativeLayout>
