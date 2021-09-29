@@ -28,20 +28,31 @@ class HomeFragment : Fragment() {
 
         ivNotification.setOnClickListener {
 
-//            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
-//            ft.replace(com.example.sarang.R.id.framelayout_container, HomeFragment(), "Home Fragment")
-//            ft.addToBackStack(null)
-//            ft.commit()
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(com.example.sarang.R.id.framelayout_container, NotificationFragment(), "Home Fragment")
+            ft.addToBackStack(null)
+            ft.commit()
 
             Toast.makeText(context,"Notification",Toast.LENGTH_SHORT).show()
         }
 
 
         ivRecentlyPlayed.setOnClickListener {
+
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(com.example.sarang.R.id.framelayout_container, RecentlyPlayedFragment(), "Recently Fragment")
+            ft.addToBackStack(null)
+            ft.commit()
+
             Toast.makeText(context,"Recently PLayed",Toast.LENGTH_SHORT).show()
         }
 
         ivSettings.setOnClickListener {
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(com.example.sarang.R.id.framelayout_container, SettingsFragment(), "=Settings Fragment")
+            ft.addToBackStack(null)
+            ft.commit()
+
             Toast.makeText(context,"Settings",Toast.LENGTH_SHORT).show()
         }
 
