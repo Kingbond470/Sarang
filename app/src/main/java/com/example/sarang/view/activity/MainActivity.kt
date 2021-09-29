@@ -1,7 +1,7 @@
 package com.example.sarang.view.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import com.example.sarang.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,5 +17,6 @@ class MainActivity : AppCompatActivity() {
         outlinedTextField.editText?.doOnTextChanged { inputText, _, _, _ ->
             // Respond to input text change
         }
+
     }
 }

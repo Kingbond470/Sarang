@@ -4,42 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_back.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_home_selected_false_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_home_selected_true_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_library_selected_false_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_library_selected_true_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_premium_selected_false_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_premium_selected_true_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_search_selected_false_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_search_selected_true_icon.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_camera.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_cancel.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_devices.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_down_arrow.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24114583333333334" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_like_black.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_like_selected_false.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_like_selected_true.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_more.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_music_control_left.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_music_control_pause.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_music_control_pause_white_colour.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_music_control_play.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_music_control_play_pause_background.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_music_control_play_white_colour.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_music_control_right.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_notification.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_queue.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_recent.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_repeat_selected_false.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_repeat_selected_true.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_settings.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_share.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_shuffle_selected_false.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_shuffle_selected_true.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/font/font.xml" value="0.2552083333333333" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/blue_bg.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_bottom_nav_home_selected_false_icon.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_bottom_nav_premium_selected_false_icon.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_bottom_nav_premium_selected_true_icon.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_bottom_nav_search_selected_true_icon.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_more.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_queue.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_share.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/premium_btn.xml" value="0.20277777777777778" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_main.xml" value="0.2854785478547855" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_test_actvity.xml" value="0.2210144927536232" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/fragment_premium.xml" value="0.16" />
       </map>
     </option>
   </component>
