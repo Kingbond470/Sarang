@@ -24,61 +24,75 @@
         android:textColor="@color/white"
         android:textSize="25sp" />
 
-
-    <TextView
-        android:id="@+id/tvTodayRecentlyPlayed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ivBackRecentlyPlayed"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/gotham_book"
-        android:text="Today"
-        android:textColor="@color/white"
-        android:textSize="28sp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewRecentlyPlayedToday"
+    <ScrollView
+        android:id="@+id/scrollViewRecently"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTodayRecentlyPlayed" />
+        android:layout_below="@+id/ivBackRecentlyPlayed">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/tvYesterDayRecentlyPlayed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recyclerViewRecentlyPlayedToday"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/gotham_book"
-        android:text="Yesterday"
-        android:textColor="@color/white"
-        android:textSize="28sp" />
+            <TextView
+                android:id="@+id/tvTodayRecentlyPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/gotham_book"
+                android:text="Today"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewYesterdayRecentlyPlayedToday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvYesterDayRecentlyPlayed" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRecentlyPlayedToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTodayRecentlyPlayed" />
 
-    <TextView
-        android:id="@+id/tvDateRecentlyPlayed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recyclerViewYesterdayRecentlyPlayedToday"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/gotham_book"
-        android:text="Wed, 29 Sep 2021"
-        android:textColor="@color/white"
-        android:textSize="28sp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewDateRecentlyPlayedToday"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvDateRecentlyPlayed" />
+            <TextView
+                android:id="@+id/tvYesterDayRecentlyPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewRecentlyPlayedToday"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/gotham_book"
+                android:text="Yesterday"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewYesterday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvYesterDayRecentlyPlayed" />
+
+            <TextView
+                android:id="@+id/tvDateRecentlyPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewYesterday"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/gotham_book"
+                android:text="Wed, 29 Sep 2021"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDateRecentlyPlayed" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 
 </RelativeLayout>

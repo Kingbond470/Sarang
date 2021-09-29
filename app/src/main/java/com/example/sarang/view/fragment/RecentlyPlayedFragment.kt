@@ -10,14 +10,15 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sarang.R
 import com.example.sarang.view.adapter.ToGetYouStartedAdapter
 import com.example.sarang.view.model.ToGetYouStarted
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_notification.*
 import kotlinx.android.synthetic.main.fragment_recently_played.*
 
 
 class RecentlyPlayedFragment : Fragment() {
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
+    private val togetYouStartedYesterday=ArrayList<ToGetYouStarted>()
+    private val togetYouStartedDate=ArrayList<ToGetYouStarted>()
+
 
 
     override fun onCreateView(
@@ -38,18 +39,45 @@ class RecentlyPlayedFragment : Fragment() {
         }
 
 
+        //for to get you started
         for(i in 0..10){
             togetyoustartedList.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
         }
 
-        //for to get you started
         val toGetYouStartedAdapter = ToGetYouStartedAdapter(togetyoustartedList)
-        val gridLayoutManagerHospitals =
+        val gridLayoutManager =
             GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
         recyclerViewRecentlyPlayedToday.adapter = toGetYouStartedAdapter
-        recyclerViewRecentlyPlayedToday.layoutManager = gridLayoutManagerHospitals
+        recyclerViewRecentlyPlayedToday.layoutManager = gridLayoutManager
         recyclerViewRecentlyPlayedToday.hasFixedSize()
 
+        // for to get you started yesterday
+        for(i in 0..10){
+            togetYouStartedYesterday.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
+        }
+
+        val toGetYouStartedYesterdayAdapter = ToGetYouStartedAdapter(togetYouStartedYesterday)
+        val gridLayoutManager1 =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewYesterday.adapter = toGetYouStartedYesterdayAdapter
+        recyclerViewYesterday.layoutManager = gridLayoutManager1
+        recyclerViewYesterday.hasFixedSize()
+
+
+        // for to get you started yesterday
+        for(i in 0..10){
+            togetYouStartedDate.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
+        }
+
+        val toGetYouStartedDate = ToGetYouStartedAdapter(togetYouStartedDate)
+        val gridLayoutManager2 =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewDate.adapter = toGetYouStartedDate
+        recyclerViewDate.layoutManager = gridLayoutManager2
+        recyclerViewDate.hasFixedSize()
+
+
+//
 //        recyclerViewYesterdayRecentlyPlayedToday.adapter = toGetYouStartedAdapter
 //        recyclerViewYesterdayRecentlyPlayedToday.layoutManager = gridLayoutManagerHospitals
 //        recyclerViewYesterdayRecentlyPlayedToday.hasFixedSize()
