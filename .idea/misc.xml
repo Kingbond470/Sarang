@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1265625" />
+        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/bottom_bar_background_colour.xml" value="0.17314814814814813" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_back.xml" value="0.1265625" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_home_selected_false_icon.xml" value="0.1265625" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_bottom_nav_home_selected_true_icon.xml" value="0.1265625" />
@@ -43,7 +44,9 @@
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_home.xml" value="0.1094224924012158" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search.xml" value="0.1" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search_songs.xml" value="0.2" />
+        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search_item.xml" value="0.1094224924012158" />
+        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search_songs.xml" value="0.1" />
+        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search_songs_item.xml" value="0.22" />
       </map>
     </option>
   </component>

@@ -8,6 +8,7 @@
     tools:context=".view.fragment.SearchSongsFragment">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSearchQuery"
         android:layout_width="match_parent"
         android:layout_height="40.28dp"
         android:layout_marginLeft="20dp"
@@ -17,6 +18,7 @@
         app:cardCornerRadius="5dp">
 
         <EditText
+            android:id="@+id/etSearchQuery"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:autofillHints="songs"
@@ -35,26 +37,11 @@
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/tvPlayWhatYouLove"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewSearchSongs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="480dp"
-        android:fontFamily="@font/gotham_bold"
-        android:gravity="center_horizontal"
-        android:text="@string/play_what_you_love"
-        android:textColor="@color/white"
-        android:textSize="24sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tvPlayWhatYouLove"
-        android:layout_marginTop="14dp"
-        android:fontFamily="@font/gotham_light"
-        android:gravity="center_horizontal"
-        android:text="@string/search_for_artists_songs_podcasts_and_more"
-        android:textColor="@color/grey7"
-        android:textSize="11sp" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardViewSearchQuery"
+        android:layout_marginTop="90dp" />
 
 </RelativeLayout>

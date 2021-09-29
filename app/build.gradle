@@ -86,4 +86,10 @@ dependencies {
     // material UI
     implementation 'com.google.android.material:material:1.5.0-alpha03'
 
+    // for adding recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+
+    // for adding cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+
 }
