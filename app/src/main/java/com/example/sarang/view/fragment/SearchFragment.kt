@@ -1,6 +1,5 @@
 package com.example.sarang.view.fragment
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -21,14 +20,13 @@ class SearchFragment : Fragment() {
         return inflater.inflate(com.example.sarang.R.layout.fragment_search, container, false)
     }
 
-    @SuppressLint("ResourceType")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         cardViewSearchBar.setOnClickListener(View.OnClickListener {
             val searchSongsFragment = SearchSongsFragment()
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.mainActivity, searchSongsFragment)
-            transaction.commit()
+            transaction.addToBackStack("").commit()
         })
     }
 

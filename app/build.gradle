@@ -33,14 +33,16 @@ android {
         jvmTarget = '1.8'
     }
 
-    buildFeatures(){
-        viewBinding=true
+    buildFeatures() {
+        viewBinding = true
     }
 }
 
 dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     def anko_version = '0.10.0'
     def arch_version = '2.2.0-alpha01'
 
@@ -83,4 +85,5 @@ dependencies {
 
     // material UI
     implementation 'com.google.android.material:material:1.5.0-alpha03'
+
 }
