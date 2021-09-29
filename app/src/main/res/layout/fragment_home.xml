@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".view.fragment.HomeFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/tvRecentlyPlayed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:text="Recently Played"
+                android:textColor="@color/white"
+                android:fontFamily="@font/gotham_bold"
+                android:textSize="26sp" />
+
+
+            <ImageView
+                android:id="@+id/ivNotification"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_toLeftOf="@+id/ivRecentlyPlayed"
+                android:src="@drawable/ic_notification" />
+
+            <ImageView
+                android:id="@+id/ivRecentlyPlayed"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="18dp"
+                android:layout_toLeftOf="@id/ivSettings"
+                android:src="@drawable/ic_recent" />
+
+
+            <ImageView
+                android:id="@+id/ivSettings"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_settings" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</RelativeLayout>

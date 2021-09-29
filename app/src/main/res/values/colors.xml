@@ -8,7 +8,7 @@
 
     <color name="green">#48B36E</color>
 
-    <color name="black">#2A2C2D</color>
+    <color name="black">#000000</color>
 
     <color name="grey1">#595A5B</color>
     <color name="grey2">#999A9A</color>
@@ -19,5 +19,11 @@
     <color name="blue">#7D8BA1</color>
     <color name="grey5">#706C6B</color>
     <color name="grey6">#B7B9AD</color>
+
+    <color name="grey7">#C4C4C4</color>
+
+    <color name="app_background">#121212</color>
+    <color name="bottom_nav_background">#282828</color>
+    <color name="transparent">#00000000</color>
 
 </resources>
