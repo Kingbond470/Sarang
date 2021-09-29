@@ -38,11 +38,10 @@
         android:textSize="28sp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRecentlyPlayedToday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTodayRecentlyPlayed"
-        android:id="@+id/recyclerViewRecentlyPlayedToday"
-        />
+        android:layout_below="@+id/tvTodayRecentlyPlayed" />
 
 
     <TextView
@@ -58,11 +57,10 @@
         android:textSize="28sp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewYesterdayRecentlyPlayedToday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvYesterDayRecentlyPlayed"
-        android:id="@+id/recyclerViewYesterdayRecentlyPlayedToday"
-        />
+        android:layout_below="@id/tvYesterDayRecentlyPlayed" />
 
     <TextView
         android:id="@+id/tvDateRecentlyPlayed"
@@ -77,11 +75,10 @@
         android:textSize="28sp" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDateRecentlyPlayedToday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvDateRecentlyPlayed"
-        android:id="@+id/recyclerViewDateRecentlyPlayedToday"
-        />
+        android:layout_below="@id/tvDateRecentlyPlayed" />
 
 
 </RelativeLayout>
