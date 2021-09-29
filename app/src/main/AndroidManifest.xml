@@ -12,20 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarang">
+
         <activity
-            android:name=".view.activity.TestActvity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".view.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".view.activity.MainActivity"
-            android:exported="true">
-
         </activity>
     </application>
 
