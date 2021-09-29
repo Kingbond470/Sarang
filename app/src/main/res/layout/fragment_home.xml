@@ -34,11 +34,11 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginHorizontal="10dp"
-                android:layout_toLeftOf="@+id/ivRefresh"
+                android:layout_toLeftOf="@+id/ivRecentlyPlayed"
                 android:src="@drawable/ic_notification" />
 
             <ImageView
-                android:id="@+id/ivRefresh"
+                android:id="@+id/ivRecentlyPlayed"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginHorizontal="18dp"
