@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_home.*
 import androidx.fragment.app.FragmentTransaction
+import android.R
+import androidx.fragment.app.FragmentManager
 
 
 class HomeFragment : Fragment() {
@@ -30,6 +32,7 @@ class HomeFragment : Fragment() {
 //            ft.replace(com.example.sarang.R.id.framelayout_container, HomeFragment(), "Home Fragment")
 //            ft.addToBackStack(null)
 //            ft.commit()
+
             Toast.makeText(context,"Notification",Toast.LENGTH_SHORT).show()
         }
 
