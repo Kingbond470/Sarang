@@ -8,15 +8,14 @@ import android.view.ViewGroup
 import com.example.sarang.R
 
 
-class SearchFragment : Fragment() {
-
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
 }

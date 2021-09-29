@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.sarang.R
 
 
-class SearchFragment : Fragment() {
+class LibraryFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +16,8 @@ class SearchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false)
+        return inflater.inflate(R.layout.fragment_library, container, false)
     }
+
 
 }
