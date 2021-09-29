@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background"
-    android:id="@+id/searchSongFragment"
     tools:context=".view.fragment.SearchSongsFragment">
 
     <androidx.cardview.widget.CardView
@@ -20,7 +19,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:autofillHints=""
+            android:autofillHints="songs"
             android:background="@color/grey1"
             android:drawableStart="@drawable/ic_back"
             android:drawableEnd="@drawable/ic_camera"
@@ -30,6 +29,7 @@
             android:inputType="text"
             android:paddingStart="14dp"
             android:paddingEnd="13.38dp"
+            android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="12sp" />
 
