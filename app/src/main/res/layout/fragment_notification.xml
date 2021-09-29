@@ -1,20 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background"
+    android:padding="10dp"
     tools:context=".view.fragment.NotificationFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivBackNotification"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_back" />
+
+
+    <TextView
+        android:id="@+id/tvWhatsNewNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivBackNotification"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gotham_bold"
+        android:text="What's New"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWhatsNewNotification"
+        android:layout_marginTop="50dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMusicNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/transparent"
+            android:text="Music"
+            android:textColor="@color/white"
+            app:chipStrokeColor="@color/white"
+            app:chipStrokeWidth="0.8dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPodcastNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="@color/transparent"
+            android:text="@string/podcast_shows"
+            android:textColor="@color/white"
+            app:chipStrokeColor="@color/white"
+            app:chipStrokeWidth="0.8dp" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+
+    <TextView
+        android:id="@+id/tvUpdateNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chipGroupNotification"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/gotham_bold"
+        android:text="We don't have any updates for you yet"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="normal" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUpdateNotification"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/gotham_light"
         android:gravity="center"
-        android:text="Notification"
-        android:textSize="30sp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/gotham_bold"
-        android:layout_marginVertical="100dp"
-        />
+        android:text="When there's news, we'll post it here. \n Follow your
+favorite artists and podcasts \n
+to stay updated on them too."
+        android:textColor="@color/white" />
 
-</FrameLayout>
+
+
+
+</RelativeLayout>

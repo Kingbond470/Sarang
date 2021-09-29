@@ -9,4 +9,5 @@
     <string name="play_what_you_love">Play what you love</string>
     <string name="search_for_artists_songs_podcasts_and_more">Search for artists, songs, podcasts, and more.</string>
     <string name="search_query">Search query</string>
+    <string name="podcast_shows"><![CDATA[Podcast & Shows]]></string>
 </resources>
