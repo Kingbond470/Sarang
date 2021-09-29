@@ -1,126 +1,642 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
     android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     tools:context=".view.fragment.PremiumFragment">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="100dp"
-        android:fontFamily="@font/gotham_medium"
-        android:text="Get more out of your music with Premium"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/premium_viewPager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="15dp"
-        android:background="@drawable/white_btn"
-        android:fontFamily="@font/gotham_medium"
-        android:padding="15dp"
-        android:text="GET PREMIUM"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/gotham_medium"
-        android:text="Terms and Conditions apply."
-        android:textColor="#FFFFFF"
-        android:textSize="12dp" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginVertical="25dp"
-        app:cardCornerRadius="10dp">
-
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#262727"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/gotham_medium"
+            android:lineSpacingExtra="15dp"
+            android:text="Get more out of your music with Premium"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|left"
-                android:layout_weight="1"
-                android:fontFamily="@font/gotham_medium"
-                android:padding="20dp"
-                android:text="Sarang Free"
-                android:textColor="#FFFFFF"
-                android:textSize="21dp"
-                android:textStyle="bold" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/premium_viewPager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/gotham_medium"
-                android:gravity="right"
-                android:padding="20dp"
-                android:text="CURRENT PLAN"
-                android:textColor="#D8CFCF"
-                android:textSize="15dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:background="@drawable/white_btn"
+            android:fontFamily="@font/gotham_medium"
+            android:paddingHorizontal="50dp"
+            android:paddingVertical="15dp"
+            android:text="GET PREMIUM"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/gotham_medium"
+            android:text="Terms and Conditions apply."
+            android:textColor="#FFFFFF"
+            android:textSize="12dp" />
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/blue_bg"
-            android:padding="15dp"
-            android:orientation="vertical">
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="25dp"
+            app:cardCornerRadius="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#262727"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|left"
                     android:layout_weight="1"
                     android:fontFamily="@font/gotham_medium"
-                    android:gravity="center"
-                    android:text="Mini"
+                    android:padding="20dp"
+                    android:text="Sarang Free"
+                    android:textColor="#FFFFFF"
+                    android:textSize="21dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="right"
+                    android:padding="20dp"
+                    android:text="CURRENT PLAN"
+                    android:textColor="#D8CFCF"
+                    android:textSize="15dp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/skyblue_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="left"
+                        android:text="Mini"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="right"
+                        android:text="From"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:text="11"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="FOR 1 DAY"
+                    android:textColor="#C3BBBB"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/plan1_desc"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF"
-                    android:textSize="15dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_plan1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_btn"
+                    android:text="View Plans"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Prices according to duration of plan."
+                    android:textAlignment="center"
+                    android:textColor="#C3BBBB"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Terms and Conditions apply."
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
             </LinearLayout>
 
 
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/violet_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="left"
+                        android:text="Premium Family"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="right"
+                        android:text="From"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:text="199"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="FOR 1 MONTH"
+                    android:textColor="#C3BBBB"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/plan2_desc"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_plan2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_btn"
+                    android:text="View Plans"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Prices according to duration of plan."
+                    android:textAlignment="center"
+                    android:textColor="#C3BBBB"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Terms and Conditions apply."
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+            </LinearLayout>
 
 
-    </androidx.cardview.widget.CardView>
-</LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/green_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="left"
+                        android:text="Premium Individual"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="right"
+                        android:text="From"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:text="129"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="FOR 1 MONTH"
+                    android:textColor="#EDE6E6"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/plan3_desc"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_plan3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_btn"
+                    android:text="View Plans"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Prices according to duration of plan."
+                    android:textAlignment="center"
+                    android:textColor="#EDE6E6"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Terms and Conditions apply."
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="left"
+                        android:text="Premium Duo"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="right"
+                        android:text="From"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:text="165"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="FOR 1 MONTH"
+                    android:textColor="#C3BBBB"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/plan4_desc"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_plan4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_btn"
+                    android:text="View Plans"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="Prices according to duration of plan."
+                    android:textAlignment="center"
+                    android:textColor="#C3BBBB"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Terms and Conditions apply."
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/orange_bg"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="left"
+                        android:text="Premium Student"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:gravity="right"
+                        android:text="From"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/gotham_medium"
+                        android:text="66"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginHorizontal="5dp"
+                    android:text="FOR 1 MONTH"
+                    android:textColor="#E1D6D6"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:lineSpacingExtra="5dp"
+                    android:text="@string/plan5_desc"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_plan5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/white_btn"
+                    android:text="View Plans"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/disclaimer_studentPremium"
+                    android:textAlignment="center"
+                    android:textColor="#E1D6D6"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Terms and Conditions apply."
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
