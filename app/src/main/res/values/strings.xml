@@ -6,4 +6,7 @@
     <string name="todo">TODO</string>
     <string name="artists_songs_or_podcasts">Artists, songs, or podcasts</string>
     <string name="browse_all">Browse all</string>
+    <string name="play_what_you_love">Play what you love</string>
+    <string name="search_for_artists_songs_podcasts_and_more">Search for artists, songs, podcasts, and more.</string>
+    <string name="search_query">Search query</string>
 </resources>

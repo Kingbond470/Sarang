@@ -20,6 +20,8 @@
     <color name="grey5">#706C6B</color>
     <color name="grey6">#B7B9AD</color>
 
+    <color name="grey7">#C4C4C4</color>
+
     <color name="app_background">#121212</color>
     <color name="bottom_nav_background">#282828</color>
     <color name="transparent">#00000000</color>
