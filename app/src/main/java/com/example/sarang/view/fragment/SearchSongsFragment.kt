@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sarang.R
 import com.example.sarang.data.local.SearchSongsFragmentData
@@ -39,9 +40,22 @@ class SearchSongsFragment : Fragment() {
         val adapter = SearchSongsFragmentAdapter(data)
         recyclerview.adapter = adapter
 
-    }
-    /*
 
+        ivSearchQueryBack.setOnClickListener {
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                com.example.sarang.R.id.framelayout_container,
+                SearchFragment(),
+                "Search Songs Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()
+        }
+
+    }
+
+
+    /*
     <TextView
         android:id="@+id/tvPlayWhatYouLove"
         android:layout_width="match_parent"
@@ -63,6 +77,6 @@ class SearchSongsFragment : Fragment() {
         android:text="@string/search_for_artists_songs_podcasts_and_more"
         android:textColor="@color/grey7"
         android:textSize="11sp" />
-
      */
+
 }

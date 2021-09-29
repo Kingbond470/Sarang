@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sarang.R
 import com.example.sarang.data.local.SearchFragmentData
 import com.example.sarang.view.adapter.SearchFragmentAdapter
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_search.*
 
 class SearchFragment : Fragment() {
@@ -42,12 +44,17 @@ class SearchFragment : Fragment() {
         val adapter = SearchFragmentAdapter(data)
         recyclerview.adapter = adapter
 
-        cardViewSearchBar.setOnClickListener(View.OnClickListener {
-            val searchSongsFragment = SearchSongsFragment()
-            val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.mainActivity, searchSongsFragment)
-            transaction.addToBackStack("").commit()
-        })
+
+        cardViewSearchBar.setOnClickListener {
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                com.example.sarang.R.id.framelayout_container,
+                SearchSongsFragment(),
+                "Search Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()
+        }
 
     }
 
