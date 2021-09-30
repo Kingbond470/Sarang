@@ -101,6 +101,7 @@
                 android:layout_marginTop="17dp"
                 android:layout_marginBottom="15dp"
                 android:layout_toRightOf="@+id/vLine"
+                android:inputType="number"
                 android:background="@color/phone_no_background"
                 android:fontFamily="@font/gotham_light"
                 android:hint="Phone Number"
