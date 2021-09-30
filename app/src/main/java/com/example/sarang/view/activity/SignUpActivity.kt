@@ -29,14 +29,6 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
-        /*mAuth = FirebaseAuth.getInstance()
-        val user = mAuth.currentUser
-
-        btnSignUpFree.setOnClickListener {
-            val intent = Intent(this@SignUpActivity, MainActivity::class.java)
-            startActivity(intent)
-        }*/
-
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
@@ -49,7 +41,6 @@ class SignUpActivity : AppCompatActivity() {
             signIn()
         }
 
-
         btnSignUpPhone.setOnClickListener {
             setCurrentFragment(SignUpPhoneNumber())
         }
@@ -59,7 +50,6 @@ class SignUpActivity : AppCompatActivity() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -102,11 +92,10 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
 
-
-
     private fun setCurrentFragment(fragment: Fragment) =
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.containerSignUp, fragment)
             commit()
         }
+
 }
