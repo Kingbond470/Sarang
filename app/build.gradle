@@ -89,6 +89,8 @@ dependencies {
     // Image Slider
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
 
+    //Circular Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     // glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
