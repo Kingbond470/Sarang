@@ -3,6 +3,7 @@ package com.example.sarang.view.fragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sarang.R
 import com.example.sarang.view.adapter.LibraryAdapter
@@ -11,6 +12,7 @@ import kotlinx.android.synthetic.main.fragment_library.*
 
 
 class LibraryFragment : Fragment(R.layout.fragment_library) {
+    var isGridLayout = false
     private var libraryList = mutableListOf<LibraryModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,20 +23,55 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
         buildLibraryList()
         setLibraryRecyclerView()
 
-
+        // Change Layout on every click
+        btn_changeLibraryLayout.setOnClickListener {
+            changeLayout()
+        }
     }
 
     private fun buildLibraryList() {
-        libraryList.add(LibraryModel("Yo Yo Honey Singh","https://i.postimg.cc/43CVqcPt/hone.jpg"))
-        libraryList.add(LibraryModel("Manoj Tiwari","https://i.postimg.cc/q7nXvwqj/manoj.jpg"))
-        libraryList.add(LibraryModel("Khesari Lal Yadav","https://i.postimg.cc/7Zjn4dH5/khesari.jpg"))
-        libraryList.add(LibraryModel("Tulshi Kumar","https://i.postimg.cc/BbJCyFqN/tulshi.jpg"))
+        libraryList.add(
+            LibraryModel(
+                "Yo Yo Honey Singh",
+                "https://i.postimg.cc/43CVqcPt/hone.jpg"
+            )
+        )
+        libraryList.add(
+            LibraryModel(
+                "Manoj Tiwari",
+                "https://i.postimg.cc/q7nXvwqj/manoj.jpg"
+            )
+        )
+        libraryList.add(
+            LibraryModel(
+                "Khesari Lal Yadav",
+                "https://i.postimg.cc/7Zjn4dH5/khesari.jpg"
+            )
+        )
+        libraryList.add(
+            LibraryModel(
+                "Tulshi Kumar",
+                "https://i.postimg.cc/BbJCyFqN/tulshi.jpg"
+            )
+        )
 
     }
 
     private fun setLibraryRecyclerView() {
         val libraryAdapter = LibraryAdapter(libraryList)
         library_recyclerView.layoutManager = LinearLayoutManager(context)
-        library_recyclerView.adapter=libraryAdapter
+        library_recyclerView.adapter = libraryAdapter
+    }
+
+    private fun changeLayout() {
+        if (!isGridLayout) {
+            library_recyclerView.layoutManager = GridLayoutManager(context, 2)
+            btn_changeLibraryLayout.setImageResource(R.drawable.list_view_icon)
+            isGridLayout = true
+        } else {
+            library_recyclerView.layoutManager = LinearLayoutManager(context)
+            btn_changeLibraryLayout.setImageResource(R.drawable.grid_view_icon)
+            isGridLayout = false
+        }
     }
 }
