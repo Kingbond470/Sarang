@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="@color/app_background"
+    android:paddingBottom="65dp"
     tools:context=".view.fragment.SearchFragment">
 
     <TextView
@@ -67,6 +67,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tvBrowseAll"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="14dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        tools:listitem="@layout/fragment_search_item" />
 
 </RelativeLayout>
