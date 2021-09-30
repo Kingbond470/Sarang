@@ -13,10 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarang">
         <activity
-            android:name=".view.activity.SplashActivity"
+            android:name=".view.activity.SignUpActivity"
             android:exported="true" />
         <activity
             android:name=".view.activity.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".view.activity.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
