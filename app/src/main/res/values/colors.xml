@@ -26,5 +26,6 @@
     <color name="app_background">#121212</color>
     <color name="bottom_nav_background">#282828</color>
     <color name="transparent">#00000000</color>
+    <color name="phone_no_background">#535252</color>
 
 </resources>
