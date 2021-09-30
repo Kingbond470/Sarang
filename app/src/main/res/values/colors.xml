@@ -27,4 +27,10 @@
     <color name="bottom_nav_background">#282828</color>
     <color name="transparent">#00000000</color>
 
+
+    <color name="colorAccent">#08FF04</color>
+    <color name="mediumDarkBackground">#303030</color>
+    <color name="darkBackground">#202020</color>
+    <color name="lightBackground">#404040</color>
+
 </resources>

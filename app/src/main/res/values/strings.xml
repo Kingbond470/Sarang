@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Sarang</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search">Search</string>
     <string name="todo">TODO</string>
     <string name="artists_songs_or_podcasts">Artists, songs, or podcasts</string>
@@ -16,4 +15,7 @@
     <string name="plan5_desc">Ad-free music. Download to listen offline</string>
     <string name="disclaimer_studentPremium">Offer available only to students at an accredited higher education institution.</string>
     <string name="podcast_shows"><![CDATA[Podcast & Shows]]></string>
+    <string name="notification_channel_name">Music Channel</string>
+    <string name="notification_channel_description">Shows the currently playing music</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>
