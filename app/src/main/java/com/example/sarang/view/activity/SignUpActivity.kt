@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import com.example.sarang.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -12,6 +13,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.example.sarang.view.fragment.SignUpPhoneNumber
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -45,6 +47,11 @@ class SignUpActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         btnSignUpGoogle.setOnClickListener {
             signIn()
+        }
+
+
+        btnSignUpPhone.setOnClickListener {
+            setCurrentFragment(SignUpPhoneNumber())
         }
     }
 
@@ -95,4 +102,11 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
 
+
+
+    private fun setCurrentFragment(fragment: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.containerSignUp, fragment)
+            commit()
+        }
 }

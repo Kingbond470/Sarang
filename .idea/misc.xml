@@ -4,6 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_splash.xml" value="0.11820652173913043" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_premium.xml" value="0.11911231884057971" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search_songs.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search_songs_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_sign_up_number_o_t_p.xml" value="0.25" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_sign_up_o_t_p_number.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_sign_up_phone_number.xml" value="0.22" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/item_layout_togetyoustarted.xml" value="0.11911231884057971" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/premium_image_slider_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1265625" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/bottom_bar_background_colour.xml" value="0.17314814814814813" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_back.xml" value="0.1265625" />
@@ -40,14 +53,9 @@
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_share.xml" value="0.1265625" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_shuffle_selected_false.xml" value="0.1265625" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/ic_shuffle_selected_true.xml" value="0.1265625" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/sign_up_bg.xml" value="0.15648148148148147" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/skyblue_bg.xml" value="0.15648148148148147" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/font/font.xml" value="0.2552083333333333" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/activity_sign_up.xml" value="0.12409420289855072" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/activity_splash.xml" value="0.12409420289855072" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_home.xml" value="0.1094224924012158" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_premium.xml" value="0.1" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search.xml" value="0.1" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search_item.xml" value="0.1094224924012158" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_search_songs.xml" value="0.21" />
