@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/app_background"
     tools:context=".view.fragment.SearchFragment">
 
@@ -36,7 +37,6 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="12.7dp"
-            android:contentDescription="@string/todo"
             android:src="@drawable/ic_search" />
 
         <TextView
@@ -67,8 +67,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tvBrowseAll"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginTop="14dp" />
 
 </RelativeLayout>

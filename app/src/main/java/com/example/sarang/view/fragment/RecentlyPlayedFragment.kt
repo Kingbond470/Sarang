@@ -5,30 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sarang.R
+import com.example.sarang.view.adapter.ToGetYouStartedAdapter
+import com.example.sarang.view.model.ToGetYouStarted
+import kotlinx.android.synthetic.main.fragment_recently_played.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [RecentlyPlayedFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RecentlyPlayedFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private val togetyoustartedList = ArrayList<ToGetYouStarted>()
+    private val togetYouStartedYesterday=ArrayList<ToGetYouStarted>()
+    private val togetYouStartedDate=ArrayList<ToGetYouStarted>()
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,23 +29,66 @@ class RecentlyPlayedFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_recently_played, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RecentlyPlayedFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RecentlyPlayedFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        ivBackRecentlyPlayed.setOnClickListener {
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(com.example.sarang.R.id.framelayout_container, HomeFragment(), "Home Fragment")
+            ft.addToBackStack(null)
+            ft.commit()
+        }
+
+
+        //for to get you started
+        for(i in 0..10){
+            togetyoustartedList.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
+        }
+
+        val toGetYouStartedAdapter = ToGetYouStartedAdapter(togetyoustartedList)
+        val gridLayoutManager =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewRecentlyPlayedToday.adapter = toGetYouStartedAdapter
+        recyclerViewRecentlyPlayedToday.layoutManager = gridLayoutManager
+        recyclerViewRecentlyPlayedToday.hasFixedSize()
+
+        // for to get you started yesterday
+        for(i in 0..10){
+            togetYouStartedYesterday.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
+        }
+
+        val toGetYouStartedYesterdayAdapter = ToGetYouStartedAdapter(togetYouStartedYesterday)
+        val gridLayoutManager1 =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewYesterday.adapter = toGetYouStartedYesterdayAdapter
+        recyclerViewYesterday.layoutManager = gridLayoutManager1
+        recyclerViewYesterday.hasFixedSize()
+
+
+        // for to get you started yesterday
+        for(i in 0..10){
+            togetYouStartedDate.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
+        }
+
+        val toGetYouStartedDate = ToGetYouStartedAdapter(togetYouStartedDate)
+        val gridLayoutManager2 =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewDate.adapter = toGetYouStartedDate
+        recyclerViewDate.layoutManager = gridLayoutManager2
+        recyclerViewDate.hasFixedSize()
+
+
+//
+//        recyclerViewYesterdayRecentlyPlayedToday.adapter = toGetYouStartedAdapter
+//        recyclerViewYesterdayRecentlyPlayedToday.layoutManager = gridLayoutManagerHospitals
+//        recyclerViewYesterdayRecentlyPlayedToday.hasFixedSize()
+//
+//        recyclerViewDateRecentlyPlayedToday.adapter = toGetYouStartedAdapter
+//        recyclerViewDateRecentlyPlayedToday.layoutManager = gridLayoutManagerHospitals
+//        recyclerViewDateRecentlyPlayedToday.hasFixedSize()
+
+
+
     }
+
+
 }
