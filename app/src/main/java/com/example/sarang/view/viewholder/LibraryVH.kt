@@ -6,7 +6,7 @@ import com.bumptech.glide.Glide
 import com.example.sarang.view.model.LibraryModel
 import kotlinx.android.synthetic.main.library_linear_layout.view.*
 
-class LibraryVH(val view: View) : RecyclerView.ViewHolder(view) {
+class LibraryVH(private val view: View) : RecyclerView.ViewHolder(view) {
     fun setLibraryData(model: LibraryModel) {
         view.apply {
             singer_name.text = model.singerName

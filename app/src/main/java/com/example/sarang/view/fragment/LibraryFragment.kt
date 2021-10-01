@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sarang.R
 import com.example.sarang.view.adapter.LibraryAdapter
+import com.example.sarang.view.adapter.LibraryAdapter2
 import com.example.sarang.view.model.LibraryModel
 import kotlinx.android.synthetic.main.fragment_library.*
 
@@ -22,6 +23,7 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
         super.onViewCreated(view, savedInstanceState)
         buildLibraryList()
         setLibraryRecyclerView()
+        setGridLibraryRecyclerView()
 
         // Change Layout on every click
         btn_changeLibraryLayout.setOnClickListener {
@@ -63,14 +65,23 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
         library_recyclerView.adapter = libraryAdapter
     }
 
+
+    private fun setGridLibraryRecyclerView() {
+        val libraryAdapter = LibraryAdapter2(libraryList)
+        library_grid_recyclerView.layoutManager = GridLayoutManager(context, 2)
+        library_grid_recyclerView.adapter = libraryAdapter
+    }
+
     private fun changeLayout() {
         if (!isGridLayout) {
-            library_recyclerView.layoutManager = GridLayoutManager(context, 2)
             btn_changeLibraryLayout.setImageResource(R.drawable.list_view_icon)
+            library_recyclerView.visibility = View.GONE
+            library_grid_recyclerView.visibility = View.VISIBLE
             isGridLayout = true
         } else {
-            library_recyclerView.layoutManager = LinearLayoutManager(context)
             btn_changeLibraryLayout.setImageResource(R.drawable.grid_view_icon)
+            library_recyclerView.visibility = View.VISIBLE
+            library_grid_recyclerView.visibility = View.GONE
             isGridLayout = false
         }
     }

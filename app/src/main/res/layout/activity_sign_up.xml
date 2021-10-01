@@ -1,60 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sign_up_bg"
     android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.Light"
     tools:context=".view.activity.SignUpActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sign_up_bg_image" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/signup_flade_bg" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="360dp">
+        <ImageView
+            android:id="@+id/ivSignUpSpotifyLogo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="165dp"
+            android:src="@drawable/ic_sign_up_spotift_logo" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/sign_up_bg_image" />
+        <TextView
+            android:id="@+id/tvMillionsOfSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/gotham_bold"
+            android:text="Millions of songs."
+            android:textColor="@color/white"
+            android:textSize="34sp" />
 
-            <ImageView
-                android:id="@+id/ivSignUpSpotifyLogo"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="220dp"
-                android:src="@drawable/ic_sign_up_spotift_logo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/gotham_bold"
+            android:text="Free on Spotify."
+            android:textColor="@color/white"
+            android:textSize="34sp" />
 
-            <TextView
-                android:id="@+id/tvMillionsOfSongs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ivSignUpSpotifyLogo"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/gotham_bold"
-                android:text="Millions of songs."
-                android:textColor="@color/white"
-                android:textSize="34sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tvMillionsOfSongs"
-                android:layout_centerHorizontal="true"
-                android:fontFamily="@font/gotham_bold"
-                android:text="Free on Spotify."
-                android:textColor="@color/white"
-                android:textSize="34sp" />
-
-        </RelativeLayout>
 
         <ImageView
             android:id="@+id/btnSignUpFree"
