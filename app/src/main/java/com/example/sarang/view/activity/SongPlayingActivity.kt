@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v4.media.session.PlaybackStateCompat
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.RequestManager
 import com.example.sarang.R
@@ -24,7 +24,10 @@ import javax.inject.Inject
 
 class SongPlayingActivity : AppCompatActivity() {
 
-    private val mainViewModel: MainViewModel by viewModels()
+    val mainViewModel: MainViewModel by viewModels()
+    //lateinit var mainViewModel: MainViewModel
+    /*mWordViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication())).get(WordViewModel.
+            class);*/
 
     @Inject
     lateinit var swipeSongAdapter: SwipeSongAdapter
@@ -39,7 +42,13 @@ class SongPlayingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_song_playing)
+
+
         subscribeToObservers()
+
+
+        /*mainViewModel = ViewModelProviders.of(this, ViewModelFactory)
+            .get(MainViewModel::class.java)*/
 
         vpSong.adapter = swipeSongAdapter
 
@@ -154,3 +163,14 @@ class SongPlayingActivity : AppCompatActivity() {
         }
     }
 }
+
+/*
+<service android:name=".exoplayer.MusicService"
+            android:exported="TODO">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>.
+
+        6986297787408057~2283367735
+ */

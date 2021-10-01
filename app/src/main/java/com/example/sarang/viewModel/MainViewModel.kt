@@ -13,8 +13,10 @@ import com.example.sarang.exoplayer.isPlaying
 import com.example.sarang.exoplayer.isPrepared
 import com.example.sarang.other.Constants.MEDIA_ROOT_ID
 import com.example.sarang.other.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+@HiltViewModel
 class MainViewModel @Inject constructor(
     private val musicServiceConnection: MusicServiceConnection
 ) : ViewModel() {

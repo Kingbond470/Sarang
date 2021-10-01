@@ -91,7 +91,7 @@ class SignUpActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
                     val user = mAuth.currentUser
-                    val intent = Intent(this@SignUpActivity, MainActivity::class.java)
+                    val intent = Intent(this@SignUpActivity, SongPlayingActivity::class.java)
                     startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.
