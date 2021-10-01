@@ -29,7 +29,7 @@
             android:layout_height="45dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="165dp"
-            android:src="@drawable/ic_sign_up_spotift_logo" />
+            android:src="@drawable/large_logo" />
 
         <TextView
             android:id="@+id/tvMillionsOfSongs"
@@ -54,32 +54,32 @@
 
         <ImageView
             android:id="@+id/btnSignUpFree"
-            android:layout_width="309dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:src="@drawable/ic_sign_up_free_button" />
 
         <ImageView
             android:id="@+id/btnSignUpPhone"
-            android:layout_width="309dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_sign_up_phone" />
 
         <ImageView
             android:id="@+id/btnSignUpGoogle"
-            android:layout_width="309dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_sign_up_google" />
 
         <ImageView
             android:id="@+id/btnSignUpFacebook"
-            android:layout_width="309dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:src="@drawable/ic_sign_up_facebook" />

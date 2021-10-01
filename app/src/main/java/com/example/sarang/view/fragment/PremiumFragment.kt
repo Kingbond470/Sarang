@@ -1,16 +1,19 @@
 package com.example.sarang.view.fragment
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.sarang.R
+import com.example.sarang.view.activity.PaymentActivity
 import com.example.sarang.view.adapter.PremiumImageSliderAdapter
 import com.example.sarang.view.model.PremiumImageSliderModel
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
 import kotlinx.android.synthetic.main.fragment_premium.*
+
 
 class PremiumFragment : Fragment(R.layout.fragment_premium) {
     private val imageList = mutableListOf<PremiumImageSliderModel>()
@@ -20,9 +23,18 @@ class PremiumFragment : Fragment(R.layout.fragment_premium) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         // Image Slider
+
         buildSlider()
         setSliderAdapter()
+
+        // Navigate to Payment option
+
+        btn_getPremium.setOnClickListener {
+            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+        }
+
     }
 
     private fun buildSlider() {

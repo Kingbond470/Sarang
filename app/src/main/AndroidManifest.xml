@@ -24,6 +24,9 @@
         </service>
 
         <activity
+            android:name=".view.activity.PaymentActivity"
+            android:exported="true" />
+        <activity
             android:name=".view.activity.SignUpActivity"
             android:exported="true" />
 
@@ -37,11 +40,16 @@
 
         <activity android:name=".view.activity.SplashActivity"
             android:exported="true">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.SplashActivity"
+            android:exported="true"></activity>
         </activity>
     </application>
 
