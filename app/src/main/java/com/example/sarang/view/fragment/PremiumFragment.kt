@@ -1,10 +1,12 @@
 package com.example.sarang.view.fragment
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.sarang.R
+import com.example.sarang.view.activity.PaymentActivity
 import com.example.sarang.view.adapter.PremiumImageSliderAdapter
 import com.example.sarang.view.model.PremiumImageSliderModel
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
@@ -27,6 +29,11 @@ class PremiumFragment : Fragment(R.layout.fragment_premium) {
         buildSlider()
         setSliderAdapter()
 
+        // Navigate to Payment option
+
+        btn_getPremium.setOnClickListener {
+            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+        }
 
     }
 

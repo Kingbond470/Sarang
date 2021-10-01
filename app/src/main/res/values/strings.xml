@@ -16,7 +16,7 @@
     <string name="plan5_desc">Ad-free music. Download to listen offline</string>
     <string name="disclaimer_studentPremium">Offer available only to students at an accredited higher education institution.</string>
     <string name="podcast_shows"><![CDATA[Podcast & Shows]]></string>
-<!--    <string name="default_web_client_id" translatable="false">31085457489-dfv4rgc9t3ko8bv6mp6nvc4ddvmjkr79.apps.googleusercontent.com</string>-->
+    <!--    <string name="default_web_client_id" translatable="false">31085457489-dfv4rgc9t3ko8bv6mp6nvc4ddvmjkr79.apps.googleusercontent.com</string>-->
 
     <style name="clickable_effect">
         <item name="android:background">?android:attr/selectableItemBackground</item>
