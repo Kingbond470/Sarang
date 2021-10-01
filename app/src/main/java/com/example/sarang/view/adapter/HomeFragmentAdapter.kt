@@ -26,7 +26,6 @@ class ToGetYouStartedAdapter(private val listOfHospitals:ArrayList<ToGetYouStart
         return listOfHospitals.size
     }
 
-
     //ViewHolder for Hospitals
     class ToGetYouStartedViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         internal fun setData(toGetYouStarted: ToGetYouStarted) {

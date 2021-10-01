@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,37 +11,37 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_margin="10dp">
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginVertical="20dp">
 
             <TextView
                 android:id="@+id/tvRecentlyPlayed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
+                android:fontFamily="@font/gotham_bold"
                 android:text="Recently Played"
                 android:textColor="@color/white"
-                android:fontFamily="@font/gotham_bold"
-                android:textSize="26sp" />
-
+                android:textSize="20sp" />
 
             <ImageView
                 android:id="@+id/ivNotification"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_marginHorizontal="10dp"
                 android:layout_toLeftOf="@+id/ivRecentlyPlayed"
                 android:src="@drawable/ic_notification" />
 
             <ImageView
                 android:id="@+id/ivRecentlyPlayed"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_marginHorizontal="18dp"
                 android:layout_toLeftOf="@id/ivSettings"
                 android:src="@drawable/ic_recent" />
@@ -48,8 +49,8 @@
 
             <ImageView
                 android:id="@+id/ivSettings"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:src="@drawable/ic_settings" />
@@ -58,13 +59,85 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="30dp"
+    <RelativeLayout
+        android:id="@+id/rlChooseMusic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/violet_bg"
+        android:layout_below="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/tvHomeHey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gotham_medium"
+            android:text="Hey"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHomePickPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHomeHey"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/gotham_light"
+            android:text="Want new playlists? Pick some\nmusic you like."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cdChooseMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHomePickPlaylist"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="10dp"
+            android:backgroundTint="@color/transparent"
+            app:cardCornerRadius="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:fontFamily="@font/gotham_medium"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="15dp"
+                android:text="CHOOSE MUSIC"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvNotNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cdChooseMusic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/gotham_light"
+            android:text="Not now"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewToGetYouStarted"
-        android:layout_below="@+id/toolbar"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlChooseMusic"
+        android:layout_marginTop="30dp" />
 
 
 </RelativeLayout>

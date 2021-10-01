@@ -12,14 +12,11 @@ import com.example.sarang.view.adapter.ToGetYouStartedAdapter
 import com.example.sarang.view.model.ToGetYouStarted
 import kotlinx.android.synthetic.main.fragment_recently_played.*
 
-
 class RecentlyPlayedFragment : Fragment() {
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
     private val togetYouStartedYesterday=ArrayList<ToGetYouStarted>()
     private val togetYouStartedDate=ArrayList<ToGetYouStarted>()
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,7 +34,6 @@ class RecentlyPlayedFragment : Fragment() {
             ft.addToBackStack(null)
             ft.commit()
         }
-
 
         //for to get you started
         for(i in 0..10){
@@ -63,7 +59,6 @@ class RecentlyPlayedFragment : Fragment() {
         recyclerViewYesterday.layoutManager = gridLayoutManager1
         recyclerViewYesterday.hasFixedSize()
 
-
         // for to get you started yesterday
         for(i in 0..10){
             togetYouStartedDate.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
@@ -76,7 +71,6 @@ class RecentlyPlayedFragment : Fragment() {
         recyclerViewDate.layoutManager = gridLayoutManager2
         recyclerViewDate.hasFixedSize()
 
-
 //
 //        recyclerViewYesterdayRecentlyPlayedToday.adapter = toGetYouStartedAdapter
 //        recyclerViewYesterdayRecentlyPlayedToday.layoutManager = gridLayoutManagerHospitals
@@ -86,9 +80,6 @@ class RecentlyPlayedFragment : Fragment() {
 //        recyclerViewDateRecentlyPlayedToday.layoutManager = gridLayoutManagerHospitals
 //        recyclerViewDateRecentlyPlayedToday.hasFixedSize()
 
-
-
     }
-
 
 }

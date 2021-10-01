@@ -13,7 +13,6 @@ import com.example.sarang.R
 import com.example.sarang.view.adapter.ToGetYouStartedAdapter
 import com.example.sarang.view.model.ToGetYouStarted
 
-
 class HomeFragment : Fragment() {
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
@@ -25,7 +24,6 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(com.example.sarang.R.layout.fragment_home, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,7 +44,6 @@ class HomeFragment : Fragment() {
 
 
         ivRecentlyPlayed.setOnClickListener {
-
             val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
             ft.replace(
                 com.example.sarang.R.id.framelayout_container,
@@ -68,14 +65,12 @@ class HomeFragment : Fragment() {
             )
             ft.addToBackStack(null)
             ft.commit()
-
             Toast.makeText(context, "Settings", Toast.LENGTH_SHORT).show()
         }
 
         for(i in 0..10){
             togetyoustartedList.add(ToGetYouStarted(R.drawable.play_date,"Songs"))
         }
-
         //for to get you started
         val toGetYouStartedAdapter = ToGetYouStartedAdapter(togetyoustartedList)
         val gridLayoutManagerHospitals =
@@ -83,9 +78,6 @@ class HomeFragment : Fragment() {
         recyclerViewToGetYouStarted.adapter = toGetYouStartedAdapter
         recyclerViewToGetYouStarted.layoutManager = gridLayoutManagerHospitals
         recyclerViewToGetYouStarted.hasFixedSize()
-
-
-
     }
 
 }

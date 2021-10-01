@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown"
+    tools:context=".view.activity.SongPlayingActivity">
+
+    <FrameLayout
+        android:id="@+id/flFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/app_background"
+        app:layout_constraintBottom_toTopOf="@+id/vpSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/navHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_background"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivCurSongImage"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:contentDescription="TODO"
+        android:padding="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/search_songs_hindi_songs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpSong"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/brown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivPlayPause"
+        app:layout_constraintStart_toEndOf="@+id/ivCurSongImage" />
+
+    <ImageView
+        android:id="@+id/ivPlayPause"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:contentDescription="TODO"
+        android:padding="18dp"
+        android:src="@drawable/ic_music_control_pause_white_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

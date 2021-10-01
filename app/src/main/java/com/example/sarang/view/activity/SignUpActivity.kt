@@ -2,18 +2,18 @@ package com.example.sarang.view.activity
 
 import android.content.ContentValues.TAG
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.sarang.R
-import com.example.sarang.view.fragment.SignUpPhoneNumber
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.example.sarang.view.fragment.SignUpPhoneNumber
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -28,14 +28,10 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-
-        /*mAuth = FirebaseAuth.getInstance()
-        val user = mAuth.currentUser
-
         btnSignUpFree.setOnClickListener {
             val intent = Intent(this@SignUpActivity, MainActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -49,7 +45,6 @@ class SignUpActivity : AppCompatActivity() {
             signIn()
         }
 
-
         btnSignUpPhone.setOnClickListener {
             setCurrentFragment(SignUpPhoneNumber())
         }
@@ -59,7 +54,6 @@ class SignUpActivity : AppCompatActivity() {
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -107,4 +101,5 @@ class SignUpActivity : AppCompatActivity() {
             replace(R.id.containerSignUp, fragment)
             commit()
         }
+
 }

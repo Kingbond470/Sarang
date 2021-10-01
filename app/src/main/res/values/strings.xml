@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Sarang</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search">Search</string>
     <string name="todo">TODO</string>
     <string name="artists_songs_or_podcasts">Artists, songs, or podcasts</string>
@@ -10,13 +9,46 @@
     <string name="search_for_artists_songs_podcasts_and_more">Search for artists, songs, podcasts, and more.</string>
     <string name="search_query">Search query</string>
     <string name="plan1_desc">Day and week plans. Ad-Free music on mobile. Download 30 Songs on 1 mobile device</string>
-    <string name="plan2_desc" translatable="false">Choose 1, 3, 6 or 12 months of Premium. Pay with Paytm or UPI. Top up when you want</string>
+    <string name="plan2_desc">Choose 1, 3, 6 or 12 months of Premium. Pay with Paytm or UPI. Top up when you want</string>
     <string name="plan3_desc">Ad-free music.Download to listen offline</string>
     <string name="plan4_desc">2 Premium accounts. For couples who live together. Ad-free music. Download 10,000 songs/device, on up to 5 devices per account. Choose 1, 3, 6 or 12 months of Premium. Pay with Paytm or UPI. Top up when you want</string>
     <string name="plan5_desc">Ad-free music. Download to listen offline</string>
     <string name="disclaimer_studentPremium">Offer available only to students at an accredited higher education institution.</string>
     <string name="podcast_shows"><![CDATA[Podcast & Shows]]></string>
-    <!--    <string name="default_web_client_id" translatable="false">31085457489-dfv4rgc9t3ko8bv6mp6nvc4ddvmjkr79.apps.googleusercontent.com</string>-->
+    <string name="notification_channel_name">Music Channel</string>
+    <string name="notification_channel_description">Shows the currently playing music</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="carMode">
+        <item>Only in a car</item>
+        <item>Never</item>
+    </string-array>
+
+    <string-array name="wifiAndCellularStreaming">
+        <item>Automatic</item>
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+
+    <string-array name="downloadQuality">
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+
+    <style name="MatchSpinnerStyle" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:divider">@color/grey1</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="MatchSpinnerTheme" parent="Theme.AppCompat">
+        <item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item>
+    </style>
 
     <style name="clickable_effect">
         <item name="android:background">?android:attr/selectableItemBackground</item>
@@ -29,5 +61,4 @@
     <style name="BrandedSwitch">
         <item name="colorAccent">@color/green</item>
     </style>
-
 </resources>

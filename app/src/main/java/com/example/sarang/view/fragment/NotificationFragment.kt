@@ -9,7 +9,6 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.sarang.R
 import kotlinx.android.synthetic.main.fragment_notification.*
 
-
 class NotificationFragment : Fragment() {
 
     override fun onCreateView(
@@ -30,6 +29,5 @@ class NotificationFragment : Fragment() {
             ft.commit()
         }
     }
-
 
 }

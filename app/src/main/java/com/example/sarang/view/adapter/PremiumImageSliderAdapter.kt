@@ -3,7 +3,6 @@ package com.example.sarang.view.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.sarang.R
-
 import com.example.sarang.view.model.PremiumImageSliderModel
 import com.example.sarang.view.viewholder.PremiumImageSliderViewHolder
 import com.smarteist.autoimageslider.SliderViewAdapter
