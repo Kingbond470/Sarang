@@ -38,7 +38,8 @@ class SongFragment : Fragment() {
     @Inject
     lateinit var glide: RequestManager
 
-    private lateinit var mainViewModel: MainViewModel
+    lateinit var mainViewModel: MainViewModel
+
     private val songViewModel: SongViewModel by viewModels()
 
     private var curPlayingSong: Song? = null
@@ -138,4 +139,5 @@ class SongFragment : Fragment() {
         val dateFormat = SimpleDateFormat("mm:ss", Locale.getDefault())
         tvCurTime.text = dateFormat.format(ms)
     }
+
 }

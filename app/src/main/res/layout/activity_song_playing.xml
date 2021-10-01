@@ -5,7 +5,7 @@
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/app_background"
+    android:background="@color/brown"
     tools:context=".view.activity.SongPlayingActivity">
 
     <FrameLayout
@@ -35,7 +35,9 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:contentDescription="TODO"
+        android:padding="10dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/search_songs_hindi_songs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="ContentDescription" />
@@ -44,7 +46,7 @@
         android:id="@+id/vpSong"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="@color/grey1"
+        android:background="@color/brown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivPlayPause"
         app:layout_constraintStart_toEndOf="@+id/ivCurSongImage" />
@@ -53,9 +55,9 @@
         android:id="@+id/ivPlayPause"
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:background="@color/darkBackground"
         android:contentDescription="TODO"
-        android:src="@drawable/ic_music_control_play_white_colour"
+        android:padding="18dp"
+        android:src="@drawable/ic_music_control_pause_white_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="ContentDescription" />

@@ -1,6 +1,5 @@
 package com.example.sarang.viewModel
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,10 +8,14 @@ import com.example.sarang.exoplayer.MusicService
 import com.example.sarang.exoplayer.MusicServiceConnection
 import com.example.sarang.exoplayer.currentPlaybackPosition
 import com.example.sarang.other.Constants.UPDATE_PLAYER_POSITION_INTERVAL
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class SongViewModel @ViewModelInject constructor(
+@HiltViewModel
+
+class SongViewModel @Inject constructor(
     musicServiceConnection: MusicServiceConnection
 ) : ViewModel() {
 

@@ -18,6 +18,7 @@ import com.example.sarang.viewModel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_song_playing.*
+import java.util.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
