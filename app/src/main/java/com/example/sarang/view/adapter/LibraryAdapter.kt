@@ -10,8 +10,8 @@ import com.example.sarang.view.viewholder.LibraryVH
 class LibraryAdapter(private val libraryList: List<LibraryModel>) :
     RecyclerView.Adapter<LibraryVH>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LibraryVH {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.library_linear_layout, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.library_linear_layout, parent, false)
         return LibraryVH(view)
     }
 
