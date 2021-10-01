@@ -1,5 +1,6 @@
 package com.example.sarang.view.fragment
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,10 +24,8 @@ class SignUpNumberOTPFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         pin_view.doAfterTextChanged {
-            if(pin_view.text.toString().length==6){
-
-            }else{
-
+            if(pin_view.text.toString().trim().length==6){
+                    btnNextSignUp.setBackgroundColor(Color.parseColor("#ffffff"))
             }
         }
     }

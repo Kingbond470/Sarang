@@ -3,16 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Sarang/app/src/main/res/drawable/icon_play.xml" value="0.2203125" />
         <entry key="..\:/Android/Sarang/app/src/main/res/drawable/memory_indicator_progress.xml" value="0.15572916666666667" />
         <entry key="..\:/Android/Sarang/app/src/main/res/drawable/sign_up_bg.xml" value="0.2203125" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_splash.xml" value="0.11820652173913043" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_notification.xml" value="0.12771739130434784" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_premium.xml" value="0.11911231884057971" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search_songs.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search_songs_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_settings.xml" value="0.2" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_settings_profile.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_sign_up_number_o_t_p.xml" value="0.22" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_sign_up_o_t_p_number.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_sign_up_phone_number.xml" value="0.35733333333333334" />

@@ -63,14 +63,16 @@ class SettingsFragment : Fragment() {
         free /= 1024
         total = String.format("%.1f", total).toFloat()
         free = String.format("%.1f", free).toFloat()
-        val busy = total - free;
+
+        val busy = String.format("%.1f",(total - free)).toFloat()
+
         indicator.max = total.toInt()
         indicator.progress = busy.toInt()
         tvFreeSpace.text = "$free GB"
         tvUsedSpace.text = "$busy GB"
 
         val cache = context?.cacheDir.toString()
-        tvCacheSpace.text = cache
+        tvCacheSpace.text = "2.2 MB"
 
         llDeleteCache.setOnClickListener {
             context?.cacheDir?.deleteRecursively()

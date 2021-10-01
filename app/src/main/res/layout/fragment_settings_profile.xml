@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".view.fragment.SettingsProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/llSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey9"
+        android:orientation="horizontal"
+        android:paddingVertical="15dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivBackSettingsProfile"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/gotham_medium"
+            android:text="Username"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
