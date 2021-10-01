@@ -1,10 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     android:orientation="vertical"
     tools:context=".view.fragment.LibraryFragment">
 
+    <LinearLayout
+        android:id="@+id/library_topView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:orientation="horizontal">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:drawableLeft="@drawable/user_icon"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/gotham_medium"
+            android:text="Your Library"
+            android:textColor="#FFFFFF"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_library_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn_library_add"
+        android:layout_alignBottom="@id/btn_library_add"
+        android:layout_toLeftOf="@id/btn_library_add"
+        android:src="@drawable/ic_bottom_nav_search_selected_true_icon" />
+
+    <ImageView
+        android:id="@+id/btn_library_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/plush_icon" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/library_topView"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_changeLibraryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@color/black"
+            android:src="@drawable/grid_view_icon"
+            app:civ_border_width="2dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/library_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            tools:listitem="@layout/library_linear_layout" />
+    </LinearLayout>
+</RelativeLayout>

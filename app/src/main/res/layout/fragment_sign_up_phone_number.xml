@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    android:paddingRight="10dp"
+    tools:context=".view.fragment.SignUpPhoneNumber">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivBackSignUpPhone"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/tvEnterPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivBackSignUpPhone"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/gotham_bold"
+        android:text="Enter phone number"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:id="@+id/rlPhoneNoSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvEnterPhoneNumber"
+        android:layout_marginTop="25dp"
+        android:background="@color/phone_no_background">
+
+        <RelativeLayout
+            android:id="@+id/rlIndiaPhoneSignUP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/phone_no_background"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/gotham_medium"
+                android:text="India"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ic_right_arrow" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlIndiaPhoneSignUP"
+            android:background="@color/phone_no_background">
+
+            <TextView
+                android:id="@+id/tvCountryCodeSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="15dp"
+                android:text="+91"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="1dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@+id/tvCountryCodeSignUp"
+                android:background="@color/white" />
+
+            <EditText
+                android:id="@+id/etNumberSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toRightOf="@+id/vLine"
+                android:inputType="number"
+                android:background="@color/phone_no_background"
+                android:fontFamily="@font/gotham_light"
+                android:hint="Phone Number"
+                android:textColorHint="@color/white" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvsmscodeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlPhoneNoSignUp"
+        android:layout_marginTop="50dp"
+        android:letterSpacing="0.01"
+        android:text="We’ll send you a code by SMS to confirm your \n phone number."
+        android:textColor="@color/white"
+        android:fontFamily="@font/gotham_medium"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvServiceTextSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_medium"
+        android:layout_below="@+id/tvsmscodeText"
+        android:layout_marginTop="12dp"
+        android:letterSpacing="0.01"
+        android:text="We may occasionally send you service-based \n messages."
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvServiceTextSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        app:cardCornerRadius="20dp">
+
+        <Button
+            android:id="@+id/btnNextSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#C4141414"
+            android:fontFamily="@font/gotham_light"
+            android:letterSpacing="0.01"
+            android:padding="12dp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

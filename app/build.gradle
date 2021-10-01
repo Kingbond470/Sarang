@@ -79,7 +79,8 @@ dependencies {
     //Okhttp3
     implementation "com.squareup.okhttp3:okhttp:$okhttp3_version"
 
-    
+
+
     //hilt
     implementation("com.google.dagger:hilt-android:2.38.1")
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
@@ -90,6 +91,8 @@ dependencies {
     // Image Slider
     implementation 'com.github.smarteist:autoimageslider:1.4.0'
 
+    //Circular Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 
 
@@ -151,4 +154,17 @@ dependencies {
     api "com.google.android.exoplayer:exoplayer-core:2.11.8"
     api "com.google.android.exoplayer:exoplayer-ui:2.11.8"
     api "com.google.android.exoplayer:extension-mediasession:2.11.8"
+
+    // circular imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // otp pin view
+    implementation 'com.chaos.view:pinview:1.4.3'
+
+    //fire base
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+
+    //google authentication
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+
 }

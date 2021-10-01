@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "31085457489",
+    "project_id": "sarang-39776",
+    "storage_bucket": "sarang-39776.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31085457489:android:5bff1ad2dbb784d1220870",
+        "android_client_info": {
+          "package_name": "com.example.sarang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "31085457489-1u3vgclmm2j3tm9d1vvsfbpulihejjep.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sarang",
+            "certificate_hash": "cf3ba5210684af2f10eef4e2d2e0538fd93aa54d"
+          }
+        },
+        {
+          "client_id": "31085457489-dfv4rgc9t3ko8bv6mp6nvc4ddvmjkr79.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhJe-oF_1Dc9cJ1v77b7lKQkRezDWvVbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "31085457489-dfv4rgc9t3ko8bv6mp6nvc4ddvmjkr79.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

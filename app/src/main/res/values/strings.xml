@@ -18,4 +18,16 @@
     <string name="notification_channel_name">Music Channel</string>
     <string name="notification_channel_description">Shows the currently playing music</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+    <style name="clickable_effect">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:theme">@android:style/ThemeOverlay.Material.Dark</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="BrandedSwitch">
+        <item name="colorAccent">@color/green</item>
+    </style>
 </resources>
