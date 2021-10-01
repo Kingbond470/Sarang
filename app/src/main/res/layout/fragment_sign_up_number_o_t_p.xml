@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/pin_view"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/gotham_medium"
+        android:fontFamily="@font/gotham_light"
         android:text="We’ll send an SMS with a 6-digit code to \n
 +918970452155"
         android:textColor="@color/white"
@@ -84,6 +84,36 @@
             android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvResendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend SMS"
+        android:drawableLeft="@drawable/ic_bx_bx_message_alt_detail"
+        android:layout_below="@id/cvNext"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gotham_light"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tvEditPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Phone Number"
+        android:drawableLeft="@drawable/ic_bytesize_edit"
+        android:layout_below="@id/tvResendSMS"
+        android:drawablePadding="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gotham_light"
+        android:textSize="14sp"
+        />
 
 
 </RelativeLayout>
