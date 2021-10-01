@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.sarang.R
-import kotlinx.android.synthetic.main.fragment_sign_up_phone_number.*
-
 
 class SignUpPhoneNumber : Fragment() {
 
@@ -23,6 +21,5 @@ class SignUpPhoneNumber : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
     }
-
 
 }

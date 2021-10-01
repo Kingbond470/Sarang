@@ -3,9 +3,7 @@ package com.example.sarang.view.fragment
 import android.os.Bundle
 import android.support.v4.media.session.PlaybackStateCompat
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
@@ -25,21 +23,12 @@ import java.util.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class SongFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_song, container, false)
-    }
+class SongFragment : Fragment(R.layout.fragment_song) {
 
     @Inject
     lateinit var glide: RequestManager
 
-    lateinit var mainViewModel: MainViewModel
-
+    private lateinit var mainViewModel: MainViewModel
     private val songViewModel: SongViewModel by viewModels()
 
     private var curPlayingSong: Song? = null
@@ -139,5 +128,4 @@ class SongFragment : Fragment() {
         val dateFormat = SimpleDateFormat("mm:ss", Locale.getDefault())
         tvCurTime.text = dateFormat.format(ms)
     }
-
 }

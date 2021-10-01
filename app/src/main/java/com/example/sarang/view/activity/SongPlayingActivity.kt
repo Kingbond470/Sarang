@@ -127,8 +127,8 @@ class SongPlayingActivity : AppCompatActivity() {
         mainViewModel.playbackState.observe(this) {
             playbackState = it
             ivPlayPause.setImageResource(
-                if (playbackState?.isPlaying == true) R.drawable.ic_music_control_play
-                else R.drawable.ic_music_control_pause
+                if (playbackState?.isPlaying == true) R.drawable.ic_music_control_pause
+                else R.drawable.ic_music_control_play
             )
         }
         mainViewModel.isConnected.observe(this) {

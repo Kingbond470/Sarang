@@ -12,7 +12,6 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.sarang.R
 import kotlinx.android.synthetic.main.fragment_settings.*
 
-
 class SettingsFragment : Fragment() {
 
     override fun onCreateView(

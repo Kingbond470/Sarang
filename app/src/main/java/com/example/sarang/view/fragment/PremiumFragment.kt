@@ -12,7 +12,6 @@ import com.smarteist.autoimageslider.SliderAnimations
 import com.smarteist.autoimageslider.SliderView
 import kotlinx.android.synthetic.main.fragment_premium.*
 
-
 class PremiumFragment : Fragment(R.layout.fragment_premium) {
     private val imageList = mutableListOf<PremiumImageSliderModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,13 +20,9 @@ class PremiumFragment : Fragment(R.layout.fragment_premium) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // Image Slider
-
         buildSlider()
         setSliderAdapter()
-
-
     }
 
     private fun buildSlider() {

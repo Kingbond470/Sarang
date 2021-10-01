@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android/Sarang/app/src/main/res/drawable/memory_indicator_progress.xml" value="0.15572916666666667" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1265625" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/drawable/blue_bg.xml" value="0.20555555555555555" />
@@ -71,7 +70,7 @@
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_select_music_item.xml" value="0.20199275362318841" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_settings.xml" value="0.11875" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_sign_up_phone_number.xml" value="0.20199275362318841" />
-        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_song.xml" value="0.22" />
+        <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_song.xml" value="0.2" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/fragment_song_home.xml" value="0.16" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/item_layout_togetyoustarted.xml" value="0.20199275362318841" />
         <entry key="..\:/Construct Week Project/3. Sarang/Sarang/app/src/main/res/layout/list_item.xml" value="0.20199275362318841" />

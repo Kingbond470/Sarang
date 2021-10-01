@@ -13,8 +13,6 @@ import com.example.sarang.view.activity.MainActivity
 import com.example.sarang.view.adapter.SearchFragmentAdapter
 import kotlinx.android.synthetic.main.fragment_select_music.*
 import android.app.Activity
-import kotlinx.android.synthetic.main.activity_sign_up.*
-
 
 class SelectMusicFragment : Fragment() {
 

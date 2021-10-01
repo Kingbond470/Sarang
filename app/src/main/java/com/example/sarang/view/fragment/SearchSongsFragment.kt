@@ -54,7 +54,6 @@ class SearchSongsFragment : Fragment() {
 
     }
 
-
     /*
     <TextView
         android:id="@+id/tvPlayWhatYouLove"

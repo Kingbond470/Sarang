@@ -14,7 +14,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.example.sarang.view.fragment.SignUpPhoneNumber
-import com.example.sarang.view.fragment.SelectMusicFragment
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -87,7 +86,7 @@ class SignUpActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithCredential:success")
                     val user = mAuth.currentUser
-                    val intent = Intent(this@SignUpActivity, SongPlayingActivity::class.java)
+                    val intent = Intent(this@SignUpActivity, MainActivity::class.java)
                     startActivity(intent)
                 } else {
                     // If sign in fails, display a message to the user.

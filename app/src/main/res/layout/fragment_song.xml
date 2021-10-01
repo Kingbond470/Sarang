@@ -8,11 +8,31 @@
     tools:context=".view.fragment.SongFragment">
 
     <ImageView
+        android:id="@+id/ivDownArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_down_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/ivSongImage"
         android:layout_width="match_parent"
         android:layout_height="335dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="80dp"
         android:layout_marginRight="20dp"
         android:scaleType="fitXY"
         android:src="@drawable/song_image"
@@ -38,14 +58,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivSongImage" />
 
+    <ImageView
+        android:id="@+id/ivLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_like_selected_false"
+        app:layout_constraintBottom_toBottomOf="@id/tvSongName"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvCurTime"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:gravity="center"
         android:text="00:00"
-        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:fontFamily="@font/gotham_book"
         app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/seekBar" />
@@ -54,6 +87,7 @@
         android:id="@+id/seekBar"
         android:layout_width="0dp"
         android:layout_height="18dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toStartOf="@+id/tvSongDuration"
         app:layout_constraintStart_toEndOf="@+id/tvCurTime"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
@@ -65,7 +99,9 @@
         android:layout_marginEnd="16dp"
         android:gravity="center"
         android:text="00:00"
-        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:fontFamily="@font/gotham_book"
         app:layout_constraintBottom_toBottomOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/seekBar" />
@@ -74,7 +110,7 @@
         android:id="@+id/ivPlayPauseDetail"
         android:layout_width="63dp"
         android:layout_height="63dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="7dp"
         android:background="@drawable/circle_drawable"
         android:padding="15.5dp"
         android:src="@drawable/ic_music_control_pause"
@@ -94,6 +130,16 @@
         app:layout_constraintTop_toTopOf="@+id/ivPlayPauseDetail" />
 
     <ImageView
+        android:id="@+id/ivShuffle"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_shuffle_selected_false"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlayPauseDetail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivPlayPauseDetail" />
+
+    <ImageView
         android:id="@+id/ivSkip"
         android:layout_width="35dp"
         android:layout_height="35dp"
@@ -101,6 +147,16 @@
         android:src="@drawable/ic_music_control_right"
         app:layout_constraintBottom_toBottomOf="@+id/ivPlayPauseDetail"
         app:layout_constraintStart_toEndOf="@+id/ivPlayPauseDetail"
+        app:layout_constraintTop_toTopOf="@+id/ivPlayPauseDetail" />
+
+    <ImageView
+        android:id="@+id/ivRepeat"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_repeat_selected_false"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlayPauseDetail"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ivPlayPauseDetail" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -116,5 +172,35 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.7" />
+
+    <ImageView
+        android:id="@+id/ivDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_devices"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/ivQueue" />
+
+    <ImageView
+        android:id="@+id/ivQueue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_queue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
