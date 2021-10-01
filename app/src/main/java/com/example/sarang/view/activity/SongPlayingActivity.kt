@@ -25,9 +25,6 @@ import javax.inject.Inject
 class SongPlayingActivity : AppCompatActivity() {
 
     val mainViewModel: MainViewModel by viewModels()
-    //lateinit var mainViewModel: MainViewModel
-    /*mWordViewModel = new ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication())).get(WordViewModel.
-            class);*/
 
     @Inject
     lateinit var swipeSongAdapter: SwipeSongAdapter
@@ -45,10 +42,6 @@ class SongPlayingActivity : AppCompatActivity() {
 
 
         subscribeToObservers()
-
-
-        /*mainViewModel = ViewModelProviders.of(this, ViewModelFactory)
-            .get(MainViewModel::class.java)*/
 
         vpSong.adapter = swipeSongAdapter
 
@@ -163,14 +156,3 @@ class SongPlayingActivity : AppCompatActivity() {
         }
     }
 }
-
-/*
-<service android:name=".exoplayer.MusicService"
-            android:exported="TODO">
-            <intent-filter>
-                <action android:name="android.media.browse.MediaBrowserService" />
-            </intent-filter>
-        </service>.
-
-        6986297787408057~2283367735
- */

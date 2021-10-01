@@ -5,12 +5,14 @@
     android:id="@+id/rootLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     tools:context=".view.activity.SongPlayingActivity">
 
     <FrameLayout
         android:id="@+id/flFragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/app_background"
         app:layout_constraintBottom_toTopOf="@+id/vpSong"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -22,6 +24,7 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/app_background"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph" />
 
@@ -31,17 +34,17 @@
         android:id="@+id/ivCurSongImage"
         android:layout_width="56dp"
         android:layout_height="56dp"
+        android:contentDescription="TODO"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="TODO"
         tools:ignore="ContentDescription" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/vpSong"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="@color/darkBackground"
+        android:background="@color/grey1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ivPlayPause"
         app:layout_constraintStart_toEndOf="@+id/ivCurSongImage" />
@@ -51,10 +54,10 @@
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:background="@color/darkBackground"
-        android:src="@drawable/ic_music_control_play"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_music_control_play_white_colour"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="TODO"
         tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

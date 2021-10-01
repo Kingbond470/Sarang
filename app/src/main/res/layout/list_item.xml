@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="60dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="14dp"
+    android:layout_marginEnd="20dp"
+    android:background="@color/app_background">
 
     <ImageView
-        android:id="@+id/ivItemImage"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/ivSongItemImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/search_songs_hindi_songs" />
 
-    <com.google.android.material.textview.MaterialTextView
+    <TextView
         android:id="@+id/tvPrimary"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="16dp"
-        android:gravity="center|left"
-        android:text="Playlist Title"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivItemImage"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="HardcodedText,RtlHardcoded" />
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/gotham_medium"
+        android:src="@drawable/search_songs_hindi_songs"
+        android:text="Hindi Songs"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
-    <com.google.android.material.textview.MaterialTextView
+    <TextView
         android:id="@+id/tvSecondary"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:text="100 Songs"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivItemImage"
-        app:layout_constraintTop_toBottomOf="@+id/tvPrimary"
-        tools:ignore="HardcodedText" />
+        android:layout_below="@id/tvPrimary"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/gotham_medium"
+        android:src="@drawable/search_songs_hindi_songs"
+        android:text="Playlist"
+        android:textColor="@color/grey8"
+        android:textSize="14sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ivRightArrowImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="18dp"
+        android:src="@drawable/ic_right_arrow" />
+
+</RelativeLayout>
