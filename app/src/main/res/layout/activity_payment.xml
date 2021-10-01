@@ -278,7 +278,7 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/btn_select"
+                android:id="@+id/btn_confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -286,7 +286,7 @@
                 android:enabled="false"
                 android:fontFamily="@font/gotham_medium"
                 android:paddingHorizontal="50dp"
-                android:text="Select"
+                android:text="Confirm"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp"
