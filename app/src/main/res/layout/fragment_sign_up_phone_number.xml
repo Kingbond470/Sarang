@@ -116,19 +116,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rlPhoneNoSignUp"
         android:layout_marginTop="50dp"
+        android:fontFamily="@font/gotham_medium"
         android:letterSpacing="0.01"
         android:text="We’ll send you a code by SMS to confirm your \n phone number."
         android:textColor="@color/white"
-        android:fontFamily="@font/gotham_medium"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tvServiceTextSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/gotham_medium"
         android:layout_below="@+id/tvsmscodeText"
         android:layout_marginTop="12dp"
+        android:fontFamily="@font/gotham_medium"
         android:letterSpacing="0.01"
         android:text="We may occasionally send you service-based \n messages."
         android:textColor="@color/white"
