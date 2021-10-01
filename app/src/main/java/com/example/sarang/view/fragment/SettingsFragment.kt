@@ -70,7 +70,11 @@ class SettingsFragment : Fragment() {
         tvFreeSpace.text = "$free GB"
         tvUsedSpace.text = "$busy GB"
 
+        val cache = context?.cacheDir.toString()
+        tvCacheSpace.text = cache
+
         llDeleteCache.setOnClickListener {
+            context?.cacheDir?.deleteRecursively()
             rlCache.visibility = View.GONE
         }
 
