@@ -21,6 +21,35 @@
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <!-- TODO: Remove or change this placeholder text -->
 
+    <string-array name="carMode">
+        <item>Only in a car</item>
+        <item>Never</item>
+    </string-array>
+
+    <string-array name="wifiAndCellularStreaming">
+        <item>Automatic</item>
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+
+    <string-array name="downloadQuality">
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+
+    <style name="MatchSpinnerStyle" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:divider">@color/grey1</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="MatchSpinnerTheme" parent="Theme.AppCompat">
+        <item name="android:dropDownListViewStyle">@style/MatchSpinnerStyle</item>
+    </style>
+
     <style name="clickable_effect">
         <item name="android:background">?android:attr/selectableItemBackground</item>
         <item name="android:foreground">?android:attr/selectableItemBackground</item>
