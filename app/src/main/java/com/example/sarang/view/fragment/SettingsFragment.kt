@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.FragmentTransaction
 import com.example.sarang.R
-import kotlinx.android.synthetic.main.fragment_recently_played.*
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 
@@ -78,52 +77,3 @@ class SettingsFragment : Fragment() {
     }
 
 }
-
-/*
-
-        //for storage
-        val totalSpace: Float = DeviceMemory().getInternalStorageSpace()
-        val outputFormat = DecimalFormat("#.##")
-
-        if (null != indicator) {
-            indicator.max = totalSpace.toInt()
-            indicator.progress = DeviceMemory().getInternalUsedSpace().toInt()
-        }
-        if (null != freeSpace) {
-//            freeSpaceText.text = outputFormat.format(freeSpace) + " MB"
-            freeSpace.text = outputFormat.format("${DeviceMemory().getInternalFreeSpace()} MB")
-        }
-
-        if (null != occupiedSpace) {
-//            occupiedSpaceText.setText(outputFormat.format(occupiedSpace) + " MB");
-            occupiedSpace.text = outputFormat.format("${DeviceMemory().getInternalUsedSpace()} MB")
-        }
-
-    }
-
-    class DeviceMemory {
-
-        fun getInternalStorageSpace(): Float {
-            val statFs = StatFs(Environment.getDataDirectory().absolutePath);
-            //StatFs statFs = new StatFs("/data");
-            val total = (statFs.blockCount.toFloat() * statFs.blockSize) / 1048576;
-            return total.toFloat();
-        }
-
-        fun getInternalFreeSpace(): Float {
-            val statFs = StatFs(Environment.getDataDirectory().absolutePath);
-            //StatFs statFs = new StatFs("/data");
-            val free  = (statFs.availableBlocks.toFloat() * statFs.blockSize) / 1048576;
-            return free;
-        }
-
-        fun getInternalUsedSpace(): Float {
-            val statFs = StatFs(Environment.getDataDirectory().absolutePath);
-            //StatFs statFs = new StatFs("/data");
-            val total = (statFs.blockCount.toFloat() * statFs.blockSize) / 1048576;
-            val free  = (statFs.availableBlocks.toFloat() * statFs.blockSize) / 1048576;
-            val busy  = total - free;
-            return busy;
-        }
-    }
- */

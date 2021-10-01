@@ -168,6 +168,7 @@
                     android:textSize="18sp" />
 
                 <LinearLayout
+                    style="@style/clickable_effect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="10dp"
