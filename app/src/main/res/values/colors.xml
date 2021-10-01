@@ -28,5 +28,8 @@
     <color name="bottom_nav_background">#282828</color>
     <color name="transparent">#00000000</color>
     <color name="phone_no_background">#535252</color>
+    <color name="storageUsed">#2b78d0</color>
+    <color name="storageFree">#616161</color>
+    <color name="storageCache">#A7A7A7</color>
 
 </resources>
