@@ -30,11 +30,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
         btnSignUpFree.setOnClickListener {
-            /*supportFragmentManager.beginTransaction().apply {
-                replace(R.id.sign_up_framelayout_container, SelectMusicFragment())
-                commit()
-            }*/
-            val intent = Intent(this@SignUpActivity, SongPlayingActivity::class.java)
+            val intent = Intent(this@SignUpActivity, MainActivity::class.java)
             startActivity(intent)
         }
 

@@ -60,11 +60,11 @@ class SearchFragment : Fragment() {
             ft.commit()
         }
 
-        /*tvSearch.setOnClickListener {
+        tvSearch.setOnClickListener {
             val i = Intent(activity, SongPlayingActivity::class.java)
             startActivity(i)
             (activity as Activity?)!!.overridePendingTransition(0, 0)
-        }*/
+        }
 
     }
 
