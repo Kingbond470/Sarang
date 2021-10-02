@@ -154,13 +154,50 @@ class SongFragment : Fragment(R.layout.fragment_song) {
         }
         songViewModel.curSongDuration.observe(viewLifecycleOwner) {
             seekBar.max = it.toInt()
-            val dateFormat = SimpleDateFormat("mm:ss", Locale.getDefault())
-            tvSongDuration.text = dateFormat.format(it)
+            val milliseconds: Long = it
+            val minutes = milliseconds / 1000 / 60
+            val seconds = milliseconds / 1000 % 60
+            val strintMin: String = minutes.toString()
+            val strintSec: String = seconds.toString()
+            if (strintMin.length == 1 && strintSec.length == 1) {
+                val startTime: String = "0${minutes}:0${seconds}"
+                tvSongDuration.text = startTime
+            } else if (strintMin.length == 1 || strintSec.length == 1) {
+                if (strintMin.length == 1) {
+                    val startTime: String = "0${minutes}:${seconds}"
+                    tvSongDuration.text = startTime
+                } else {
+                    val startTime: String = "${minutes}:0${seconds}"
+                    tvSongDuration.text = startTime
+                }
+            } else {
+                val startTime: String = "${minutes}:${seconds}"
+                tvSongDuration.text = startTime
+            }
         }
     }
 
     private fun setCurPlayerTimeToTextView(ms: Long) {
-        val dateFormat = SimpleDateFormat("mm:ss", Locale.getDefault())
-        tvCurTime.text = dateFormat.format(ms)
+        //val dateFormat = SimpleDateFormat("mm:ss", Locale.getDefault())
+        val milliseconds: Long = ms
+        val minutes = milliseconds / 1000 / 60
+        val seconds = milliseconds / 1000 % 60
+        val strintMin: String = minutes.toString()
+        val strintSec: String = seconds.toString()
+        if (strintMin.length == 1 && strintSec.length == 1) {
+            val startTime: String = "0${minutes}:0${seconds}"
+            tvCurTime.text = startTime
+        } else if (strintMin.length == 1 || strintSec.length == 1) {
+            if (strintMin.length == 1) {
+                val startTime: String = "0${minutes}:${seconds}"
+                tvCurTime.text = startTime
+            } else {
+                val startTime: String = "${minutes}:0${seconds}"
+                tvCurTime.text = startTime
+            }
+        } else {
+            val startTime: String = "${minutes}:${seconds}"
+            tvCurTime.text = startTime
+        }
     }
 }

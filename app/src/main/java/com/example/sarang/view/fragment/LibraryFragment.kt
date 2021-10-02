@@ -1,6 +1,5 @@
 package com.example.sarang.view.fragment
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment

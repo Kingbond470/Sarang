@@ -1,5 +1,7 @@
 package com.example.sarang.view.fragment
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.os.StatFs
@@ -11,6 +13,7 @@ import android.widget.SeekBar
 import androidx.fragment.app.FragmentTransaction
 import com.bumptech.glide.Glide
 import com.example.sarang.R
+import com.example.sarang.view.activity.SplashActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_library.*
 import kotlinx.android.synthetic.main.fragment_settings.*
@@ -49,6 +52,7 @@ class SettingsFragment : Fragment() {
         Glide.with(ivSettingProfileImage).load(user!!.photoUrl).into(ivSettingProfileImage)
         tvSettingsProfileName.setText(user!!.displayName)
         ivEmail.setText(user!!.email)
+        tvLogOutName.setText("You are logged in as ${user.displayName}")
 
         ivBackSettings.setOnClickListener {
             val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
@@ -61,7 +65,13 @@ class SettingsFragment : Fragment() {
             ft.commit()
         }
 
-
+        //logout
+        tvLogOut.setOnClickListener {
+            mAuth.signOut()
+            val i = Intent(activity, SplashActivity::class.java)
+            startActivity(i)
+            (activity as Activity?)!!.overridePendingTransition(0, 0)
+        }
 
         if (spinnerSettingDownload.count > 1) {
             spinnerSettingDownload.setSelection(1)
