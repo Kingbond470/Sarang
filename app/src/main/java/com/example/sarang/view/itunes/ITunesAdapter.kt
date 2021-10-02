@@ -38,7 +38,7 @@ class MusicAdapter(private val responseList: ArrayList<Result>, private val clic
                 Glide.with(ivTrackImage).load(resultsModel.artworkUrl100).into(ivTrackImage)
                 tvTrackName.text = resultsModel.trackName
                 tvArtistName.text = resultsModel.artistName
-                tvCollectionName.text = resultsModel.collectionName
+                //tvCollectionName.text = resultsModel.collectionName
             }
             view.setOnClickListener {
                 clickListener.onClick(adapterPosition, resultsModel)
