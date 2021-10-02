@@ -101,7 +101,7 @@
                     <ImageView
                         android:id="@+id/ivFavoriteWhite"
                         android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_height="match_parent"
                         android:src="@drawable/icon_favorite_white"
                         android:visibility="visible" />
 

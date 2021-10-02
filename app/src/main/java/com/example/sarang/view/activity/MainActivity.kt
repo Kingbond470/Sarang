@@ -3,16 +3,42 @@ package com.example.sarang.view.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.support.v4.media.session.PlaybackStateCompat
 import android.view.View
+import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
-import com.example.sarang.R
-import com.example.sarang.view.fragment.HomeFragment
-import com.example.sarang.view.fragment.LibraryFragment
-import com.example.sarang.view.fragment.PremiumFragment
-import com.example.sarang.view.fragment.SearchFragment
+import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.RequestManager
+import com.example.sarang.data.database.Song
+import com.example.sarang.exoplayer.isPlaying
+import com.example.sarang.exoplayer.toSong
+import com.example.sarang.other.Status
+import com.example.sarang.view.adapter.SwipeSongAdapter
+import com.example.sarang.viewModel.MainViewModel
+import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_song_playing.*
+import javax.inject.Inject
+import androidx.navigation.findNavController
+import com.example.sarang.R
+import com.example.sarang.view.fragment.*
+
+@AndroidEntryPoint
 
 class MainActivity : AppCompatActivity() {
+
+    val mainViewModel: MainViewModel by viewModels()
+
+    @Inject
+    lateinit var swipeSongAdapter: SwipeSongAdapter
+
+    @Inject
+    lateinit var glide: RequestManager
+
+    private var curPlayingSong: Song? = null
+
+    private var playbackState: PlaybackStateCompat? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,9 +56,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         //Added to favorites
-        ivFavoriteWhite.setOnClickListener {
-            ivFavoriteWhite.visibility = View.GONE
-            ivFavoriteGreen.visibility = View.VISIBLE
+        mivFavoriteWhite.setOnClickListener {
+            mivFavoriteWhite.visibility = View.GONE
+            mivFavoriteGreen.visibility = View.VISIBLE
 
             cdAddedToLikedSongs.visibility = View.VISIBLE
             tvAddedToLikedSongs.text = "Added To Liked Songs."
@@ -45,9 +71,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         //removed from favorites
-        ivFavoriteGreen.setOnClickListener {
-            ivFavoriteGreen.visibility = View.GONE
-            ivFavoriteWhite.visibility = View.VISIBLE
+        mivFavoriteGreen.setOnClickListener {
+            mivFavoriteGreen.visibility = View.GONE
+            mivFavoriteWhite.visibility = View.VISIBLE
 
             cdAddedToLikedSongs.visibility = View.VISIBLE
             tvAddedToLikedSongs.text = "Removed From Liked Songs."
@@ -56,31 +82,104 @@ class MainActivity : AppCompatActivity() {
                 this@MainActivity
                 cdAddedToLikedSongs.visibility = View.GONE
             }, 2000)
-
         }
 
+        //implement song fragment
+        /*mcdPlayingSong.setOnClickListener {
 
-        //play
-        ivPlay.setOnClickListener {
-            ivPlay.visibility = View.GONE
-            ivPause.visibility = View.VISIBLE
+        }*/
+
+        mivPlay.setOnClickListener {
+            mivPlay.visibility = View.GONE
         }
-        //pause
-        ivPause.setOnClickListener {
-            ivPause.visibility = View.GONE
-            ivPlay.visibility = View.VISIBLE
+        subscribeToObservers()
+
+        mvpSong.adapter = swipeSongAdapter
+
+        mvpSong.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (playbackState?.isPlaying == true) {
+                    mainViewModel.playOrToggleSong(swipeSongAdapter.songs[position])
+                } else {
+                    curPlayingSong = swipeSongAdapter.songs[position]
+                }
+            }
+        })
+
+        mivPlayPause.setOnClickListener {
+            curPlayingSong?.let {
+                mainViewModel.playOrToggleSong(it, true)
+            }
         }
 
-//        //for bottom margin
-//        val layoutParams = (framelayout_container?.layoutParams as? ViewGroup.MarginLayoutParams)
-//        if (cdPlayingSong.isVisible) {
-//            layoutParams?.setMargins(0, 0, 0, 130)
-//            framelayout_container?.layoutParams = layoutParams
-//        } else {
-//            layoutParams?.setMargins(0, 0, 0, 0)
-//            framelayout_container?.layoutParams = layoutParams
-//        }
+    }
 
+    private fun switchViewPagerToCurrentSong(song: Song) {
+        val newItemIndex = swipeSongAdapter.songs.indexOf(song)
+        if (newItemIndex != -1) {
+            mvpSong.currentItem = newItemIndex
+            curPlayingSong = song
+        }
+    }
+
+    private fun subscribeToObservers() {
+        mainViewModel.mediaItems.observe(this) {
+            it?.let { result ->
+                when (result.status) {
+                    Status.SUCCESS -> {
+                        result.data?.let { songs ->
+                            swipeSongAdapter.songs = songs
+                            if (songs.isNotEmpty()) {
+                                glide.load((curPlayingSong ?: songs[0]).imageUrl)
+                                    .into(mivCurSongImage)
+                            }
+                            switchViewPagerToCurrentSong(curPlayingSong ?: return@observe)
+                        }
+                    }
+                    Status.ERROR -> Unit
+                    Status.LOADING -> Unit
+                }
+            }
+        }
+        mainViewModel.curPlayingSong.observe(this) {
+            if (it == null) return@observe
+
+            curPlayingSong = it.toSong()
+            glide.load(curPlayingSong?.imageUrl).into(mivCurSongImage)
+            switchViewPagerToCurrentSong(curPlayingSong ?: return@observe)
+        }
+        mainViewModel.playbackState.observe(this) {
+            playbackState = it
+            mivPlayPause.setImageResource(
+                if (playbackState?.isPlaying == true) R.drawable.ic_music_control_play_white_colour
+                else R.drawable.ic_music_control_pause_white_colour
+            )
+        }
+        mainViewModel.isConnected.observe(this) {
+            it?.getContentIfNotHandled()?.let { result ->
+                when (result.status) {
+                    Status.ERROR -> Snackbar.make(
+                        rootLayout,
+                        result.message ?: "An unknown error occured",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                    else -> Unit
+                }
+            }
+        }
+        mainViewModel.networkError.observe(this) {
+            it?.getContentIfNotHandled()?.let { result ->
+                when (result.status) {
+                    Status.ERROR -> Snackbar.make(
+                        rootLayout,
+                        result.message ?: "An unknown error occured",
+                        Snackbar.LENGTH_LONG
+                    ).show()
+                    else -> Unit
+                }
+            }
+        }
     }
 
     private fun setCurrentFragment(fragment: Fragment) =
