@@ -54,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/cardViewSearchQuery"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="50dp"
         android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -62,7 +62,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/cardViewSearchQuery"
-        android:layout_marginTop="90dp" />
+        android:layout_marginTop="50dp" />
 
 
 </RelativeLayout>
