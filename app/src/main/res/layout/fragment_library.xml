@@ -8,27 +8,29 @@
     android:orientation="vertical"
     tools:context=".view.fragment.LibraryFragment">
 
-    <LinearLayout
-        android:id="@+id/library_topView"
-        android:layout_width="match_parent"
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ivProfileTopImage"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignBottom="@id/btn_library_add"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/user_icon"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical"
-            android:drawableLeft="@drawable/user_icon"
-            android:drawablePadding="15dp"
-            android:fontFamily="@font/gotham_medium"
-            android:text="Your Library"
-            android:textColor="#FFFFFF"
-            android:textSize="26dp"
-            android:textStyle="bold" />
-
-
-    </LinearLayout>
+        android:layout_alignBottom="@id/btn_library_add"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/ivProfileTopImage"
+        android:drawablePadding="15dp"
+        android:fontFamily="@font/gotham_medium"
+        android:text="Your Library"
+        android:textColor="#FFFFFF"
+        android:textSize="26dp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/btn_library_search"
@@ -54,11 +56,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/library_topView"
+        android:layout_below="@id/btn_library_add"
         android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/btn_changeLibraryLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

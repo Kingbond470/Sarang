@@ -1,5 +1,7 @@
 package com.example.sarang.view.fragment
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.os.StatFs
@@ -9,10 +11,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import androidx.fragment.app.FragmentTransaction
+import com.bumptech.glide.Glide
 import com.example.sarang.R
+import com.example.sarang.view.activity.SongPlayingActivity
+import com.example.sarang.view.activity.SplashActivity
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.fragment_library.*
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : Fragment() {
+
+    //profile
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +35,13 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //profile
+        mAuth = FirebaseAuth.getInstance()
+        val user = mAuth.currentUser
+        Glide.with(ivSettingProfileImage).load(user!!.photoUrl).into(ivSettingProfileImage)
+        tvSettingsProfileName.setText(user!!.displayName)
+        ivEmail.setText(user!!.email)
+
         ivBackSettings.setOnClickListener {
             val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
             ft.replace(
@@ -34,6 +51,14 @@ class SettingsFragment : Fragment() {
             )
             ft.addToBackStack(null)
             ft.commit()
+        }
+
+        //logout
+        tvLogOut.setOnClickListener {
+            mAuth.signOut()
+            val i = Intent(activity, SplashActivity::class.java)
+            startActivity(i)
+            (activity as Activity?)!!.overridePendingTransition(0, 0)
         }
 
         if (spinnerSettingDownload.count > 1) {
@@ -64,7 +89,7 @@ class SettingsFragment : Fragment() {
         total = String.format("%.1f", total).toFloat()
         free = String.format("%.1f", free).toFloat()
 
-        val busy = String.format("%.1f",(total - free)).toFloat()
+        val busy = String.format("%.1f", (total - free)).toFloat()
 
         indicator.max = total.toInt()
         indicator.progress = busy.toInt()

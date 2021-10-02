@@ -7,7 +7,6 @@
     android:background="@color/app_background"
     tools:context=".view.fragment.HomeFragment">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -59,85 +58,119 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <RelativeLayout
-        android:id="@+id/rlChooseMusic"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/violet_bg"
-        android:layout_below="@+id/toolbar">
+        android:layout_below="@id/toolbar"
+        android:layout_marginBottom="100dp">
 
-        <TextView
-            android:id="@+id/tvHomeHey"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
-            android:fontFamily="@font/gotham_medium"
-            android:text="Hey"
-            android:textColor="@color/white"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvHomePickPlaylist"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvHomeHey"
-            android:layout_centerHorizontal="true"
-            android:layout_marginVertical="10dp"
-            android:fontFamily="@font/gotham_light"
-            android:text="Want new playlists? Pick some\nmusic you like."
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/rlChooseMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/violet_bg">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cdChooseMusic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvHomePickPlaylist"
-            android:layout_centerHorizontal="true"
-            android:layout_marginVertical="10dp"
-            android:backgroundTint="@color/transparent"
-            app:cardCornerRadius="100dp">
+                <TextView
+                    android:id="@+id/tvHomeHey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:text="Hey"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvHomePickPlaylist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvHomeHey"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/gotham_light"
+                    android:text="Want new playlists? Pick some\nmusic you like."
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cdChooseMusic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHomePickPlaylist"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="10dp"
+                    android:backgroundTint="@color/transparent"
+                    app:cardCornerRadius="100dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/gotham_medium"
+                        android:paddingHorizontal="25dp"
+                        android:paddingVertical="15dp"
+                        android:text="CHOOSE MUSIC"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvNotNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cdChooseMusic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/gotham_light"
+                    android:text="Not now"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewToGetYouStarted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlChooseMusic"
+                android:layout_marginTop="30dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:layout_marginTop="30dp"
                 android:fontFamily="@font/gotham_medium"
-                android:paddingHorizontal="25dp"
-                android:paddingVertical="15dp"
-                android:text="CHOOSE MUSIC"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:padding="10dp"
+                android:text="Popular artists"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold" />
 
-        </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/tvNotNow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cdChooseMusic"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/gotham_light"
-            android:text="Not now"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvListOfArtists"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button"
+                android:layout_marginBottom="30dp"/>
 
-    </RelativeLayout>
+        </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewToGetYouStarted"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rlChooseMusic"
-        android:layout_marginTop="30dp" />
-
+    </ScrollView>
 
 </RelativeLayout>

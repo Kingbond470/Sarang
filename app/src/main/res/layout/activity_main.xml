@@ -31,9 +31,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
+                android:backgroundTint="@color/white"
                 android:visibility="gone"
                 app:cardCornerRadius="10dp"
-                android:backgroundTint="@color/white"
                 app:contentPadding="10dp">
 
                 <TextView
@@ -62,7 +62,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#443B3C">
+                    android:background="@color/brown">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cdCurrentSongCoverImage"

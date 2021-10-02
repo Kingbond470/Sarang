@@ -1,5 +1,6 @@
 package com.example.sarang.view.fragment
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -9,18 +10,31 @@ import com.example.sarang.R
 import com.example.sarang.view.adapter.LibraryAdapter
 import com.example.sarang.view.adapter.LibraryAdapter2
 import com.example.sarang.view.model.LibraryModel
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_library.*
+import com.bumptech.glide.Glide
 
 
 class LibraryFragment : Fragment(R.layout.fragment_library) {
     var isGridLayout = false
+
+    //profile
+    private lateinit var mAuth: FirebaseAuth
+
     private var libraryList = mutableListOf<LibraryModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //profile
+        mAuth = FirebaseAuth.getInstance()
+        val user = mAuth.currentUser
+        Glide.with(ivProfileTopImage).load(user!!.photoUrl).into(ivProfileTopImage)
+
         buildLibraryList()
         setLibraryRecyclerView()
         setGridLibraryRecyclerView()
