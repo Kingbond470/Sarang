@@ -36,7 +36,6 @@
             android:orientation="vertical"
             android:paddingBottom="50dp">
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -283,7 +282,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/custom_btn"
-                android:enabled="false"
                 android:fontFamily="@font/gotham_medium"
                 android:paddingHorizontal="50dp"
                 android:text="Confirm"

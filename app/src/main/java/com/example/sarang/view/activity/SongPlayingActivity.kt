@@ -2,7 +2,9 @@ package com.example.sarang.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.support.v4.media.session.PlaybackStateCompat
+import android.view.View
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
@@ -17,6 +19,7 @@ import com.example.sarang.view.adapter.SwipeSongAdapter
 import com.example.sarang.viewModel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_song_playing.*
 import java.util.*
 import javax.inject.Inject
@@ -41,6 +44,17 @@ class SongPlayingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_song_playing)
 
+        //Added to favorites
+        ivFavoriteWhite.setOnClickListener {
+            ivFavoriteWhite.visibility = View.GONE
+            ivFavoriteGreen.visibility = View.VISIBLE
+        }
+
+        //removed from favorites
+        ivFavoriteGreen.setOnClickListener {
+            ivFavoriteGreen.visibility = View.GONE
+            ivFavoriteWhite.visibility = View.VISIBLE
+        }
 
         subscribeToObservers()
 
@@ -79,15 +93,11 @@ class SongPlayingActivity : AppCompatActivity() {
     }
 
     private fun hideBottomBar() {
-        ivCurSongImage.isVisible = false
-        vpSong.isVisible = false
-        ivPlayPause.isVisible = false
+        cdPlayingSong.isVisible = false
     }
 
     private fun showBottomBar() {
-        ivCurSongImage.isVisible = true
-        vpSong.isVisible = true
-        ivPlayPause.isVisible = true
+        cdPlayingSong.isVisible = true
     }
 
     private fun switchViewPagerToCurrentSong(song: Song) {
@@ -127,8 +137,8 @@ class SongPlayingActivity : AppCompatActivity() {
         mainViewModel.playbackState.observe(this) {
             playbackState = it
             ivPlayPause.setImageResource(
-                if (playbackState?.isPlaying == true) R.drawable.ic_music_control_pause
-                else R.drawable.ic_music_control_play
+                if (playbackState?.isPlaying == true) R.drawable.ic_music_control_play_white_colour
+                else R.drawable.ic_music_control_pause_white_colour
             )
         }
         mainViewModel.isConnected.observe(this) {

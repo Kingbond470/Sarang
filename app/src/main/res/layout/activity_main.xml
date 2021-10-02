@@ -9,7 +9,6 @@
     android:orientation="vertical"
     tools:context=".view.activity.MainActivity">
 
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/framelayout_container"
         android:layout_width="match_parent"
@@ -52,12 +51,13 @@
 
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cdPlayingSong"
+                android:id="@+id/mcdPlayingSong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="10dp"
-                app:cardCornerRadius="10dp">
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -65,20 +65,22 @@
                     android:background="@color/brown">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cdCurrentSongCoverImage"
+                        android:id="@+id/mcdCurrentSongCoverImage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_margin="8dp"
+                        android:background="@color/brown"
                         app:cardCornerRadius="10dp">
 
                         <ImageView
-                            android:id="@+id/ivCurrentSongCoverImage"
+                            android:id="@+id/mivCurSongImage"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_centerVertical="true"
+                            android:background="@color/brown"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_launcher_background" />
+                            android:src="@drawable/ic_music_icon" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -86,12 +88,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_toStartOf="@id/llPlayPause"
-                        android:layout_toEndOf="@id/cdCurrentSongCoverImage"
+                        android:layout_toStartOf="@id/mllPlayPause"
+                        android:layout_toEndOf="@id/mcdCurrentSongCoverImage"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tvCurrentSongName"
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/mvpSong"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="3dp"
@@ -102,21 +104,10 @@
                             android:textSize="13sp"
                             android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/tvCurrentSongArtist"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/gotham_light"
-                            android:maxLines="1"
-                            android:text="Tanishk Bagchi"
-                            android:textColor="@color/white"
-                            android:textSize="11sp" />
-
-
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/llPlayPause"
+                        android:id="@+id/mllPlayPause"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
@@ -129,14 +120,14 @@
                             android:layout_height="wrap_content">
 
                             <ImageView
-                                android:id="@+id/ivFavoriteWhite"
+                                android:id="@+id/mivFavoriteWhite"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/icon_favorite_white"
                                 android:visibility="visible" />
 
                             <ImageView
-                                android:id="@+id/ivFavoriteGreen"
+                                android:id="@+id/mivFavoriteGreen"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/icon_favorite_green"
@@ -151,28 +142,26 @@
                             android:layout_marginRight="5dp">
 
                             <ImageView
-                                android:id="@+id/ivPlay"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/icon_play"
-                                android:visibility="gone" />
-
-                            <ImageView
-                                android:id="@+id/ivPause"
+                                android:id="@+id/mivPlay"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/icon_pause"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/mivPlayPause"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/icon_play"
                                 android:visibility="visible" />
 
                         </FrameLayout>
-
 
                     </LinearLayout>
 
                 </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
-
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavBar"
@@ -184,10 +173,8 @@
                 app:itemTextColor="@color/white"
                 app:menu="@menu/bottom_navigation_menu" />
 
-
         </LinearLayout>
 
     </FrameLayout>
-
 
 </RelativeLayout>
