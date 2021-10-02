@@ -31,6 +31,18 @@ class SettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        llViewProfile.setOnClickListener {
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                R.id.framelayout_container,
+                EditProfileFragment(),
+                "EditProfile Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()
+        }
+
+
         //profile
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser
@@ -48,6 +60,8 @@ class SettingsFragment : Fragment() {
             ft.addToBackStack(null)
             ft.commit()
         }
+
+
 
         if (spinnerSettingDownload.count > 1) {
             spinnerSettingDownload.setSelection(1)
