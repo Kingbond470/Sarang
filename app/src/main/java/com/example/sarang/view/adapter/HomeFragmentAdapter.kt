@@ -7,13 +7,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sarang.R
 import com.example.sarang.view.itunes.ArtistClickListener
+import com.example.sarang.view.itunes.ThrowbackClickListener
 import com.example.sarang.view.itunes.ToGetYouStartedClickListener
 import com.example.sarang.view.model.PopularArtists
+import com.example.sarang.view.model.ThrowBack
 import com.example.sarang.view.model.ToGetYouStarted
 import kotlinx.android.synthetic.main.item_layout_for_artists.view.*
 import kotlinx.android.synthetic.main.item_layout_togetyoustarted.view.*
 
-//Adapter for To Get You started
+//Adapter for To Get You started - Mood
 class ToGetYouStartedAdapter(
     private val listOfGetStarted: ArrayList<ToGetYouStarted>,
     val clickListener: ToGetYouStartedClickListener
@@ -51,6 +53,48 @@ class ToGetYouStartedAdapter(
     }
 
 }
+
+
+
+//Adapter for Throwback
+class ThrowbackAdapter(
+    private val listOfThrowBack: ArrayList<ThrowBack>,
+    val clickListener: ThrowbackClickListener
+) : RecyclerView.Adapter<ThrowbackAdapter.ThrowbackViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ThrowbackViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return ThrowbackViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: ThrowbackViewHolder, position: Int) {
+        val throwback = listOfThrowBack[position]
+        holder.setData(throwback)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfThrowBack.size
+    }
+
+    //ViewHolder
+    class ThrowbackViewHolder(
+        private val view: View,
+        val clickListener: ThrowbackClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(throwback: ThrowBack) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(throwback.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = throwback.title
+            }
+            view.setOnClickListener {
+                clickListener.onThrowClick(adapterPosition, throwback)
+            }
+        }
+    }
+
+}
+
 
 
 //Artist Adapter

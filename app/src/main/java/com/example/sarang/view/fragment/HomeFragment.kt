@@ -11,25 +11,24 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.sarang.R
 import com.example.sarang.view.adapter.ArtistAdapter
+import com.example.sarang.view.adapter.ThrowbackAdapter
 import com.example.sarang.view.adapter.ToGetYouStartedAdapter
 import com.example.sarang.view.itunes.ArtistClickListener
+import com.example.sarang.view.itunes.ThrowbackClickListener
 import com.example.sarang.view.itunes.ToGetYouStartedClickListener
 import com.example.sarang.view.model.PopularArtists
+import com.example.sarang.view.model.ThrowBack
 import com.example.sarang.view.model.ToGetYouStarted
 
-class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListener {
+class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
+    ToGetYouStartedClickListener, ThrowbackClickListener {
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
+    private val throwbackList = ArrayList<ThrowBack>()
     private val listOfArtists = ArrayList<PopularArtists>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }
 
+    // view created - all logic/ business
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -44,7 +43,7 @@ class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListen
             ft.addToBackStack(null)
             ft.commit()
 
-            Toast.makeText(context, "Notification", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Notification", Toast.LENGTH_SHORT).show()
         }
 
 
@@ -59,7 +58,7 @@ class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListen
             ft.addToBackStack(null)
             ft.commit()
 
-            Toast.makeText(context, "Recently PLayed", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Recently PLayed", Toast.LENGTH_SHORT).show()
         }
 
         ivSettings.setOnClickListener {
@@ -72,7 +71,7 @@ class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListen
             ft.addToBackStack(null)
             ft.commit()
 
-            Toast.makeText(context, "Settings", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Settings", Toast.LENGTH_SHORT).show()
         }
 
         //Setting RecyclerView Data for ToGetYouStarted
@@ -125,6 +124,30 @@ class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListen
         recyclerViewToGetYouStarted.adapter = toGetYouStartedAdapter
         recyclerViewToGetYouStarted.layoutManager = gridLayoutManagerHospitals
         recyclerViewToGetYouStarted.hasFixedSize()
+
+
+        //Setting RecyclerView Data for Throwback
+        throwbackList.clear()
+        for (i in 1..1) {
+            throwbackList.add(ThrowBack(R.drawable.throwback_all_out_hindi, "hindi"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_romance, "romance"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_hippop, "hollywood"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_best_of_decade, "classic song"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_rock_classic, "rock classic"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_jazz, "jazz"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_male_artist, "Male"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_swagger, "swagger"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_bonnie_tyler, "bonnie tyler"))
+            throwbackList.add(ThrowBack(R.drawable.throwback_partyhits, "dance"))
+        }
+        throwbackList.shuffle()
+
+        //throwback - recycler view
+        val throwbackAdapter = ThrowbackAdapter(throwbackList, this@HomeFragment)
+        val gridLayoutManager = GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewThrowback.adapter = throwbackAdapter
+        recyclerViewThrowback.layoutManager = gridLayoutManager
+        recyclerViewThrowback.hasFixedSize()
 
 
         //Setting RecyclerView Data for Artists
@@ -180,6 +203,8 @@ class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListen
 
     }
 
+
+    // artist click listerner
     override fun onArtistClick(position: Int, artists: PopularArtists) {
         val args = Bundle()
         args.putString("artistName", artists.artistName)
@@ -193,14 +218,16 @@ class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListen
         ft.replace(
             R.id.framelayout_container,
             artistFragment,
-            "Artist Fragment"
+            "Fragment"
         )
         ft.addToBackStack(null)
         ft.commit()
 
-        Toast.makeText(context, "Artist", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(context, "Artist", Toast.LENGTH_SHORT).show()
     }
 
+
+    // to get you started - mood click listener
     override fun onMoodClick(position: Int, mood: ToGetYouStarted) {
         val args = Bundle()
         args.putString("artistName", mood.title)
@@ -214,12 +241,34 @@ class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListen
         ft.replace(
             R.id.framelayout_container,
             artistFragment,
-            "Artist Fragment"
+            "Fragment"
         )
         ft.addToBackStack(null)
         ft.commit()
 
-        Toast.makeText(context, "Mood", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(context, "Mood", Toast.LENGTH_SHORT).show()
+    }
+
+
+    // Throwback click listener
+    override fun onThrowClick(position: Int, throwback: ThrowBack) {
+        val args = Bundle()
+        args.putString("artistName", throwback.title)
+        args.putString("artistImage", throwback.albumImage.toString())
+
+        val artistFragment = ArtistFragment()
+        artistFragment.arguments = args
+
+        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+
+        ft.replace(
+            R.id.framelayout_container,
+            artistFragment,
+            "Fragment"
+        )
+        ft.addToBackStack(null)
+        ft.commit()
+
     }
 
 }
