@@ -29,7 +29,6 @@ class HomeFragment : Fragment(), ArtistClickListener {
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -91,12 +90,19 @@ class HomeFragment : Fragment(), ArtistClickListener {
 
         //Setting RecyclerView Data for Artists
         listOfArtists.clear()
-        for (i in 1..3) {
-            listOfArtists.add(PopularArtists(R.drawable.artist_image_jubin_nautiyal, "Jubin Nautiyal"))
-            listOfArtists.add(PopularArtists(R.drawable.artist_image_dua_lipa, "Dua Lipa"))
+        for (i in 1..1) {
             listOfArtists.add(PopularArtists(R.drawable.artist_image_arijit_singh, "Arijit Singh"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_justin_bieber, "Justin Bieber"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_dua_lipa, "Dua Lipa"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_taylor_swift, "Taylor Swift"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_jubin_nautiyal, "Jubin Nautiyal"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_blackpink, "BLACKPINK"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_aurora_aksnes, "Aurora Aksnes"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_shreya_ghoshal, "Shreya Ghoshal"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_pritam_chakraborty, "Pritam Chakraborty"))
+            listOfArtists.add(PopularArtists(R.drawable.artist_image_bts, "BTS"))
         }
-
+        listOfArtists.shuffle()
 
 
         //for artists list rcv
