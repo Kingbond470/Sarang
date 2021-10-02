@@ -13,10 +13,11 @@ import com.example.sarang.R
 import com.example.sarang.view.adapter.ArtistAdapter
 import com.example.sarang.view.adapter.ToGetYouStartedAdapter
 import com.example.sarang.view.itunes.ArtistClickListener
+import com.example.sarang.view.itunes.ToGetYouStartedClickListener
 import com.example.sarang.view.model.PopularArtists
 import com.example.sarang.view.model.ToGetYouStarted
 
-class HomeFragment : Fragment(), ArtistClickListener {
+class HomeFragment : Fragment(), ArtistClickListener, ToGetYouStartedClickListener {
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
     private val listOfArtists = ArrayList<PopularArtists>()
@@ -75,12 +76,50 @@ class HomeFragment : Fragment(), ArtistClickListener {
         }
 
         //Setting RecyclerView Data for ToGetYouStarted
-        for (i in 0..10) {
-            togetyoustartedList.add(ToGetYouStarted(R.drawable.play_date, "Songs"))
+        togetyoustartedList.clear()
+        for (i in 1..1) {
+            togetyoustartedList.add(ToGetYouStarted(R.drawable.togetyoustarted_youme, "you me"))
+            togetyoustartedList.add(
+                ToGetYouStarted(
+                    R.drawable.togetyoustarted_moodbooster,
+                    "Mood Booster"
+                )
+            )
+            togetyoustartedList.add(
+                ToGetYouStarted(
+                    R.drawable.togetyoustarted_feelingmyself,
+                    "feeling myself"
+                )
+            )
+            togetyoustartedList.add(
+                ToGetYouStarted(
+                    R.drawable.togetyoustarted_feelinggood,
+                    "feeling good"
+                )
+            )
+            togetyoustartedList.add(
+                ToGetYouStarted(
+                    R.drawable.togetyoustarted_darkstormy,
+                    "dark stormy"
+                )
+            )
+            togetyoustartedList.add(
+                ToGetYouStarted(
+                    R.drawable.togetyoustarted_chilltracks,
+                    "chill tracks"
+                )
+            )
+            togetyoustartedList.add(
+                ToGetYouStarted(
+                    R.drawable.togetyoustarted_feelinggoodpiano,
+                    "piano"
+                )
+            )
         }
+        togetyoustartedList.shuffle()
 
         //for to get you started
-        val toGetYouStartedAdapter = ToGetYouStartedAdapter(togetyoustartedList)
+        val toGetYouStartedAdapter = ToGetYouStartedAdapter(togetyoustartedList, this@HomeFragment)
         val gridLayoutManagerHospitals =
             GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
         recyclerViewToGetYouStarted.adapter = toGetYouStartedAdapter
@@ -92,14 +131,39 @@ class HomeFragment : Fragment(), ArtistClickListener {
         listOfArtists.clear()
         for (i in 1..1) {
             listOfArtists.add(PopularArtists(R.drawable.artist_image_arijit_singh, "Arijit Singh"))
-            listOfArtists.add(PopularArtists(R.drawable.artist_image_justin_bieber, "Justin Bieber"))
+            listOfArtists.add(
+                PopularArtists(
+                    R.drawable.artist_image_justin_bieber,
+                    "Justin Bieber"
+                )
+            )
             listOfArtists.add(PopularArtists(R.drawable.artist_image_dua_lipa, "Dua Lipa"))
             listOfArtists.add(PopularArtists(R.drawable.artist_image_taylor_swift, "Taylor Swift"))
-            listOfArtists.add(PopularArtists(R.drawable.artist_image_jubin_nautiyal, "Jubin Nautiyal"))
+            listOfArtists.add(
+                PopularArtists(
+                    R.drawable.artist_image_jubin_nautiyal,
+                    "Jubin Nautiyal"
+                )
+            )
             listOfArtists.add(PopularArtists(R.drawable.artist_image_blackpink, "BLACKPINK"))
-            listOfArtists.add(PopularArtists(R.drawable.artist_image_aurora_aksnes, "Aurora Aksnes"))
-            listOfArtists.add(PopularArtists(R.drawable.artist_image_shreya_ghoshal, "Shreya Ghoshal"))
-            listOfArtists.add(PopularArtists(R.drawable.artist_image_pritam_chakraborty, "Pritam Chakraborty"))
+            listOfArtists.add(
+                PopularArtists(
+                    R.drawable.artist_image_aurora_aksnes,
+                    "Aurora Aksnes"
+                )
+            )
+            listOfArtists.add(
+                PopularArtists(
+                    R.drawable.artist_image_shreya_ghoshal,
+                    "Shreya Ghoshal"
+                )
+            )
+            listOfArtists.add(
+                PopularArtists(
+                    R.drawable.artist_image_pritam_chakraborty,
+                    "Pritam Chakraborty"
+                )
+            )
             listOfArtists.add(PopularArtists(R.drawable.artist_image_bts, "BTS"))
         }
         listOfArtists.shuffle()
@@ -112,7 +176,6 @@ class HomeFragment : Fragment(), ArtistClickListener {
         rcvListOfArtists.adapter = artistAdapter
         rcvListOfArtists.layoutManager = artistGridLayoutManager
         rcvListOfArtists.hasFixedSize()
-
 
 
     }
@@ -135,7 +198,28 @@ class HomeFragment : Fragment(), ArtistClickListener {
         ft.addToBackStack(null)
         ft.commit()
 
-        Toast.makeText(context, "Artist Fragment", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Artist", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onMoodClick(position: Int, mood: ToGetYouStarted) {
+        val args = Bundle()
+        args.putString("artistName", mood.title)
+        args.putString("artistImage", mood.albumImage.toString())
+
+        val artistFragment = ArtistFragment()
+        artistFragment.arguments = args
+
+        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+
+        ft.replace(
+            R.id.framelayout_container,
+            artistFragment,
+            "Artist Fragment"
+        )
+        ft.addToBackStack(null)
+        ft.commit()
+
+        Toast.makeText(context, "Mood", Toast.LENGTH_SHORT).show()
     }
 
 }
