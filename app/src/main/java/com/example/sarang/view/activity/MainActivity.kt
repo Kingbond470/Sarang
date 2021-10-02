@@ -71,7 +71,6 @@ class MainActivity : AppCompatActivity() {
             ivPlay.visibility = View.VISIBLE
         }
 
-
 //        //for bottom margin
 //        val layoutParams = (framelayout_container?.layoutParams as? ViewGroup.MarginLayoutParams)
 //        if (cdPlayingSong.isVisible) {
@@ -81,7 +80,6 @@ class MainActivity : AppCompatActivity() {
 //            layoutParams?.setMargins(0, 0, 0, 0)
 //            framelayout_container?.layoutParams = layoutParams
 //        }
-
 
     }
 
