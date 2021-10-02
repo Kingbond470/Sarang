@@ -49,15 +49,17 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_margin="8dp"
+                android:background="@color/brown"
                 app:cardCornerRadius="10dp">
 
                 <ImageView
                     android:id="@+id/ivCurSongImage"
                     android:layout_width="40dp"
+                    android:background="@color/brown"
                     android:layout_height="40dp"
                     android:layout_centerVertical="true"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_launcher_background" />
+                    android:src="@drawable/ic_music_icon" />
 
             </androidx.cardview.widget.CardView>
 
