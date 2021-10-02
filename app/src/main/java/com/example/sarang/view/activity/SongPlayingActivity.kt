@@ -157,3 +157,35 @@ class SongPlayingActivity : AppCompatActivity() {
         }
     }
 }
+/*
+<TextView
+                    android:id="@+id/tvCurrentSongName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:fontFamily="@font/gotham_light"
+                    android:maxLines="1"
+                    android:text="Raataan Lambiyan"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vpSong"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:background="@color/brown"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivPlayPause"
+                    app:layout_constraintStart_toEndOf="@+id/ivCurSongImage" />
+
+                <TextView
+                    android:id="@+id/tvCurrentSongArtist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_light"
+                    android:maxLines="1"
+                    android:text="Tanishk Bagchi"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+ */
