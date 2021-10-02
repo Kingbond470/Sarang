@@ -1,10 +1,7 @@
 package com.example.sarang.view.activity
 
-import android.graphics.Color
-import android.graphics.ColorFilter
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sarang.R
 import kotlinx.android.synthetic.main.activity_payment.*
@@ -16,7 +13,11 @@ class PaymentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
 
+        btn_confirm.setOnClickListener {
+            val intent = Intent(this, PaymentOptionActivity::class.java)
+            intent.putExtra("amount", amount)
+            startActivity(intent)
 
-
+        }
     }
 }
