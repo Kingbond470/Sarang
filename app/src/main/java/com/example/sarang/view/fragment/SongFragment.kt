@@ -5,6 +5,7 @@ import android.support.v4.media.session.PlaybackStateCompat
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.SeekBar
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.RequestManager
@@ -21,6 +22,12 @@ import kotlinx.android.synthetic.main.fragment_song_home.*
 import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
+import android.content.Intent
+import com.example.sarang.view.adapter.BaseSongAdapter
+import com.example.sarang.view.adapter.SwipeSongAdapter
+import kotlinx.android.synthetic.main.activity_song_playing.*
+import kotlinx.android.synthetic.main.fragment_search_songs_item.view.*
+
 
 @AndroidEntryPoint
 class SongFragment : Fragment(R.layout.fragment_song) {
@@ -37,15 +44,43 @@ class SongFragment : Fragment(R.layout.fragment_song) {
 
     private var shouldUpdateSeekbar = true
 
+    //private lateinit var swipeSongAdapter: SwipeSongAdapter
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
+        //swipeSongAdapter = Vie
         subscribeToObservers()
 
         ivPlayPauseDetail.setOnClickListener {
             curPlayingSong?.let {
                 mainViewModel.playOrToggleSong(it, true)
             }
+        }
+
+
+        //val song = swipeSongAdapter.songs
+
+        /*ivShare.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.putExtra(
+                Intent.EXTRA_TEXT,
+                song.get(1).title +
+                        " -\n\n" + song.get(1).songUrl + "\n\n" + "~ via Sarang \uD83D\uDCE3"
+            )
+            intent.type = "text/plain"
+            requireContext().startActivity(Intent.createChooser(intent, "Send To"))
+        }*/
+
+        ivDownArrow.setOnClickListener {
+            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+            ft.replace(
+                R.id.navHostFragment,
+                SongHomeFragment(),
+                "Song Home Fragment"
+            )
+            ft.addToBackStack(null)
+            ft.commit()
         }
 
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
