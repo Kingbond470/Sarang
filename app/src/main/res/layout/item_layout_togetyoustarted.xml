@@ -34,16 +34,5 @@
         android:ellipsize="end"
         android:text="The finest quality"
         android:textColor="@color/white"/>
-    <TextView
-        android:id="@+id/tvDescriptionToGetYouStarted"
-        android:layout_below="@+id/tvTitleGetYouStarted"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:fontFamily="@font/gotham_light"
-        android:text="of Bollywood music handpi..."
-        android:textColor="@color/white"/>
 
 </RelativeLayout>
