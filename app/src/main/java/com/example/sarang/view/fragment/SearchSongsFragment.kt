@@ -1,5 +1,7 @@
 package com.example.sarang.view.fragment
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +12,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.FragmentTransaction
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sarang.R
+import com.example.sarang.view.activity.SongPlayingActivity
 import com.example.sarang.view.adapter.SearchedSongsAdapter
 import com.example.sarang.view.itunes.*
 import kotlinx.android.synthetic.main.fragment_artist.*
@@ -101,8 +104,9 @@ class SearchSongsFragment : Fragment(), ClickListener {
     }
 
     override fun onClick(position: Int, result: Result) {
-        //please read what's written in TODO
-        TODO("Write the Code to play music")
+        val i = Intent(activity, SongPlayingActivity::class.java)
+        startActivity(i)
+        (activity as Activity?)!!.overridePendingTransition(0, 0)
     }
 
 }
