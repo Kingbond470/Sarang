@@ -108,26 +108,6 @@ class HomeFragment : Fragment(), ArtistClickListener {
         rcvListOfArtists.hasFixedSize()
 
 
-        button.setOnClickListener {
-
-            val args = Bundle()
-            args.putString("artistName", button.text.toString())
-
-            val artistFragment = ArtistFragment()
-            artistFragment.arguments = args
-
-            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
-            ft.replace(
-                R.id.framelayout_container,
-                artistFragment,
-                "=Settings Fragment"
-            )
-            ft.addToBackStack(null)
-            ft.commit()
-
-            Toast.makeText(context, "Artist Fragment", Toast.LENGTH_SHORT).show()
-        }
-
 
     }
 
