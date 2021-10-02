@@ -21,18 +21,25 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class SearchSongsFragment : Fragment(), ClickListener {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search_songs, container, false)
-    }
+class SearchSongsFragment : Fragment(R.layout.fragment_search_songs), ClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //for animation of search edittext
+        etSearchQuery.requestFocus()
+        ivSearchQueryBack.setOnClickListener {
+            flSearchQuery.visibility = View.GONE
+            cardViewSearchDummy.visibility = View.VISIBLE
+        }
+
+        cardViewSearchDummy.setOnClickListener {
+            cardViewSearchDummy.visibility = View.GONE
+            flSearchQuery.visibility = View.VISIBLE
+            etSearchQuery.requestFocus()
+        }
+
+
 
 //        val recyclerview = recyclerViewSearchSongs
 //        recyclerview.layoutManager = LinearLayoutManager(context)
@@ -89,17 +96,18 @@ class SearchSongsFragment : Fragment(), ClickListener {
         }
 
 
+
         //back to SearchFragment
-        ivSearchQueryBack.setOnClickListener {
-            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
-            ft.replace(
-                com.example.sarang.R.id.framelayout_container,
-                SearchFragment(),
-                "Search Songs Fragment"
-            )
-            ft.addToBackStack(null)
-            ft.commit()
-        }
+//        ivSearchQueryBack.setOnClickListener {
+//            val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+//            ft.replace(
+//                com.example.sarang.R.id.framelayout_container,
+//                SearchFragment(),
+//                "Search Songs Fragment"
+//            )
+//            ft.addToBackStack(null)
+//            ft.commit()
+//        }
 
     }
 
