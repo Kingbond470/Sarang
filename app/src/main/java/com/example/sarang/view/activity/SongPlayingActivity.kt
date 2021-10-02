@@ -79,11 +79,15 @@ class SongPlayingActivity : AppCompatActivity() {
     }
 
     private fun hideBottomBar() {
-        cdPlayingSong.isVisible = false
+        ivCurSongImage.isVisible = false
+        vpSong.isVisible = false
+        ivPlayPause.isVisible = false
     }
 
     private fun showBottomBar() {
-        cdPlayingSong.isVisible = true
+        ivCurSongImage.isVisible = true
+        vpSong.isVisible = true
+        ivPlayPause.isVisible = true
     }
 
     private fun switchViewPagerToCurrentSong(song: Song) {
@@ -123,8 +127,8 @@ class SongPlayingActivity : AppCompatActivity() {
         mainViewModel.playbackState.observe(this) {
             playbackState = it
             ivPlayPause.setImageResource(
-                if (playbackState?.isPlaying == true) R.drawable.ic_music_control_pause_white_colour
-                else R.drawable.ic_music_control_play_white_colour
+                if (playbackState?.isPlaying == true) R.drawable.ic_music_control_pause
+                else R.drawable.ic_music_control_play
             )
         }
         mainViewModel.isConnected.observe(this) {

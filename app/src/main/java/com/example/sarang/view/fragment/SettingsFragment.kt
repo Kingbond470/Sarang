@@ -13,10 +13,8 @@ import android.widget.SeekBar
 import androidx.fragment.app.FragmentTransaction
 import com.bumptech.glide.Glide
 import com.example.sarang.R
-import com.example.sarang.view.activity.SongPlayingActivity
 import com.example.sarang.view.activity.SplashActivity
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.fragment_library.*
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : Fragment() {
