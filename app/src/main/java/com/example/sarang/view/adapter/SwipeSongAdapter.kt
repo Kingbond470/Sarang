@@ -20,6 +20,7 @@ class SwipeSongAdapter : BaseSongAdapter(R.layout.swipe_item) {
                 }
             }
         }
+        song.songUrl
     }
 
 }

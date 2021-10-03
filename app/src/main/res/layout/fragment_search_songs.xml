@@ -7,62 +7,130 @@
     android:background="@color/app_background"
     tools:context=".view.fragment.SearchSongsFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewSearchQuery"
+    <RelativeLayout
+        android:id="@+id/llSearchQuery"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp">
+        android:layout_height="60dp"
+        android:background="@color/grey9">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSearchDummy"
             android:layout_width="match_parent"
-            android:layout_height="40.28dp"
-            android:background="@color/grey1"
-            android:orientation="horizontal"
-            app:cardCornerRadius="5dp">
+            android:layout_height="match_parent"
+            android:layout_margin="7dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp">
 
-            <ImageView
-                android:id="@+id/ivSearchQueryBack"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="16dp"
-                android:src="@drawable/ic_back" />
-
-            <EditText
-                android:id="@+id/etSearchQuery"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:autofillHints="songs"
-                android:background="@color/grey1"
-                android:drawableEnd="@drawable/ic_camera"
-                android:drawablePadding="11dp"
-                android:fontFamily="@font/gotham_light"
-                android:hint="@string/search_query"
-                android:inputType="text"
-                android:paddingStart="14dp"
-                android:paddingEnd="13.38dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="12sp" />
+                android:background="@color/grey1">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:autofillHints="songs"
+                    android:background="@color/grey1"
+                    android:drawablePadding="11dp"
+                    android:fontFamily="@font/gotham_light"
+                    android:text="Search"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_camera" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:id="@+id/flSearchQuery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewSearchQuery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/grey1"
+                    android:orientation="horizontal"
+                    app:cardCornerRadius="5dp">
+
+                    <ImageView
+                        android:id="@+id/ivSearchQueryBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/ic_back" />
+
+                    <EditText
+                        android:id="@+id/etSearchQuery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/ivSearchQueryBack"
+                        android:autofillHints="songs"
+                        android:background="@color/grey1"
+                        android:fontFamily="@font/gotham_light"
+                        android:hint="@string/search_query"
+                        android:inputType="text"
+                        android:paddingHorizontal="20dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivSearchQueryScan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/ic_camera" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewSearchSongs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/cardViewSearchQuery"
-        android:layout_marginTop="50dp"
+        android:layout_below="@id/llSearchQuery"
+        android:layout_marginTop="90dp"
         android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvSearchSongsThroughAPI"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/cardViewSearchQuery"
-        android:layout_marginTop="50dp" />
+        android:layout_below="@id/llSearchQuery"
+        android:layout_marginTop="90dp" />
 
 
 </RelativeLayout>
