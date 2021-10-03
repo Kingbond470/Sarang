@@ -80,7 +80,7 @@
                             android:layout_centerVertical="true"
                             android:background="@color/brown"
                             android:scaleType="fitXY"
-                            android:src="@drawable/ic_music_icon" />
+                            android:src="@drawable/ic_bottom_nav_premium_selected_false_icon" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -166,7 +166,7 @@
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavBar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="?attr/actionBarSize"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/bottom_nav_bar_bg"
                 app:itemIconTint="@color/white"
