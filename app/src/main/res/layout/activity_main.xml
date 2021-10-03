@@ -169,8 +169,9 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/bottom_nav_bar_bg"
-                app:itemIconTint="@color/white"
-                app:itemTextColor="@color/white"
+                app:itemIconTint="@color/nav_btn_bg"
+                app:itemRippleColor="@color/green"
+                app:itemTextColor="@color/nav_btn_bg"
                 app:menu="@menu/bottom_navigation_menu" />
 
         </LinearLayout>
