@@ -70,6 +70,21 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/verified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/verified_icon"
+            android:fontFamily="@font/gotham_medium"
+            android:gravity="center"
+            android:text="Premium Member"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/tc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
