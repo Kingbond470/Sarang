@@ -165,4 +165,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
 
 
+    //Razorpay
+//    implementation 'com.razorpay:checkout:1.6.12'
+
+    // GooglePay
+    implementation 'com.google.android.gms:play-services-wallet:18.1.3'
+
 }

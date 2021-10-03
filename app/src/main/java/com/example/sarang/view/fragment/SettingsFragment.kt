@@ -5,17 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
 import android.os.StatFs
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.bumptech.glide.Glide
 import com.example.sarang.R
-import com.example.sarang.view.activity.SplashActivity
+import com.example.sarang.view.activity.SignUpActivity
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.fragment_library.*
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : Fragment() {
@@ -48,11 +47,16 @@ class SettingsFragment : Fragment() {
         //profile
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser
-        Glide.with(ivSettingProfileImage).load(user!!.photoUrl).into(ivSettingProfileImage)
-        tvSettingsProfileName.setText(user!!.displayName)
-        ivEmail.setText(user!!.email)
-        tvLogOutName.setText("You are logged in as ${user.displayName}")
-
+        if (user != null) {
+            Glide.with(ivSettingProfileImage).load(user.photoUrl).into(ivSettingProfileImage)
+            tvSettingsProfileName.text = user.displayName
+            ivEmail.text = user.email
+            tvLogOutName.text = "You are logged in as ${user.displayName}"
+            Glide.with(ivSettingProfileImage).load(user.photoUrl).into(ivSettingProfileImage)
+            tvSettingsProfileName.text = user.displayName
+            ivEmail.text = user.email
+            tvLogOutName.text = "You are logged in as ${user.displayName}"
+        }
         ivBackSettings.setOnClickListener {
             val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
             ft.replace(
@@ -67,9 +71,9 @@ class SettingsFragment : Fragment() {
         //logout
         tvLogOut.setOnClickListener {
             mAuth.signOut()
-            val i = Intent(activity, SplashActivity::class.java)
-            startActivity(i)
-            (activity as Activity?)!!.overridePendingTransition(0, 0)
+            val logout = Intent(activity, SignUpActivity::class.java)
+            startActivity(logout)
+            (activity as Activity?)?.overridePendingTransition(0, 0)
         }
 
         if (spinnerSettingDownload.count > 1) {
