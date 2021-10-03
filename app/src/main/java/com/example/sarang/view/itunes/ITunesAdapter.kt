@@ -1,19 +1,18 @@
 package com.example.sarang.view.itunes
 
 
-
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.sarang.R
-import kotlinx.android.synthetic.main.fragment_artist.view.*
 import kotlinx.android.synthetic.main.item_layout.view.*
-import kotlinx.android.synthetic.main.item_layout.view.ivTrackImage
 
-class MusicAdapter(private val responseList: ArrayList<Result>, private val clickListener: ClickListener) :
+class MusicAdapter(
+    private val responseList: ArrayList<Result>,
+    private val clickListener: ClickListener
+) :
     RecyclerView.Adapter<MusicAdapter.ViewHolder>() {
 
 
@@ -31,7 +30,8 @@ class MusicAdapter(private val responseList: ArrayList<Result>, private val clic
         return responseList.size
     }
 
-    class ViewHolder(private val view: View, private val clickListener: ClickListener) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(private val view: View, private val clickListener: ClickListener) :
+        RecyclerView.ViewHolder(view) {
 
         fun setData(resultsModel: Result) {
             view.apply {
