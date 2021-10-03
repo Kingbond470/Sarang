@@ -1,6 +1,7 @@
 package com.example.sarang.view.activity
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,10 @@ class PaymentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment)
 
+        select_plan1.setOnClickListener {
+            select_plan1.setBackgroundColor(Color.YELLOW)
+            amount = 101
+        }
         btn_confirm.setOnClickListener {
             val intent = Intent(this, PaymentOptionActivity::class.java)
             intent.putExtra("amount", amount)
@@ -21,7 +26,8 @@ class PaymentActivity : AppCompatActivity() {
 
         }
     }
-    fun selectPlant(linearLayout: LinearLayout){
+
+    fun selectPlant(linearLayout: LinearLayout) {
 
     }
 }
