@@ -26,3 +26,7 @@ interface ChartClickListener {
 interface UniquelyClickListener{
     fun onUniquelyClick(position: Int,uniquely: Uniquely)
 }
+
+interface ToGetYouStartedFirstClickListener{
+    fun onToGetYouStartedOnClick(position: Int, toGetYouStartedFirst: ToGetYouStartedFirst)
+}

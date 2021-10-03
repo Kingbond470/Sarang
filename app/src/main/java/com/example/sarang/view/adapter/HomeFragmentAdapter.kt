@@ -51,6 +51,47 @@ class ToGetYouStartedAdapter(
 }
 
 
+//Adapter for To Get You started - First
+class ToGetYouStartedFirstAdapter(
+    private val listOfGetStartedFirst: ArrayList<ToGetYouStartedFirst>,
+    val clickListener: ToGetYouStartedFirstClickListener
+) : RecyclerView.Adapter<ToGetYouStartedFirstAdapter.ToGetYouStartedFirstViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToGetYouStartedFirstViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return ToGetYouStartedFirstViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: ToGetYouStartedFirstViewHolder, position: Int) {
+        val list = listOfGetStartedFirst[position]
+        holder.setData(list)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfGetStartedFirst.size
+    }
+
+    //ViewHolder for Hospitals
+    class ToGetYouStartedFirstViewHolder(
+        private val view: View,
+        val clickListener: ToGetYouStartedFirstClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(toGetYouStarted: ToGetYouStartedFirst) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(toGetYouStarted.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = toGetYouStarted.title
+            }
+            view.setOnClickListener {
+                clickListener.onToGetYouStartedOnClick(adapterPosition, toGetYouStarted)
+            }
+        }
+    }
+
+}
+
+
+
 //Adapter for Throwback
 class ThrowbackAdapter(
     private val listOfThrowBack: ArrayList<ThrowBack>,

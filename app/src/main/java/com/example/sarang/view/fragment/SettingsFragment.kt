@@ -42,7 +42,6 @@ class SettingsFragment : Fragment() {
             ft.commit()
         }
 
-
         //profile
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser

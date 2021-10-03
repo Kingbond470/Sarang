@@ -12,13 +12,15 @@ import com.example.sarang.view.itunes.*
 import com.example.sarang.view.model.*
 
 class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
-    ToGetYouStartedClickListener, ThrowbackClickListener, IndiaBestClickListener, ChartClickListener, UniquelyClickListener {
+    ToGetYouStartedClickListener, ThrowbackClickListener, IndiaBestClickListener,
+    ChartClickListener, UniquelyClickListener, ToGetYouStartedFirstClickListener {
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
     private val throwbackList = ArrayList<ThrowBack>()
-    private val indiaBestList=ArrayList<IndiaBest>()
-    private val chartList=ArrayList<Chart>()
-    private val uniquelyList=ArrayList<Uniquely>()
+    private val indiaBestList = ArrayList<IndiaBest>()
+    private val chartList = ArrayList<Chart>()
+    private val uniquelyList = ArrayList<Uniquely>()
+    private val togetyoustartedFirstList = ArrayList<ToGetYouStartedFirst>()
     private val listOfArtists = ArrayList<PopularArtists>()
 
 
@@ -136,11 +138,74 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         throwbackList.shuffle()
         //throwback - recycler view
         val throwbackAdapter = ThrowbackAdapter(throwbackList, this@HomeFragment)
-        val gridLayoutManagerThrowBack = GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        val gridLayoutManagerThrowBack =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
         recyclerViewThrowback.adapter = throwbackAdapter
         recyclerViewThrowback.layoutManager = gridLayoutManagerThrowBack
         recyclerViewThrowback.hasFixedSize()
 
+
+        //Setting RecyclerView Data for To Get You Started First
+        togetyoustartedFirstList.clear()
+        for (i in 1..1) {
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_album,
+                    "Today Album"
+                )
+            )
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_bollywood_acoustic,
+                    "Bollywood Acoustic"
+                )
+            )
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_bollywood_romance,
+                    "Bollywood Romance"
+                )
+            )
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_filmy_cover,
+                    "Filmy Cover"
+                )
+            )
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_hindi_hits,
+                    "Hindi Hits"
+                )
+            )
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_indiestan,
+                    "Indiestan"
+                )
+            )
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_punjabi,
+                    "Punjabi Today"
+                )
+            )
+            togetyoustartedFirstList.add(
+                ToGetYouStartedFirst(
+                    R.drawable.recommended_today_punjabi_juk_box,
+                    "Punjabi Box"
+                )
+            )
+        }
+        togetyoustartedFirstList.shuffle()
+        //To Get You Started First - recycler view
+        val toGetYouStartedFirstAdapter =
+            ToGetYouStartedFirstAdapter(togetyoustartedFirstList, this@HomeFragment)
+        val gridLayoutManagerFirst =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewToGetYouStartedFirst.adapter = toGetYouStartedFirstAdapter
+        recyclerViewToGetYouStartedFirst.layoutManager = gridLayoutManagerFirst
+        recyclerViewToGetYouStartedFirst.hasFixedSize()
 
 
         //Setting RecyclerView Data for India Best
@@ -160,7 +225,8 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         indiaBestList.shuffle()
         //India Best - recycler view
         val indiaBestAdapter = IndiaBestAdapter(indiaBestList, this@HomeFragment)
-        val gridLayoutManagerIndiaBest = GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        val gridLayoutManagerIndiaBest =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
         recyclerViewIndiaBest.adapter = indiaBestAdapter
         recyclerViewIndiaBest.layoutManager = gridLayoutManagerIndiaBest
         recyclerViewIndiaBest.hasFixedSize()
@@ -181,11 +247,11 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         chartList.shuffle()
         //Chart - recycler view
         val chartAdapter = ChartAdapter(chartList, this@HomeFragment)
-        val gridLayoutManagerChart = GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        val gridLayoutManagerChart =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
         recyclerViewChart.adapter = chartAdapter
         recyclerViewChart.layoutManager = gridLayoutManagerChart
         recyclerViewChart.hasFixedSize()
-
 
 
         //Setting RecyclerView Data for Uniquely Yours
@@ -198,11 +264,11 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         }
         //Uniquely Yours - recycler view
         val uniquelyAdapter = UniquelyAdapter(uniquelyList, this@HomeFragment)
-        val gridLayoutManagerUniqely = GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        val gridLayoutManagerUniqely =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
         recyclerViewUniquely.adapter = uniquelyAdapter
         recyclerViewUniquely.layoutManager = gridLayoutManagerUniqely
         recyclerViewUniquely.hasFixedSize()
-
 
 
         //Setting RecyclerView Data for Artists
@@ -368,6 +434,28 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         val args = Bundle()
         args.putString("artistName", uniquely.title)
         args.putString("artistImage", uniquely.albumImage.toString())
+
+        val artistFragment = ArtistFragment()
+        artistFragment.arguments = args
+
+        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+
+        ft.replace(
+            R.id.framelayout_container,
+            artistFragment,
+            "Fragment"
+        )
+        ft.addToBackStack(null)
+        ft.commit()
+    }
+
+    override fun onToGetYouStartedOnClick(
+        position: Int,
+        toGetYouStartedFirst: ToGetYouStartedFirst
+    ) {
+        val args = Bundle()
+        args.putString("artistName", toGetYouStartedFirst.title)
+        args.putString("artistImage", toGetYouStartedFirst.albumImage.toString())
 
         val artistFragment = ArtistFragment()
         artistFragment.arguments = args
