@@ -26,3 +26,15 @@ interface ChartClickListener {
 interface UniquelyClickListener{
     fun onUniquelyClick(position: Int,uniquely: Uniquely)
 }
+
+interface ToGetYouStartedFirstClickListener{
+    fun onToGetYouStartedOnClick(position: Int, toGetYouStartedFirst: ToGetYouStartedFirst)
+}
+
+interface WorkoutClickListener{
+    fun onWorkoutClick(position: Int, workout: Workout)
+}
+
+interface ArijitClickListener{
+    fun onArijitClick(position: Int, arijit: Arijit)
+}

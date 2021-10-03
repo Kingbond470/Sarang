@@ -51,6 +51,47 @@ class ToGetYouStartedAdapter(
 }
 
 
+//Adapter for To Get You started - First
+class ToGetYouStartedFirstAdapter(
+    private val listOfGetStartedFirst: ArrayList<ToGetYouStartedFirst>,
+    val clickListener: ToGetYouStartedFirstClickListener
+) : RecyclerView.Adapter<ToGetYouStartedFirstAdapter.ToGetYouStartedFirstViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToGetYouStartedFirstViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return ToGetYouStartedFirstViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: ToGetYouStartedFirstViewHolder, position: Int) {
+        val list = listOfGetStartedFirst[position]
+        holder.setData(list)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfGetStartedFirst.size
+    }
+
+    //ViewHolder for Hospitals
+    class ToGetYouStartedFirstViewHolder(
+        private val view: View,
+        val clickListener: ToGetYouStartedFirstClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(toGetYouStarted: ToGetYouStartedFirst) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(toGetYouStarted.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = toGetYouStarted.title
+            }
+            view.setOnClickListener {
+                clickListener.onToGetYouStartedOnClick(adapterPosition, toGetYouStarted)
+            }
+        }
+    }
+
+}
+
+
+
 //Adapter for Throwback
 class ThrowbackAdapter(
     private val listOfThrowBack: ArrayList<ThrowBack>,
@@ -129,6 +170,48 @@ class IndiaBestAdapter(
     }
 
 }
+
+
+
+//Adapter for Ariijt Music
+class ArijitAdapter(
+    private val listOfArijit: ArrayList<Arijit>,
+    val clickListener: ArijitClickListener
+) : RecyclerView.Adapter<ArijitAdapter.ArijitViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArijitViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return ArijitViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: ArijitViewHolder, position: Int) {
+        val list = listOfArijit[position]
+        holder.setData(list)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfArijit.size
+    }
+
+    //ViewHolder - india best music
+    class ArijitViewHolder(
+        private val view: View,
+        val clickListener: ArijitClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(arijit: Arijit) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(arijit.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = arijit.title
+            }
+            view.setOnClickListener {
+                clickListener.onArijitClick(adapterPosition, arijit)
+            }
+        }
+    }
+
+}
+
 
 //Adapter for India best Music
 class ChartAdapter(
@@ -244,6 +327,48 @@ class ArtistAdapter(
             }
             view.setOnClickListener {
                 clickListener.onArtistClick(adapterPosition, popularArtists)
+            }
+        }
+    }
+
+}
+
+
+
+
+//Adapter for Workout
+class WorkoutAdapter(
+    private val listOfWorkout: ArrayList<Workout>,
+    val clickListener: WorkoutClickListener
+) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkoutViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return WorkoutViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
+        val workoutList = listOfWorkout[position]
+        holder.setData(workoutList)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfWorkout.size
+    }
+
+    //ViewHolder - workout
+    class WorkoutViewHolder(
+        private val view: View,
+        val clickListener: WorkoutClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(workout: Workout) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(workout.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = workout.title
+            }
+            view.setOnClickListener {
+                clickListener.onWorkoutClick(adapterPosition, workout)
             }
         }
     }
