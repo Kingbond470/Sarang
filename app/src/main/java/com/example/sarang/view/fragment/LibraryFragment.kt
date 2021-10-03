@@ -1,6 +1,5 @@
 package com.example.sarang.view.fragment
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -33,7 +32,9 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
         //profile
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser
-        Glide.with(ivProfileTopImage).load(user!!.photoUrl).into(ivProfileTopImage)
+        if (user!=null){
+            Glide.with(userProfileImage).load(user.photoUrl).into(userProfileImage)
+        }
 
         buildLibraryList()
         setLibraryRecyclerView()

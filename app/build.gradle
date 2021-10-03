@@ -165,6 +165,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.0.1'
 
     //Razorpay
-    implementation 'com.razorpay:checkout:1.6.12'
+//    implementation 'com.razorpay:checkout:1.6.12'
 
 }
