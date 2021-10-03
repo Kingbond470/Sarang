@@ -290,3 +290,45 @@ class ArtistAdapter(
     }
 
 }
+
+
+
+
+//Adapter for Workout
+class WorkoutAdapter(
+    private val listOfWorkout: ArrayList<Workout>,
+    val clickListener: WorkoutClickListener
+) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkoutViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return WorkoutViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
+        val workoutList = listOfWorkout[position]
+        holder.setData(workoutList)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfWorkout.size
+    }
+
+    //ViewHolder - workout
+    class WorkoutViewHolder(
+        private val view: View,
+        val clickListener: WorkoutClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(workout: Workout) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(workout.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = workout.title
+            }
+            view.setOnClickListener {
+                clickListener.onWorkoutClick(adapterPosition, workout)
+            }
+        }
+    }
+
+}

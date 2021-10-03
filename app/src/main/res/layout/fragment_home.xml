@@ -269,6 +269,24 @@
                 android:layout_below="@+id/button"
                 android:layout_marginBottom="30dp" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/gotham_medium"
+                android:padding="10dp"
+                android:text="Workout"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerWorkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlChooseMusic" />
+
         </LinearLayout>
 
     </ScrollView>

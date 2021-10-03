@@ -30,3 +30,7 @@ interface UniquelyClickListener{
 interface ToGetYouStartedFirstClickListener{
     fun onToGetYouStartedOnClick(position: Int, toGetYouStartedFirst: ToGetYouStartedFirst)
 }
+
+interface WorkoutClickListener{
+    fun onWorkoutClick(position: Int, workout: Workout)
+}

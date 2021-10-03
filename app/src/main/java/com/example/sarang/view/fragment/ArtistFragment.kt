@@ -24,30 +24,37 @@ class ArtistFragment : Fragment(R.layout.fragment_artist), ClickListener {
 
         Glide.with(ivArtistImage).load(artistImageId?.toInt()).into(ivArtistImage)
 
-        val apiService = ITunesNetwork.instance.create(ITunesApiService::class.java)
-        val toSearch: String? = artistName
-        if (toSearch != null) {
-            apiService.getData(toSearch).enqueue(object : Callback<ITunesResponse> {
-                override fun onResponse(call: Call<ITunesResponse>, response: Response<ITunesResponse>) {
-                    if (response.body() != null) {
-                        rcvArtistSongsList.apply {
-                            layoutManager = LinearLayoutManager(requireContext())
-                            val ar = response.body()!!.results as ArrayList<Result>
-                            adapter = MusicAdapter(
-                                ar, this@ArtistFragment
-                            )
+        try {
+            val apiService = ITunesNetwork.instance.create(ITunesApiService::class.java)
+            val toSearch: String? = artistName
+            if (toSearch != null) {
+                apiService.getData(toSearch).enqueue(object : Callback<ITunesResponse> {
+                    override fun onResponse(
+                        call: Call<ITunesResponse>,
+                        response: Response<ITunesResponse>
+                    ) {
+                        if (response.body() != null) {
+                            rcvArtistSongsList.apply {
+                                layoutManager = LinearLayoutManager(requireContext())
+                                val ar = response.body()!!.results as ArrayList<Result>
+                                adapter = MusicAdapter(
+                                    ar, this@ArtistFragment
+                                )
 //                            Glide.with(ivArtistImage).load(ar[1].artworkUrl100).into(ivArtistImage)
 //                            Glide.with(ivArtistImage).load(artistImageId?.toInt()).into(ivArtistImage)
 
+                            }
                         }
                     }
-                }
 
-                override fun onFailure(call: Call<ITunesResponse>, t: Throwable) {
-                    Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
-                }
+                    override fun onFailure(call: Call<ITunesResponse>, t: Throwable) {
+                        Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
+                    }
 
-            })
+                })
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
 
 
