@@ -13,9 +13,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarang">
-        <activity
-            android:name=".view.activity.PaymentOptionActivity"
-            android:exported="true" />
 
         <service
             android:name=".exoplayer.MusicService"
@@ -25,6 +22,9 @@
             </intent-filter>
         </service>
 
+        <activity
+            android:name=".view.activity.PaymentOptionActivity"
+            android:exported="true" />
         <activity
             android:name=".view.activity.PaymentActivity"
             android:exported="true" />
@@ -49,8 +49,7 @@
 
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_loxWUsINdy3WWQ"
-            />
+            android:value="rzp_test_loxWUsINdy3WWQ" />
         <meta-data
             android:name="com.google.android.gms.wallet.api.enabled"
             android:value="true" />

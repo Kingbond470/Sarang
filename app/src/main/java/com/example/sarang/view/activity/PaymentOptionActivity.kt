@@ -18,6 +18,7 @@ class PaymentOptionActivity : AppCompatActivity(), PaymentResultListener {
         Checkout.preload(this)
 
         amount = intent.getIntExtra("amount", 0)
+        amount = 200
         pay_amount.text = amount.toString()
 
         // Payment with Razorpay
@@ -37,12 +38,12 @@ class PaymentOptionActivity : AppCompatActivity(), PaymentResultListener {
             options.put("description", "Demoing Charges")
             options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.png")
             options.put("currency", "INR")
-            options.put("amount", "100")
+            options.put("amount", "$amount")
             options.put("send_sms_hash", true);
 
             val prefill = JSONObject()
-            prefill.put("email", "test@razorpay.com")
-            prefill.put("contact", "9021066696")
+            prefill.put("email", "prabhakar@sarang.com")
+            prefill.put("contact", "6206950235")
 
             options.put("prefill", prefill)
             checkout.open(this, options)
