@@ -1,20 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/app_background"
     tools:context=".view.fragment.ArtistFragment">
 
-    <ImageView
-        android:id="@+id/ivArtistImage"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"/>
+        android:layout_height="wrap_content">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcvArtistSongsList"
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_background"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_background"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/grey9"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/ivArtistImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/artist_image_arijit_singh"
+                    app:layout_collapseMode="parallax"
+                    app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolBarArtistName"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:title="Name"
+                    app:titleMarginStart="50dp"
+                    app:titleTextColor="@color/white" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvArtistSongsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/ivArtistImage"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.cardview.widget.CardView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#6D1E1E1E"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:layout_margin="5dp"
+                    android:id="@+id/ivArtistBack"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_back" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
 
 </RelativeLayout>
+
+
