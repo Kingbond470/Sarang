@@ -155,6 +155,9 @@ dependencies {
     // circular imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    // Gif ImageView
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
+
     // otp pin view
     implementation 'com.chaos.view:pinview:1.4.3'
 

@@ -17,13 +17,21 @@ import kotlinx.android.synthetic.main.fragment_premium.*
 
 class PremiumFragment : Fragment(R.layout.fragment_premium) {
     private val imageList = mutableListOf<PremiumImageSliderModel>()
+    private var argumentsValue = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (arguments != null) {
+            argumentsValue = arguments?.getString("key").toString()
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        if (argumentsValue == "success") {
+            btn_getPremium.visibility = View.GONE
+            tc.visibility = View.GONE
+            verified.visibility = View.VISIBLE
+        }
         // Image Slider
 
         buildSlider()

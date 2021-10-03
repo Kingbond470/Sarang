@@ -69,10 +69,9 @@ class SarangPayActivity : AppCompatActivity() {
                 btn_verifyOTP.setBackgroundColor(Color.GREEN)
             }, 1500)
         }
+        // Button pay
         btn_pay.setOnClickListener {
-            val intent=Intent(this,MainActivity::class.java)
-            intent.putExtra("intent","success")
-            startActivity(intent)
+            startActivity(Intent(this, SuccessActivity::class.java))
         }
     }
 

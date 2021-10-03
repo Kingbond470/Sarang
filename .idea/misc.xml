@@ -120,6 +120,7 @@
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/grid_view_icon.xml" value="0.2175925925925926" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/grid_view_iocn.xml" value="0.2175925925925926" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_down_arrow.xml" value="0.20462962962962963" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_music.xml" value="0.19814814814814816" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_music_icon.xml" value="0.20462962962962963" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/ic_sign_up_spotift_logo.xml" value="0.2175925925925926" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/library_item_bg.xml" value="0.2175925925925926" />
@@ -138,10 +139,14 @@
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/voilet_bg.xml" value="0.2" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/drawable/white_btn.xml" value="0.21481481481481482" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_main.xml" value="0.12613981762917933" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_payment.xml" value="0.25" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_payment_option.xml" value="0.2368659420289855" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_sarang_pay.xml" value="0.264" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_payment.xml" value="0.24592391304347827" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_sign_up.xml" value="0.24592391304347827" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_song_playing.xml" value="0.2" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_splash.xml" value="0.24592391304347827" />
+        <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/activity_success.xml" value="0.259375" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/dialog_error1.xml" value="0.24139492753623187" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/dialog_error2.xml" value="0.24139492753623187" />
         <entry key="..\:/Prabhakar/Full Stack Android Development/Assignments/Week 23/Sarang-Spotify-Clone/app/src/main/res/layout/dialog_success.xml" value="0.24139492753623187" />
