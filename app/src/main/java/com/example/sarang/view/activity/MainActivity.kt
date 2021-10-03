@@ -1,28 +1,27 @@
 package com.example.sarang.view.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.support.v4.media.session.PlaybackStateCompat
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.RequestManager
+import com.example.sarang.R
 import com.example.sarang.data.database.Song
 import com.example.sarang.exoplayer.isPlaying
 import com.example.sarang.exoplayer.toSong
 import com.example.sarang.other.Status
 import com.example.sarang.view.adapter.SwipeSongAdapter
+import com.example.sarang.view.fragment.*
 import com.example.sarang.viewModel.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_song_playing.*
 import javax.inject.Inject
-import androidx.navigation.findNavController
-import com.example.sarang.R
-import com.example.sarang.view.fragment.*
 
 @AndroidEntryPoint
 
@@ -44,7 +43,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setCurrentFragment(HomeFragment())
-
+        if (intent != null) {
+            val bundle = Bundle()
+            bundle.putString("key", intent.getStringExtra("intent"))
+            val fragment = PremiumFragment()
+            fragment.arguments = bundle
+            val ft = supportFragmentManager.beginTransaction()
+            if (intent.getStringExtra("intent").equals("success")) {
+                ft.replace(R.id.framelayout_container, fragment)
+                    .commit()
+            }
+        }
         bottomNavBar.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.page_1 -> setCurrentFragment(HomeFragment())
@@ -70,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        //removed from favorites
+        //Removed from favorites
         mivFavoriteGreen.setOnClickListener {
             mivFavoriteGreen.visibility = View.GONE
             mivFavoriteWhite.visibility = View.VISIBLE

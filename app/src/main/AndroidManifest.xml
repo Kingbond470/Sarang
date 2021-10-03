@@ -14,9 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarang">
-        <activity
-            android:name=".view.activity.SarangPayActivity"
-            android:exported="true" />
 
         <service
             android:name=".exoplayer.MusicService"
@@ -25,7 +22,9 @@
                 <action android:name="android.media.browse.MediaBrowserService" />
             </intent-filter>
         </service>
-
+        <activity
+            android:name=".view.activity.SarangPayActivity"
+            android:exported="true" />
         <activity
             android:name=".view.activity.PaymentOptionActivity"
             android:exported="true" />
