@@ -3,13 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
-    android:background="@drawable/library_item_bg"
+    android:background="@color/app_background"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/transparent"
         android:padding="10dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -18,7 +19,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/honey"
+            android:src="@drawable/artist_image_justin_bieber"
             app:civ_border_color="#FFFFFF"
             app:civ_border_width="2dp" />
 
@@ -34,7 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/gotham_medium"
-                android:text="Yo Yo Honey Singh"
+                android:text="Justin Bieber"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
 

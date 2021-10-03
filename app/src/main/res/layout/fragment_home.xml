@@ -266,6 +266,25 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rlChooseMusic" />
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/gotham_medium"
+                android:padding="10dp"
+                android:text="Recommended for today"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recvRecommendedToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlChooseMusic" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

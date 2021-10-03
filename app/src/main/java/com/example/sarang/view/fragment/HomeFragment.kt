@@ -14,7 +14,8 @@ import com.example.sarang.view.model.*
 class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
     ToGetYouStartedClickListener, ThrowbackClickListener, IndiaBestClickListener,
     ChartClickListener, UniquelyClickListener,
-    ToGetYouStartedFirstClickListener, WorkoutClickListener, ArijitClickListener{
+    ToGetYouStartedFirstClickListener, WorkoutClickListener,
+    ArijitClickListener, RecommendedClickListener{
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
     private val throwbackList = ArrayList<ThrowBack>()
@@ -24,6 +25,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
     private val togetyoustartedFirstList = ArrayList<ToGetYouStartedFirst>()
     private val workoutList=ArrayList<Workout>()
     private val arijitList=ArrayList<Arijit>()
+    private val recommendedList=ArrayList<Recommended>()
     private val listOfArtists = ArrayList<PopularArtists>()
 
 
@@ -148,6 +150,26 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         recyclerViewThrowback.hasFixedSize()
 
 
+        //Setting RecyclerView Data for Recommended
+        recommendedList.clear()
+        for (i in 1..1) {
+            recommendedList.add(Recommended(R.drawable.recommended_fitness, "Fitness"))
+            recommendedList.add(Recommended(R.drawable.recommended_girl_power, "Girl"))
+            recommendedList.add(Recommended(R.drawable.recommended_hits_spring, "Spring"))
+            recommendedList.add(Recommended(R.drawable.recommended_non_stop, "Stop"))
+            recommendedList.add(Recommended(R.drawable.recommended_workout, "Workout"))
+
+        }
+        recommendedList.shuffle()
+        //throwback - recycler view
+        val recommendedAdapter = RecommendedAdapter(recommendedList, this@HomeFragment)
+        val gridLayoutManagerRecommended =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recvRecommendedToday.adapter = recommendedAdapter
+        recvRecommendedToday.layoutManager = gridLayoutManagerRecommended
+        recvRecommendedToday.hasFixedSize()
+
+
         //Setting RecyclerView Data for To Get You Started First
         togetyoustartedFirstList.clear()
         for (i in 1..1) {
@@ -242,7 +264,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
             arijitList.add(Arijit(R.drawable.arijit_grove, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_hits, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_jiya_jaye, "Arijit"))
-            arijitList.add(Arijit(R.drawable.arijit_latest_hits, "Arijit"))
+            arijitList.add(Arijit(R.drawable.artist_image_jubin_nautiyal, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_love, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_love_istic, "Arijit"))
         }
@@ -545,6 +567,25 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         val args = Bundle()
         args.putString("artistName", arijit.title)
         args.putString("artistImage", arijit.albumImage.toString())
+
+        val artistFragment = ArtistFragment()
+        artistFragment.arguments = args
+
+        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+
+        ft.replace(
+            R.id.framelayout_container,
+            artistFragment,
+            "Fragment"
+        )
+        ft.addToBackStack(null)
+        ft.commit()
+    }
+
+    override fun onRecommendedClick(position: Int, recommended: Recommended) {
+        val args = Bundle()
+        args.putString("artistName", recommended.title)
+        args.putString("artistImage", recommended.albumImage.toString())
 
         val artistFragment = ArtistFragment()
         artistFragment.arguments = args

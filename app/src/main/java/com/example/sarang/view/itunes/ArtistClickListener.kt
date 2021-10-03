@@ -38,3 +38,7 @@ interface WorkoutClickListener{
 interface ArijitClickListener{
     fun onArijitClick(position: Int, arijit: Arijit)
 }
+
+interface RecommendedClickListener{
+    fun onRecommendedClick(position: Int, recommended: Recommended)
+}

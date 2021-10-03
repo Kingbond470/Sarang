@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Sarang/app/src/main/res/drawable/circle_bg.xml" value="0.1484375" />
         <entry key="..\:/Android/Sarang/app/src/main/res/drawable/ic_music_icon.xml" value="0.18958333333333333" />
         <entry key="..\:/Android/Sarang/app/src/main/res/drawable/icon_play.xml" value="0.2203125" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/drawable/large_rupee_icon.xml" value="0.1484375" />
         <entry key="..\:/Android/Sarang/app/src/main/res/drawable/memory_indicator_progress.xml" value="0.15572916666666667" />
         <entry key="..\:/Android/Sarang/app/src/main/res/drawable/sign_up_bg.xml" value="0.2203125" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/drawable/white_btn.xml" value="0.2203125" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_payment_option.xml" value="0.13229166666666667" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_song_playing.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/activity_splash.xml" value="0.11820652173913043" />
@@ -16,7 +20,7 @@
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_home.xml" value="0.21142857142857144" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_library.xml" value="0.129981884057971" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_notification.xml" value="0.12771739130434784" />
-        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_premium.xml" value="0.11911231884057971" />
+        <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_premium.xml" value="0.22" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_recently_played.xml" value="0.19010416666666666" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search.xml" value="0.25" />
         <entry key="..\:/Android/Sarang/app/src/main/res/layout/fragment_search_item.xml" value="0.22" />

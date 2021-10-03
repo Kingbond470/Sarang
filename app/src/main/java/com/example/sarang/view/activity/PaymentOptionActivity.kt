@@ -8,7 +8,7 @@ import com.example.sarang.R
 import kotlinx.android.synthetic.main.activity_payment_option.*
 
 
-class PaymentOptionActivity : AppCompatActivity(){
+class PaymentOptionActivity : AppCompatActivity() {
 
     // Implementation ==>PaymentResultListener
 
@@ -22,7 +22,6 @@ class PaymentOptionActivity : AppCompatActivity(){
 //       Checkout.preload(this)
 
         amount = intent.getIntExtra("amount", 0)
-        amount = 200
         pay_amount.text = amount.toString()
 
         // Payment with Razorpay
@@ -36,10 +35,21 @@ class PaymentOptionActivity : AppCompatActivity(){
         btn_googlePay.setOnClickListener {
             payWithGooglePay()
         }
+        btn_sarangPay.setOnClickListener {
+            payWithSarangPay("Prabhakar", amount)
+        }
+    }
+
+
+    private fun payWithSarangPay(name: String, amount: Int) {
+        val intent = Intent(this, SarangPayActivity::class.java)
+        intent.putExtra("name", name)
+        intent.putExtra("", amount)
+        startActivity(intent)
     }
 
     private fun payWithGooglePay() {
-        var uri:Uri = Uri.parse("upi://pay").buildUpon()
+        var uri: Uri = Uri.parse("upi://pay").buildUpon()
             .appendQueryParameter("pa", "hearthacker.mgr@okhdfcbank") // virtual ID
             .appendQueryParameter("pn", "heart hacker") // name
             .appendQueryParameter("tn", "your-transaction-note") // any note about payment
@@ -50,7 +60,7 @@ class PaymentOptionActivity : AppCompatActivity(){
         val intent = Intent(Intent.ACTION_VIEW)
         intent.data = uri
         intent.setPackage(GOOGLE_PAY_PACKAGE_NAME)
-       this@PaymentOptionActivity.startActivityForResult(intent,GOOGLE_PAY_REQUEST_CODE)
+        this@PaymentOptionActivity.startActivityForResult(intent, GOOGLE_PAY_REQUEST_CODE)
     }
 
 //    private fun payWithRazorpay() {

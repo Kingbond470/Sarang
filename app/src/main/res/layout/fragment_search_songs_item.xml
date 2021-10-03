@@ -18,7 +18,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentLeft="true"
-            android:src="@drawable/search_songs_hindi_songs" />
+            android:src="@drawable/artist_image_dua_lipa" />
 
     </androidx.cardview.widget.CardView>
 
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/gotham_medium"
             android:maxLines="1"
-            android:src="@drawable/search_songs_hindi_songs"
+            android:src="@drawable/artist_image_dua_lipa"
             android:text="Hindi Songs"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -51,7 +51,7 @@
             android:layout_below="@id/tvTitle"
             android:fontFamily="@font/gotham_medium"
             android:maxLines="1"
-            android:src="@drawable/search_songs_hindi_songs"
+            android:src="@drawable/artist_image_dua_lipa"
             android:text="Playlist"
             android:textColor="@color/grey8"
             android:textSize="14sp" />

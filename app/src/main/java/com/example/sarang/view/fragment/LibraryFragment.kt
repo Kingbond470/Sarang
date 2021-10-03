@@ -49,26 +49,26 @@ class LibraryFragment : Fragment(R.layout.fragment_library) {
     private fun buildLibraryList() {
         libraryList.add(
             LibraryModel(
-                "Yo Yo Honey Singh",
-                "https://i.postimg.cc/43CVqcPt/hone.jpg"
+                "Justin Bieber",
+                R.drawable.artist_image_justin_bieber
             )
         )
         libraryList.add(
             LibraryModel(
-                "Manoj Tiwari",
-                "https://i.postimg.cc/q7nXvwqj/manoj.jpg"
+                "Black Pink",
+                R.drawable.artist_image_blackpink
             )
         )
         libraryList.add(
             LibraryModel(
-                "Khesari Lal Yadav",
-                "https://i.postimg.cc/7Zjn4dH5/khesari.jpg"
+                "Arijit Singh",
+                R.drawable.artist_image_arijit_singh
             )
         )
         libraryList.add(
             LibraryModel(
-                "Tulshi Kumar",
-                "https://i.postimg.cc/BbJCyFqN/tulshi.jpg"
+                "Taylor Swift",
+                R.drawable.artist_image_taylor_swift
             )
         )
 
