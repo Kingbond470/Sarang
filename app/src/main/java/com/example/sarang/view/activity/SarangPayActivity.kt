@@ -17,7 +17,9 @@ class SarangPayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sarang_pay)
-
+        if (intent != null) {
+            pay_amount2.text=intent.getStringExtra("amount")
+        }
         // Payment Cancel
         btn_cancelPayment.setOnClickListener {
             startActivity(Intent(this, PaymentActivity::class.java))
