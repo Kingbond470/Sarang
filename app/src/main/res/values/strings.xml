@@ -62,5 +62,10 @@
         <item name="colorAccent">@color/green</item>
     </style>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment.</string>
+    <string name="payment_guideline2">*During payment don\'t press back button or don\'t do refresh</string>
+    <string name="payment_guideline1">*Save and Secure Payment.</string>
+    <string name="payment_guideline3">*In-case you are facing any issue let me know we are happy to solve your problem.</string>
+    <string name="payment_guideline4">*If payment will failed and money deduct from your account then send us query will resolve it.</string>
+    <string name="payment_guideline5">*Amount of failed payment will be come back within 48 hours.</string>
 </resources>

@@ -74,15 +74,30 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/btn_sarangPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:lineSpacingExtra="1dp"
+                android:drawableTint="@color/green"
+                android:drawableLeft="@drawable/small_logo"
+                android:background="@drawable/song_playing_bg"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/gotham_medium"
+                android:padding="10dp"
+                android:text="Pay with Sarang Pay"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
             <ImageView
                 android:id="@+id/btn_googlePay"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/form_bg"
+                android:background="@drawable/form_bg1"
                 android:padding="10dp"
-                android:scaleType="fitXY"
                 android:src="@drawable/google_pay_logo" />
 
             <ImageView
@@ -91,30 +106,18 @@
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/form_bg"
+                android:background="@drawable/form_bg1"
                 android:padding="10dp"
-                android:scaleType="fitXY"
                 android:src="@drawable/razorpay_logo" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/form_bg"
-                android:padding="10dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/phonepe_logo" />
-
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/form_bg"
+                android:background="@drawable/form_bg1"
                 android:padding="10dp"
-                android:scaleType="fitXY"
                 android:src="@drawable/paytm_logo" />
 
             <ImageView
@@ -122,9 +125,8 @@
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/form_bg"
+                android:background="@drawable/form_bg1"
                 android:padding="10dp"
-                android:scaleType="fitXY"
                 android:src="@drawable/paypal_logo" />
 
             <ImageView
@@ -132,9 +134,8 @@
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/form_bg"
+                android:background="@drawable/form_bg1"
                 android:padding="10dp"
-                android:scaleType="fitXY"
                 android:src="@drawable/debit_card_logo" />
 
             <TextView
