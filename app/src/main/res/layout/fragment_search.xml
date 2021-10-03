@@ -27,7 +27,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/tvSearch"
         android:layout_marginTop="28dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         android:orientation="horizontal"
         app:cardCornerRadius="12dp">
 
