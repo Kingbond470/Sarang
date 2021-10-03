@@ -132,6 +132,49 @@ class ThrowbackAdapter(
 }
 
 
+
+
+
+//Adapter for Recommended Today
+class RecommendedAdapter(
+    private val listOfRecommended: ArrayList<Recommended>,
+    val clickListener: RecommendedClickListener
+) : RecyclerView.Adapter<RecommendedAdapter.RecommendedViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecommendedViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return RecommendedViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: RecommendedViewHolder, position: Int) {
+        val recommended = listOfRecommended[position]
+        holder.setData(recommended)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfRecommended.size
+    }
+
+    //ViewHolder
+    class RecommendedViewHolder(
+        private val view: View,
+        val clickListener: RecommendedClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(recommended: Recommended) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(recommended.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = recommended.title
+            }
+            view.setOnClickListener {
+                clickListener.onRecommendedClick(adapterPosition, recommended)
+            }
+        }
+    }
+
+}
+
+
 //Adapter for India best Music
 class IndiaBestAdapter(
     private val listOfIndiaBest: ArrayList<IndiaBest>,
