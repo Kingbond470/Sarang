@@ -27,7 +27,7 @@ class SearchFragment : Fragment(R.layout.fragment_search), SearchPageClickListen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        for(i in 1..1) {
+        for (i in 1..1) {
             list.add(SearchPageModel(R.drawable.search_at_home, "Home"))
             list.add(SearchPageModel(R.drawable.search_bollywood, "Bollywood"))
             list.add(SearchPageModel(R.drawable.search_charts, "Home"))
