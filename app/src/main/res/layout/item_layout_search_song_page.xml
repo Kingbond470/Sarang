@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivSearchPageImage"
+        android:layout_width="160dp"
+        android:layout_height="91dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/artist_image_dua_lipa"/>
+
+</androidx.cardview.widget.CardView>

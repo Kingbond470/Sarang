@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     android:paddingBottom="65dp"
     tools:context=".view.fragment.SearchFragment">
 
@@ -12,24 +14,22 @@
         android:id="@+id/tvSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/gotham_bold"
         android:text="@string/search"
         android:textColor="@color/white"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        android:textStyle="normal" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewSearchBar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/tvSearch"
-        android:layout_marginLeft="20dp"
         android:layout_marginTop="28dp"
-        android:layout_marginRight="20dp"
-        android:background="@color/white"
+        android:backgroundTint="@color/white"
         android:orientation="horizontal"
-        app:cardCornerRadius="6dp">
+        app:cardCornerRadius="12dp">
 
         <ImageView
             android:id="@+id/ivSearchIcon"
@@ -55,21 +55,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/cardViewSearchBar"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/gotham_bold"
         android:text="@string/browse_all"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
+    <!--    <androidx.recyclerview.widget.RecyclerView-->
+    <!--        android:id="@+id/recyclerViewSearch"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@id/tvBrowseAll"-->
+    <!--        android:layout_marginTop="14dp"-->
+    <!--        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+    <!--        app:spanCount="2"-->
+    <!--        tools:listitem="@layout/fragment_search_item" />-->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewSearch"
+        android:id="@+id/rcvBrowseAll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/tvBrowseAll"
-        android:layout_marginTop="14dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:listitem="@layout/fragment_search_item" />
+        android:layout_marginTop="14dp" />
 
 </RelativeLayout>
