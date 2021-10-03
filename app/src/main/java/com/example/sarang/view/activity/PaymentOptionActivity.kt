@@ -44,7 +44,7 @@ class PaymentOptionActivity : AppCompatActivity() {
     private fun payWithSarangPay(name: String, amount: Int) {
         val intent = Intent(this, SarangPayActivity::class.java)
         intent.putExtra("name", name)
-        intent.putExtra("", amount)
+        intent.putExtra("amount", amount)
         startActivity(intent)
         finish()
     }
