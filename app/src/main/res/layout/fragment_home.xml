@@ -26,6 +26,7 @@
                 android:fontFamily="@font/gotham_bold"
                 android:text="To get you started"
                 android:textColor="@color/white"
+                android:visibility="gone"
                 android:textSize="20sp" />
 
             <ImageView
