@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:fontFamily="@font/gotham_bold"
-                android:text="Recently Played"
+                android:text="TO get you started"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -140,6 +140,24 @@
                     android:textStyle="bold" />
 
             </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/gotham_medium"
+                android:padding="10dp"
+                android:text="To get you started"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewToGetYouStartedFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlChooseMusic" />
 
             <TextView
                 android:layout_width="match_parent"
