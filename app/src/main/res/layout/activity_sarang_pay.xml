@@ -62,6 +62,7 @@
 
             <EditText
                 android:id="@+id/enter_cardNumber"
+                android:maxLength="16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/form_bg2"
@@ -71,6 +72,39 @@
                 android:textColor="#000000"
                 android:textSize="20dp" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/enter_cvvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2dp"
+                    android:maxLength="3"
+                    android:background="@drawable/form_bg2"
+                    android:hint="Cvv"
+                    android:inputType="numberPassword"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/enter_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2dp"
+                    android:background="@drawable/form_bg2"
+                    android:maxLength="5"
+                    android:hint="MM/YY"
+                    android:inputType="datetime"
+                    android:padding="10dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_sendOTP"
                 android:layout_width="wrap_content"
@@ -78,11 +112,11 @@
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 android:backgroundTint="#4B8DF4"
-                android:visibility="gone"
                 android:text="Send OTP"
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
+                android:visibility="gone"
                 app:cornerRadius="10dp" />
 
             <EditText
@@ -91,6 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/form_bg2"
+                android:maxLength="5"
                 android:focusedByDefault="false"
                 android:hint="Enter OTP"
                 android:inputType="number"
@@ -103,7 +138,6 @@
                 android:id="@+id/btn_verifyOTP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 android:backgroundTint="#4B8DF4"
@@ -111,6 +145,7 @@
                 android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
+                android:visibility="gone"
                 app:cornerRadius="10dp" />
 
             <TextView
@@ -220,7 +255,6 @@
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold" />
-
 
     </FrameLayout>
 </LinearLayout>
