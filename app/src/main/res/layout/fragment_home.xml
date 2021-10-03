@@ -16,16 +16,15 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="12dp"
+            android:layout_marginHorizontal="8dp"
             android:layout_marginVertical="20dp">
 
             <TextView
                 android:id="@+id/tvRecentlyPlayed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
                 android:fontFamily="@font/gotham_bold"
-                android:text="TO get you started"
+                android:text="To get you started"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -202,31 +201,30 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
                 android:padding="10dp">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/cvArjit"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/artist_image_arijit_singh"
-                    />
+                    android:src="@drawable/artist_image_arijit_singh" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginLeft="20dp"
                     android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/cvArjit"
-                    >
+                    android:orientation="vertical">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="More Like"
                         android:fontFamily="@font/gotham_light"
-                        android:textStyle="normal"
-                        android:textSize="12sp"
+                        android:text="More Like"
                         android:textColor="@color/white"
-                        />
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -246,7 +244,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewArijit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
 
             <TextView
@@ -319,8 +317,7 @@
                 android:id="@+id/rcvListOfArtists"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/button"
-                android:layout_marginBottom="30dp" />
+                android:layout_below="@+id/button" />
 
             <TextView
                 android:layout_width="match_parent"
