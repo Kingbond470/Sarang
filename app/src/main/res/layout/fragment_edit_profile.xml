@@ -89,13 +89,14 @@
                             app:cardCornerRadius="30dp">
 
                             <TextView
+                                android:id="@+id/tvEditLogout"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginHorizontal="10dp"
                                 android:layout_marginVertical="5dp"
                                 android:background="@color/transparent"
                                 android:fontFamily="@font/gotham_light"
-                                android:text="Edit profile"
+                                android:text="Logout"
                                 android:textColor="@color/white"
                                 android:textSize="13sp" />
 
