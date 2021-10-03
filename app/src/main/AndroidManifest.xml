@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sarang">
         <activity
-            android:name=".view.activity.SarangPayActivity"
+            android:name=".view.activity.SuccessActivity"
             android:exported="true" />
 
         <service
@@ -26,6 +26,9 @@
             </intent-filter>
         </service>
 
+        <activity
+            android:name=".view.activity.SarangPayActivity"
+            android:exported="true" />
         <activity
             android:name=".view.activity.PaymentOptionActivity"
             android:exported="true" />
