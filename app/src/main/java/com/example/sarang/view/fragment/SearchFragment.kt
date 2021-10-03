@@ -27,14 +27,49 @@ class SearchFragment : Fragment(R.layout.fragment_search), SearchPageClickListen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        for(i in 1..10) {
-            list.add(SearchPageModel(R.drawable.search_podcast, "podcast"))
+        for(i in 1..1) {
+            list.add(SearchPageModel(R.drawable.search_at_home, "Home"))
+            list.add(SearchPageModel(R.drawable.search_bollywood, "Bollywood"))
+            list.add(SearchPageModel(R.drawable.search_charts, "Home"))
+            list.add(SearchPageModel(R.drawable.search_concerts, "Home"))
+            list.add(SearchPageModel(R.drawable.search_covid19_guide, "Home"))
+            list.add(SearchPageModel(R.drawable.search_dance_electronic, "Home"))
+            list.add(SearchPageModel(R.drawable.search_decades, "Home"))
+            list.add(SearchPageModel(R.drawable.search_devotional, "Home"))
+            list.add(SearchPageModel(R.drawable.search_equal, "Home"))
+            list.add(SearchPageModel(R.drawable.search_folk_and_acousticjpg, "Home"))
+            list.add(SearchPageModel(R.drawable.search_higher_ground, "Home"))
+            list.add(SearchPageModel(R.drawable.search_hip_hop, "Home"))
+            list.add(SearchPageModel(R.drawable.search_indian_classical, "Home"))
+            list.add(SearchPageModel(R.drawable.search_indie, "Home"))
+            list.add(SearchPageModel(R.drawable.search_instrumental, "Home"))
+            list.add(SearchPageModel(R.drawable.search_k_pop, "Home"))
+            list.add(SearchPageModel(R.drawable.search_kids_and_family, "Home"))
+            list.add(SearchPageModel(R.drawable.search_made_for_you, "Home"))
+            list.add(SearchPageModel(R.drawable.search_marathi, "Home"))
+            list.add(SearchPageModel(R.drawable.search_new_releases, "Home"))
+            list.add(SearchPageModel(R.drawable.search_only_you, "Home"))
+            list.add(SearchPageModel(R.drawable.search_party, "Home"))
+            list.add(SearchPageModel(R.drawable.search_podcast, "Home"))
+            list.add(SearchPageModel(R.drawable.search_pop, "Home"))
+            list.add(SearchPageModel(R.drawable.search_punjabi, "Home"))
+            list.add(SearchPageModel(R.drawable.search_r_and_b, "Home"))
+            list.add(SearchPageModel(R.drawable.search_radar, "Home"))
+            list.add(SearchPageModel(R.drawable.search_romance, "Home"))
+            list.add(SearchPageModel(R.drawable.search_sleep, "Home"))
+            list.add(SearchPageModel(R.drawable.search_stop_asian_hate, "Home"))
+            list.add(SearchPageModel(R.drawable.search_tastemakers, "Home"))
+            list.add(SearchPageModel(R.drawable.search_telugu, "Home"))
+            list.add(SearchPageModel(R.drawable.search_workout, "Home"))
+            list.add(SearchPageModel(R.drawable.search_sleep, "Home"))
+
         }
 
         val adapter = SearchPageAdapter(list, this@SearchFragment)
         val grid = GridLayoutManager(context, 2)
         rcvBrowseAll.adapter = adapter
         rcvBrowseAll.layoutManager = grid
+        rcvBrowseAll.hasFixedSize()
 
         // adding data in recyclerview
 //        val recyclerview = recyclerViewSearch

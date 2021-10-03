@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_background"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
+    android:padding="10dp"
     android:paddingBottom="65dp"
     tools:context=".view.fragment.SearchFragment">
 
@@ -29,7 +28,7 @@
         android:layout_marginTop="28dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal"
-        app:cardCornerRadius="12dp">
+        app:cardCornerRadius="5dp">
 
         <ImageView
             android:id="@+id/ivSearchIcon"
@@ -75,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvBrowseAll"
-        android:layout_marginTop="14dp" />
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="120dp"/>
 
 </RelativeLayout>

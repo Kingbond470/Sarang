@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/ivSearchItem"
-        android:layout_width="160dp"
+        android:layout_width="match_parent"
         android:scaleType="fitXY"
         android:src="@drawable/search_at_home"
-        android:layout_height="91dp" />
+        android:layout_height="wrap_content" />
 
 </androidx.cardview.widget.CardView>
