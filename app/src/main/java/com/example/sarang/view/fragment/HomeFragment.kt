@@ -264,7 +264,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
             arijitList.add(Arijit(R.drawable.arijit_grove, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_hits, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_jiya_jaye, "Arijit"))
-            arijitList.add(Arijit(R.drawable.arijit_latest_hits, "Arijit"))
+            arijitList.add(Arijit(R.drawable.artist_image_jubin_nautiyal, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_love, "Arijit"))
             arijitList.add(Arijit(R.drawable.arijit_love_istic, "Arijit"))
         }
