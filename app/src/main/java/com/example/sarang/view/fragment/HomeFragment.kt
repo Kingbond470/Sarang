@@ -13,7 +13,8 @@ import com.example.sarang.view.model.*
 
 class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
     ToGetYouStartedClickListener, ThrowbackClickListener, IndiaBestClickListener,
-    ChartClickListener, UniquelyClickListener, ToGetYouStartedFirstClickListener, WorkoutClickListener{
+    ChartClickListener, UniquelyClickListener,
+    ToGetYouStartedFirstClickListener, WorkoutClickListener, ArijitClickListener{
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
     private val throwbackList = ArrayList<ThrowBack>()
@@ -22,6 +23,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
     private val uniquelyList = ArrayList<Uniquely>()
     private val togetyoustartedFirstList = ArrayList<ToGetYouStartedFirst>()
     private val workoutList=ArrayList<Workout>()
+    private val arijitList=ArrayList<Arijit>()
     private val listOfArtists = ArrayList<PopularArtists>()
 
 
@@ -233,6 +235,29 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         recyclerViewIndiaBest.hasFixedSize()
 
 
+
+        //Setting RecyclerView Data for India Best
+        arijitList.clear()
+        for (i in 1..1) {
+            arijitList.add(Arijit(R.drawable.arijit_grove, "Arijit"))
+            arijitList.add(Arijit(R.drawable.arijit_hits, "Arijit"))
+            arijitList.add(Arijit(R.drawable.arijit_jiya_jaye, "Arijit"))
+            arijitList.add(Arijit(R.drawable.arijit_latest_hits, "Arijit"))
+            arijitList.add(Arijit(R.drawable.arijit_love, "Arijit"))
+            arijitList.add(Arijit(R.drawable.arijit_love_istic, "Arijit"))
+        }
+        arijitList.shuffle()
+        //India Best - recycler view
+        val arijitAdapter = ArijitAdapter(arijitList, this@HomeFragment)
+        val gridLayoutManagerArijit =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerViewArijit.adapter = arijitAdapter
+        recyclerViewArijit.layoutManager = gridLayoutManagerArijit
+        recyclerViewArijit.hasFixedSize()
+
+
+
+
         //Setting RecyclerView Data for Chart
         chartList.clear()
         for (i in 1..1) {
@@ -349,9 +374,6 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
 
 
     }
-
-
-
 
 
     // artist click listerner
@@ -504,6 +526,25 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         val args = Bundle()
         args.putString("artistName", workout.title)
         args.putString("artistImage", workout.albumImage.toString())
+
+        val artistFragment = ArtistFragment()
+        artistFragment.arguments = args
+
+        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+
+        ft.replace(
+            R.id.framelayout_container,
+            artistFragment,
+            "Fragment"
+        )
+        ft.addToBackStack(null)
+        ft.commit()
+    }
+
+    override fun onArijitClick(position: Int, arijit: Arijit) {
+        val args = Bundle()
+        args.putString("artistName", arijit.title)
+        args.putString("artistImage", arijit.albumImage.toString())
 
         val artistFragment = ArtistFragment()
         artistFragment.arguments = args
