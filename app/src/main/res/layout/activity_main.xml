@@ -95,12 +95,14 @@
                         <androidx.viewpager2.widget.ViewPager2
                             android:id="@+id/mvpSong"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="50dp"
                             android:layout_marginVertical="3dp"
                             android:fontFamily="@font/gotham_light"
                             android:maxLines="1"
                             android:text="Raataan Lambiyan"
                             android:textColor="@color/white"
+                            android:backgroundTint="@color/transparent"
+                            android:background="@color/transparent"
                             android:textSize="13sp"
                             android:textStyle="bold" />
 

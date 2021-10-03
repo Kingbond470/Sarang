@@ -36,21 +36,33 @@
         android:textSize="20dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/pay_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginRight="15dp"
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#FB8C00"
         android:background="@drawable/circle_bg"
-        android:drawableLeft="@drawable/large_rupee_icon"
-        android:drawablePadding="4dp"
-        android:fontFamily="@font/gotham_medium"
-        android:padding="25dp"
-        android:text="101"
-        android:textColor="#FFFFFF"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="end"
+        app:cardCornerRadius="100dp">
+
+        <TextView
+            android:id="@+id/pay_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_bg"
+            android:drawableLeft="@drawable/large_rupee_icon"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/gotham_medium"
+            android:padding="25dp"
+            android:text="101"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -79,12 +91,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:lineSpacingExtra="1dp"
-                android:drawableTint="@color/green"
-                android:drawableLeft="@drawable/small_logo"
                 android:background="@drawable/song_playing_bg"
+                android:drawableLeft="@drawable/small_logo"
                 android:drawablePadding="10dp"
+                android:drawableTint="@color/green"
                 android:fontFamily="@font/gotham_medium"
+                android:lineSpacingExtra="1dp"
                 android:padding="10dp"
                 android:text="Pay with Sarang Pay"
                 android:textColor="#FFFFFF"

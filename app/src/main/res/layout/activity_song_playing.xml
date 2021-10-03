@@ -54,8 +54,8 @@
 
                 <ImageView
                     android:id="@+id/ivCurSongImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
                     android:layout_centerVertical="true"
                     android:background="@drawable/song_playing_bg"
                     android:scaleType="fitXY"
@@ -74,9 +74,10 @@
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/vpSong"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginVertical="3dp"
-                    android:background="@color/brown" />
+                    android:background="@color/brown"
+                    android:backgroundTint="@color/transparent" />
 
             </LinearLayout>
 
