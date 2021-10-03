@@ -13,7 +13,7 @@ import com.example.sarang.view.model.*
 
 class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
     ToGetYouStartedClickListener, ThrowbackClickListener, IndiaBestClickListener,
-    ChartClickListener, UniquelyClickListener, ToGetYouStartedFirstClickListener {
+    ChartClickListener, UniquelyClickListener, ToGetYouStartedFirstClickListener, WorkoutClickListener{
 
     private val togetyoustartedList = ArrayList<ToGetYouStarted>()
     private val throwbackList = ArrayList<ThrowBack>()
@@ -21,6 +21,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
     private val chartList = ArrayList<Chart>()
     private val uniquelyList = ArrayList<Uniquely>()
     private val togetyoustartedFirstList = ArrayList<ToGetYouStartedFirst>()
+    private val workoutList=ArrayList<Workout>()
     private val listOfArtists = ArrayList<PopularArtists>()
 
 
@@ -169,31 +170,31 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
             togetyoustartedFirstList.add(
                 ToGetYouStartedFirst(
                     R.drawable.recommended_today_filmy_cover,
-                    "Filmy Cover"
+                    "Cover"
                 )
             )
             togetyoustartedFirstList.add(
                 ToGetYouStartedFirst(
                     R.drawable.recommended_today_hindi_hits,
-                    "Hindi Hits"
+                    "Hindi"
                 )
             )
             togetyoustartedFirstList.add(
                 ToGetYouStartedFirst(
                     R.drawable.recommended_today_indiestan,
-                    "Indiestan"
+                    "Indie"
                 )
             )
             togetyoustartedFirstList.add(
                 ToGetYouStartedFirst(
                     R.drawable.recommended_today_punjabi,
-                    "Punjabi Today"
+                    "Punjabi"
                 )
             )
             togetyoustartedFirstList.add(
                 ToGetYouStartedFirst(
                     R.drawable.recommended_today_punjabi_juk_box,
-                    "Punjabi Box"
+                    "Punjabi"
                 )
             )
         }
@@ -259,8 +260,8 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         for (i in 1..1) {
             uniquelyList.add(Uniquely(R.drawable.uniquely_yours_on_repeat, "Repeat"))
             uniquelyList.add(Uniquely(R.drawable.uniquely_yours_time_capsule, "Time Capsule"))
-            uniquelyList.add(Uniquely(R.drawable.uniquely_yourse_repeat_rewind, "Repeat Rewind"))
-            uniquelyList.add(Uniquely(R.drawable.uniquely_yours_top_gulf, "Top Gulf"))
+            uniquelyList.add(Uniquely(R.drawable.uniquely_yourse_repeat_rewind, "Rewind"))
+            uniquelyList.add(Uniquely(R.drawable.uniquely_yours_top_gulf, "Gulf"))
         }
         //Uniquely Yours - recycler view
         val uniquelyAdapter = UniquelyAdapter(uniquelyList, this@HomeFragment)
@@ -322,7 +323,35 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         rcvListOfArtists.hasFixedSize()
 
 
+
+        //Setting RecyclerView Data for Throwback
+        workoutList.clear()
+        for (i in 1..1) {
+            workoutList.add(Workout(R.drawable.wokout_hits, "Hindi"))
+            workoutList.add(Workout(R.drawable.workout_beast, "Beast"))
+            workoutList.add(Workout(R.drawable.workout_beast_woman, "Woman"))
+            workoutList.add(Workout(R.drawable.workout_cardio, "Cardio"))
+            workoutList.add(Workout(R.drawable.workout_dance, "Dance"))
+            workoutList.add(Workout(R.drawable.workout_hype, "Hype"))
+            workoutList.add(Workout(R.drawable.workout_power, "Power"))
+            workoutList.add(Workout(R.drawable.workout_workout, "Workout"))
+            workoutList.add(Workout(R.drawable.workout_workout_beats, "Beats"))
+        }
+        workoutList.shuffle()
+        //throwback - recycler view
+        val workoutAdapter = WorkoutAdapter(workoutList, this@HomeFragment)
+        val gridLayoutManagerWorkout =
+            GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        recyclerWorkout.adapter = workoutAdapter
+        recyclerWorkout.layoutManager = gridLayoutManagerWorkout
+        recyclerWorkout.hasFixedSize()
+
+
+
     }
+
+
+
 
 
     // artist click listerner
@@ -456,6 +485,25 @@ class HomeFragment : Fragment(R.layout.fragment_home), ArtistClickListener,
         val args = Bundle()
         args.putString("artistName", toGetYouStartedFirst.title)
         args.putString("artistImage", toGetYouStartedFirst.albumImage.toString())
+
+        val artistFragment = ArtistFragment()
+        artistFragment.arguments = args
+
+        val ft: FragmentTransaction = parentFragmentManager.beginTransaction()
+
+        ft.replace(
+            R.id.framelayout_container,
+            artistFragment,
+            "Fragment"
+        )
+        ft.addToBackStack(null)
+        ft.commit()
+    }
+
+    override fun onWorkoutClick(position: Int, workout: Workout) {
+        val args = Bundle()
+        args.putString("artistName", workout.title)
+        args.putString("artistImage", workout.albumImage.toString())
 
         val artistFragment = ArtistFragment()
         artistFragment.arguments = args
