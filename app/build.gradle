@@ -158,10 +158,11 @@ dependencies {
     // otp pin view
     implementation 'com.chaos.view:pinview:1.4.3'
 
+    //fire base
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+
     //google authentication
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
 
-    //fire base
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
 
 }
