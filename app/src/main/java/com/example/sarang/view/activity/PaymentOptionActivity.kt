@@ -46,10 +46,11 @@ class PaymentOptionActivity : AppCompatActivity() {
         intent.putExtra("name", name)
         intent.putExtra("", amount)
         startActivity(intent)
+        finish()
     }
 
     private fun payWithGooglePay() {
-        var uri: Uri = Uri.parse("upi://pay").buildUpon()
+        val uri: Uri = Uri.parse("upi://pay").buildUpon()
             .appendQueryParameter("pa", "hearthacker.mgr@okhdfcbank") // virtual ID
             .appendQueryParameter("pn", "heart hacker") // name
             .appendQueryParameter("tn", "your-transaction-note") // any note about payment

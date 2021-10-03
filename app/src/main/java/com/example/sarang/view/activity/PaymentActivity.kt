@@ -2,6 +2,7 @@ package com.example.sarang.view.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sarang.R
 import kotlinx.android.synthetic.main.activity_payment.*
@@ -19,5 +20,8 @@ class PaymentActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+    }
+    fun selectPlant(linearLayout: LinearLayout){
+
     }
 }
