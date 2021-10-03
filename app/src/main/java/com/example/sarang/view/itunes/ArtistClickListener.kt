@@ -34,3 +34,7 @@ interface ToGetYouStartedFirstClickListener{
 interface WorkoutClickListener{
     fun onWorkoutClick(position: Int, workout: Workout)
 }
+
+interface ArijitClickListener{
+    fun onArijitClick(position: Int, arijit: Arijit)
+}

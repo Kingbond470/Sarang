@@ -171,6 +171,48 @@ class IndiaBestAdapter(
 
 }
 
+
+
+//Adapter for Ariijt Music
+class ArijitAdapter(
+    private val listOfArijit: ArrayList<Arijit>,
+    val clickListener: ArijitClickListener
+) : RecyclerView.Adapter<ArijitAdapter.ArijitViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArijitViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_layout_togetyoustarted, parent, false)
+        return ArijitViewHolder(view, clickListener)
+    }
+
+    override fun onBindViewHolder(holder: ArijitViewHolder, position: Int) {
+        val list = listOfArijit[position]
+        holder.setData(list)
+    }
+
+    override fun getItemCount(): Int {
+        return listOfArijit.size
+    }
+
+    //ViewHolder - india best music
+    class ArijitViewHolder(
+        private val view: View,
+        val clickListener: ArijitClickListener
+    ) : RecyclerView.ViewHolder(view) {
+        internal fun setData(arijit: Arijit) {
+            view.apply {
+                Glide.with(ivGetYouStarted).load(arijit.albumImage).into(ivGetYouStarted)
+                tvTitleGetYouStarted.text = arijit.title
+            }
+            view.setOnClickListener {
+                clickListener.onArijitClick(adapterPosition, arijit)
+            }
+        }
+    }
+
+}
+
+
 //Adapter for India best Music
 class ChartAdapter(
     private val listOfChart: ArrayList<Chart>,
