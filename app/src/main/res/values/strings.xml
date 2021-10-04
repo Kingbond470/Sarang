@@ -68,4 +68,5 @@
     <string name="payment_guideline3">*In-case you are facing any issue let me know we are happy to solve your problem.</string>
     <string name="payment_guideline4">*If payment will failed and money deduct from your account then send us query will resolve it.</string>
     <string name="payment_guideline5">*Amount of failed payment will be come back within 48 hours.</string>
+    <string name="payment_warning">Your Payment is in under process , please wait and don\'t press Back Button or Cancel !!</string>
 </resources>

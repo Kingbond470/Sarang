@@ -73,7 +73,7 @@ class SarangPayActivity : AppCompatActivity() {
         }
         // Button pay
         btn_pay.setOnClickListener {
-            startActivity(Intent(this, SuccessActivity::class.java))
+            startActivity(Intent(this, FinalPaymentActivity::class.java))
         }
     }
 

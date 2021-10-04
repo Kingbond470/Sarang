@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.FinalPaymentActivity">
+
+    <TextView
+        android:id="@+id/payment_processText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/biryani_light"
+        android:gravity="center"
+        android:text="@string/payment_warning"
+        android:textColor="#501A09"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/payment_processAnimation"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="50dp"
+        android:src="@drawable/process" />
+</LinearLayout>

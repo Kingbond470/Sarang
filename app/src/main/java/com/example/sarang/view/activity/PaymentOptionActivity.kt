@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sarang.R
 import kotlinx.android.synthetic.main.activity_payment_option.*
+import kotlinx.android.synthetic.main.activity_sarang_pay.*
 
 
 class PaymentOptionActivity : AppCompatActivity() {
@@ -18,6 +19,11 @@ class PaymentOptionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_payment_option)
+
+        if (intent != null) {
+            amount=intent.getIntExtra("amount",0)
+        }
+
 
 //       Checkout.preload(this)
 
