@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="10dp"
     android:layout_marginTop="14dp"
     app:cardCornerRadius="5dp">
 
     <ImageView
         android:id="@+id/ivSearchItem"
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:scaleType="fitXY"
         android:src="@drawable/search_at_home"
-        android:layout_height="wrap_content" />
+        android:layout_height="100dp" />
 
 </androidx.cardview.widget.CardView>

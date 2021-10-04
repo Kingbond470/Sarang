@@ -1,51 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="14dp"
-    android:layout_marginEnd="20dp"
+    android:layout_height="wrap_content"
     android:background="@color/app_background">
 
-    <ImageView
-        android:id="@+id/ivSearchItemImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/search_songs_hindi_songs" />
-
-    <TextView
-        android:id="@+id/tvTitle"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdSearchItemImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/gotham_medium"
-        android:src="@drawable/search_songs_hindi_songs"
-        android:text="Hindi Songs"
-        android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
 
-    <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/ivSearchItemImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/artist_image_dua_lipa" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/llItemLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvTitle"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/gotham_medium"
-        android:src="@drawable/search_songs_hindi_songs"
-        android:text="Playlist"
-        android:textColor="@color/grey8"
-        android:textSize="14sp" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toStartOf="@id/ivRightArrowImage"
+        android:layout_toEndOf="@id/cdSearchItemImage"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_medium"
+            android:maxLines="1"
+            android:src="@drawable/artist_image_dua_lipa"
+            android:text="Hindi Songs"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:fontFamily="@font/gotham_medium"
+            android:maxLines="1"
+            android:src="@drawable/artist_image_dua_lipa"
+            android:text="Playlist"
+            android:textColor="@color/grey8"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/ivRightArrowImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/ic_right_arrow" />
+        android:layout_centerVertical="true"
+        android:layout_margin="15dp"
+        android:src="@drawable/ic_more" />
 
 </RelativeLayout>

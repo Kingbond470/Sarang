@@ -43,6 +43,27 @@ class PremiumFragment : Fragment(R.layout.fragment_premium) {
             startActivity(Intent(requireContext(), PaymentActivity::class.java))
         }
 
+        btn_plan1.setOnClickListener {
+            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+        }
+
+        btn_plan2.setOnClickListener {
+            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+        }
+
+        btn_plan3.setOnClickListener {
+            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+        }
+
+        btn_plan4.setOnClickListener {
+            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+        }
+
+        btn_plan5.setOnClickListener {
+            startActivity(Intent(requireContext(), PaymentActivity::class.java))
+        }
+
+
     }
 
     private fun buildSlider() {

@@ -41,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/gotham_book"
                 android:text="Today"
                 android:textColor="@color/white"
@@ -81,6 +82,7 @@
                 android:fontFamily="@font/gotham_book"
                 android:text="Wed, 29 Sep 2021"
                 android:textColor="@color/white"
+                android:visibility="gone"
                 android:textSize="28sp" />
 
             <androidx.recyclerview.widget.RecyclerView

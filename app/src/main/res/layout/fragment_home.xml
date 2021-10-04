@@ -16,17 +16,17 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="12dp"
+            android:layout_marginHorizontal="8dp"
             android:layout_marginVertical="20dp">
 
             <TextView
                 android:id="@+id/tvRecentlyPlayed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="5dp"
                 android:fontFamily="@font/gotham_bold"
-                android:text="Recently Played"
+                android:text="To get you started"
                 android:textColor="@color/white"
+                android:visibility="gone"
                 android:textSize="20sp" />
 
             <ImageView
@@ -148,6 +148,24 @@
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/gotham_medium"
                 android:padding="10dp"
+                android:text="To get you started"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewToGetYouStartedFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlChooseMusic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/gotham_medium"
+                android:padding="10dp"
                 android:text="Mood"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -178,6 +196,58 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rlChooseMusic" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cvArjit"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/artist_image_arijit_singh" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/cvArjit"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_light"
+                        android:text="More Like"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/gotham_medium"
+                        android:text="Arijit Singh"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewArijit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -192,6 +262,25 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlChooseMusic" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/gotham_medium"
+                android:padding="10dp"
+                android:text="Recommended for today"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recvRecommendedToday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rlChooseMusic" />
@@ -248,8 +337,25 @@
                 android:id="@+id/rcvListOfArtists"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/button"
-                android:layout_marginBottom="30dp" />
+                android:layout_below="@+id/button" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/gotham_medium"
+                android:padding="10dp"
+                android:text="Workout"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerWorkout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlChooseMusic" />
 
         </LinearLayout>
 

@@ -8,8 +8,8 @@
     tools:context=".view.activity.SplashActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="156dp"
+        android:layout_height="156dp"
         android:layout_gravity="center"
         android:src="@drawable/ic_spotify_logo" />
 

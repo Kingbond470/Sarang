@@ -62,7 +62,7 @@
             android:layout_margin="15dp"
             android:background="@drawable/white_btn"
             android:fontFamily="@font/gotham_medium"
-            android:paddingHorizontal="50dp"
+            android:paddingHorizontal="30dp"
             android:paddingVertical="15dp"
             android:text="GET PREMIUM"
             android:textColor="#000000"
@@ -215,6 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/white_btn"
+                    android:paddingHorizontal="30dp"
                     android:text="View Plans"
                     android:textColor="#000000"
                     android:textStyle="bold" />
@@ -326,6 +327,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/white_btn"
                     android:text="View Plans"
+                    android:paddingHorizontal="30dp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -436,6 +438,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/white_btn"
                     android:text="View Plans"
+                    android:paddingHorizontal="30dp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -546,6 +549,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/white_btn"
                     android:text="View Plans"
+                    android:paddingHorizontal="30dp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -656,6 +660,7 @@
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/white_btn"
                     android:text="View Plans"
+                    android:paddingHorizontal="30dp"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
