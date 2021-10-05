@@ -18,7 +18,7 @@ class SarangPayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sarang_pay)
         if (intent != null) {
-            pay_amount2.text=intent.getStringExtra("amount")
+           // pay_amount2.text=intent.getStringExtra("amount")
         }
         // Payment Cancel
         btn_cancelPayment.setOnClickListener {

@@ -21,15 +21,15 @@ class PaymentOptionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_payment_option)
 
         if (intent != null) {
-            amount=intent.getIntExtra("amount",0)
+            amount = intent.getIntExtra("amount", 0)
         }
 
 
 //       Checkout.preload(this)
 
         amount = intent.getIntExtra("amount", 0)
-        pay_amount.text = amount.toString()
-
+        //  pay_amount.text = amount.toString()
+        pay_amount.text = "101"
         // Payment with Razorpay
 
         razorpay.setOnClickListener {
