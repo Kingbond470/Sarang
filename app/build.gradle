@@ -169,7 +169,7 @@ dependencies {
 
 
     //Razorpay
-//    implementation 'com.razorpay:checkout:1.6.12'
+    //implementation 'com.razorpay:checkout:1.6.12'
 
     // GooglePay
     implementation 'com.google.android.gms:play-services-wallet:18.1.3'
