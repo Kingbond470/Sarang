@@ -14,6 +14,7 @@ With Sarang, you can listen to millions of songs and podcasts for free! Listen t
 * [AutoImageSlider](https://github.com/smarteist/Android-Image-Slider)
 * [Jetpack](https://developer.android.com/jetpack)
 * [NotificationBadge](https://github.com/nex3z/NotificationBadge)
+* [GooglePay](https://developers.google.com/pay/api/android/guides/tutorial)
 
 # Things we used while making this application
 
@@ -22,9 +23,11 @@ With Sarang, you can listen to millions of songs and podcasts for free! Listen t
 * Recycler View
 * Retrofit Library
 * API
-* Videoview
+* Gif ImageView
+* VideoView
 * Fragments
 * Navigation
+* Payment Gateway
 
 # Tech Stack ✨
 
