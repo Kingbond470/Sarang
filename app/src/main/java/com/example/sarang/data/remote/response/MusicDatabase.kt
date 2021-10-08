@@ -6,8 +6,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 
 class MusicDatabase {
-    private val firestore = FirebaseFirestore.getInstance()
-    private val songCollection = firestore.collection(SONG_COLLECTION)
+    private val fireStore = FirebaseFirestore.getInstance()
+    private val songCollection = fireStore.collection(SONG_COLLECTION)
 
     suspend fun getAllSongs(): List<Song> {
         return try {

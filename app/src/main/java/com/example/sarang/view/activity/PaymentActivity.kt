@@ -3,6 +3,7 @@ package com.example.sarang.view.activity
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sarang.R
@@ -27,7 +28,7 @@ class PaymentActivity : AppCompatActivity() {
         }
     }
 
-    fun selectPlant(linearLayout: LinearLayout) {
+    private fun selectPlant(view: View) {
 
     }
 }
