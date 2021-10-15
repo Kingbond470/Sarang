@@ -62,6 +62,61 @@ Congratulations, you have created your first local clone from your remote Github
 
 Open Android Studio. Go to File > New > Project From Version Control. Copy the link of this repositary. Paste the link in Url Box of Android Studio window and click on "Clone" button.
 
+
+# Let's See
+
+### Home Page
+
+<table>
+  <tr>
+    <td>Home</td>
+     <td>Home</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/home1.gif" width="280" /></td>
+    <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/home2.gif" width="280"></td>
+  </tr>
+ </table>
+ 
+### Search
+
+<table>
+  <tr>
+    <td>Search Song</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/search.gif" width="280"/></td>
+  </tr>
+ </table>
+ 
+### Features
+ 
+ <table>
+  <tr>
+    <td>Library</td>
+      <td>Premium</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/library.gif" width="280"/></td>
+       <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/preimum.gif" width="280"/></td>
+  </tr>
+ </table>
+ 
+### Top Navigation
+
+ <table>
+  <tr>
+    <td>Settings</td>
+      <td>Recently Played</td>
+      <td>Notification</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/settings.gif" width="280"/></td>
+       <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/recentlyPlayed.gif" width="280"/></td>
+      <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/notification.gif" width="280"/></td>
+  </tr>
+ </table>
+
 # Dependencies 
     //General Dependencies
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -194,5 +249,5 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
 
     // GooglePay
     implementation 'com.google.android.gms:play-services-wallet:18.1.3'
-
+    
 # Lessons Learnt📚
