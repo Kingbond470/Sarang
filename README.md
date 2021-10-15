@@ -94,11 +94,13 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
  <table>
   <tr>
     <td>Library</td>
-      <td>Premium</td>
+    <td>Premium</td>
+   <td>Payment</td>
   </tr>
   <tr>
     <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/library.gif" width="280"/></td>
-       <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/preimum.gif" width="280"/></td>
+    <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/preimum.gif" width="280"/></td>
+    <td><img src="https://github.com/Kingbond470/Sarang/blob/main/Sarang%20GIF/premium2.gif" width="280"/></td>
   </tr>
  </table>
  
