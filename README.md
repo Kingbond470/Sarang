@@ -167,6 +167,7 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
     implementation("com.google.dagger:hilt-android:2.38.1")
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
 
+
     // material UI
     implementation 'com.google.android.material:material:1.5.0-alpha03'
 
