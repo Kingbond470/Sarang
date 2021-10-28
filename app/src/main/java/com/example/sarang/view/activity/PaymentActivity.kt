@@ -23,7 +23,7 @@ class PaymentActivity : AppCompatActivity() {
             val intent = Intent(this, PaymentOptionActivity::class.java)
             intent.putExtra("amount", amount)
             startActivity(intent)
-
+            finish()
         }
     }
 
