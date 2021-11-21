@@ -4,7 +4,7 @@ With Sarang, you can listen to millions of songs and podcasts for free! Listen t
 
 # Links 
 
-* Blog-Post :- 
+* [Playstore Link](https://play.google.com/store/apps/details?id=com.masai.sarang) 
 
 # 🔗Open-Source Library
 
