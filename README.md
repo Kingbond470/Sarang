@@ -167,7 +167,6 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
     implementation("com.google.dagger:hilt-android:2.38.1")
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
 
-
     // material UI
     implementation 'com.google.android.material:material:1.5.0-alpha03'
 
@@ -176,10 +175,6 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
 
     //Circular Image View
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-
-    // glide
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
     // Architectural Components
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
@@ -215,8 +210,6 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha02"
     kapt "androidx.hilt:hilt-compiler:1.0.0-alpha02"
 
-    // Timber
-    implementation 'com.jakewharton.timber:timber:4.7.1'
 
     // Firebase Firestore
     implementation 'com.google.firebase:firebase-firestore:23.0.3'
@@ -238,17 +231,11 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
     // Gif ImageView
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
 
-    // otp pin view
-    implementation 'com.chaos.view:pinview:1.4.3'
-
     //fire base
     implementation 'com.google.firebase:firebase-auth:21.0.1'
 
     //google authentication
     implementation 'com.google.android.gms:play-services-auth:19.2.0'
-
-    //Razorpay
-    //implementation 'com.razorpay:checkout:1.6.12'
 
     // GooglePay
     implementation 'com.google.android.gms:play-services-wallet:18.1.3'
