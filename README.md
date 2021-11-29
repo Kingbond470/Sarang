@@ -1,10 +1,10 @@
-# Sarang
+# Sarang 🤩🔥
 With Sarang, you can listen to millions of songs and podcasts for free! Listen to artists you love and enjoy music and playlists in Hindi, English, Tamil, Telugu, and many more languages.
 
+### Available on Playstore<img height="50" width="80" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/backhand-index-pointing-down_1f447.png">
 
-# Links 
+<a href="https://play.google.com/store/apps/details?id=com.masai.sarang" title="Playstore" target="_blank"><img height="150" width="300" src="https://data.ibtimes.sg/en/full/12247/google-play-store-8-1-73-apk.png"></a>
 
-* [Playstore Link](https://play.google.com/store/apps/details?id=com.masai.sarang) 
 
 # 🔗Open-Source Library
 
